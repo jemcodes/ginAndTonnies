@@ -37,6 +37,24 @@ export const restoreUser = () => async dispatch => {
     return response;
 };
 
+
+/* As of 4/21/21, previous state is logging as user: undefined and
+perhaps should be logging as user: null - Phase 2 of Authenticate Me */
+export const signup = (user) => async (dispatch) => {
+    const { username, email, password } = user;
+    const response = await csrfFetch("/api/users", {
+        method: "POST",
+        body: JSON.stringify({
+            username,
+            email,
+            password,
+        }),
+    });
+    const data = await response.json();
+    dispatch(setUser(data.user));
+    return response;
+};
+
 const initialState = { user: null };
 
 const sessionReducer = (state = initialState, action) => {
