@@ -1,4 +1,6 @@
 .label-text {
     font-size: 36px;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: red;
 }
+
