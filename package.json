@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/jemcodes/authenticateMe/issues"
   },
-  "homepage": "https://github.com/jemcodes/authenticateMe#readme"
+  "homepage": "https://github.com/jemcodes/authenticateMe#readme",
+  "dependencies": {
+    "faker": "^5.5.3"
+  }
 }
