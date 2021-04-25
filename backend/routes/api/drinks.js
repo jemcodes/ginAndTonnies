@@ -21,4 +21,18 @@ router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
     return res.json({ singleDrink });
 }));
 
+// POST to create a new drink
+router.post('/', asyncHandler(async (req, res) => {
+    const { title, content, drinkImg, userId } = req.body;
+
+    const newDrink = await db.Drink.build( {
+        title,
+        content,
+        drinkImg,
+        userId
+    });
+    return res.json( { newDrink });
+}));
+
+
 module.exports = router;

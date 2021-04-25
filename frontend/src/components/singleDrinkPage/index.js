@@ -8,14 +8,12 @@ function SingleDrinkPage() {
 
     useEffect(() => {
         dispatch(getDrinks());
-        console.log('USE EFFECT HELLO')
     }, [dispatch]);
 
 
     const drinkList = useSelector(state => {
         return state.drink.allDrinks
     });
-    console.log('THIS IS THE DRINK LIST:', drinkList)
     const { id } = useParams();
    
     const currentDrink = drinkList.find((drink) => {

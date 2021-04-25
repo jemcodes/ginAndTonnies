@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { createPokemon, getPokemonTypes } from '../store/pokemon';
+import { createDrink } from '../../store/drink';
 import { useHistory } from 'react-router-dom';
 
 
 function CreateDrinkPage() {
+    const sessionUser = useSelector(state => state.session.user);
+
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -17,7 +19,7 @@ function CreateDrinkPage() {
     const updateDrinkImg = (e) => setDrinkImg(e.target.value);
 
     // useEffect(() => {
-    //     dispatch();
+    //     dispatch(createDrink(payload));
     // }, [dispatch]);
 
     const handleSubmit = async (e) => {
@@ -27,6 +29,7 @@ function CreateDrinkPage() {
             title,
             content,
             drinkImg,
+            userId: sessionUser.id
         };
 
         const newDrink = await dispatch(createDrink(payload));
@@ -36,58 +39,24 @@ function CreateDrinkPage() {
     };
 
     return (
-        <section className="new-form-holder centered middled">
+        <section className="create-drink-form">
             <form onSubmit={handleSubmit}>
                 <input
-                    type="number"
-                    placeholder="Number"
-                    min="1"
-                    required
-                    value={no}
-                    onChange={updateNo} />
-                <input
-                    type="number"
-                    placeholder="Attack"
-                    min="0"
-                    max="100"
-                    required
-                    value={attack}
-                    onChange={updateAttack} />
-                <input
-                    type="number"
-                    placeholder="Defense"
-                    min="0"
-                    max="100"
-                    required
-                    value={defense}
-                    onChange={updateDefense} />
+                    type="text"
+                    placeholder="Drink Title"
+                    value={title}
+                    onChange={updateTitle} />
                 <input
                     type="text"
-                    placeholder="Image URL"
-                    value={imageUrl}
-                    onChange={updateImageUrl} />
+                    placeholder="Drink Description"
+                    value={content}
+                    onChange={updateContent} />
                 <input
                     type="text"
-                    placeholder="Name"
-                    value={name}
-                    onChange={updateName} />
-                <input
-                    type="text"
-                    placeholder="Move 1"
-                    value={move1}
-                    onChange={updateMove1} />
-                <input
-                    type="text"
-                    placeholder="Move 2"
-                    value={move2}
-                    onChange={updateMove2} />
-                <select onChange={updateType} value={type}>
-                    {pokeTypes.map(type =>
-                        <option key={type}>{type}</option>
-                    )}
-                </select>
-                <button type="submit">Create new Pokemon</button>
-                <button type="button" onClick={handleCancelClick}>Cancel</button>
+                    placeholder="Drink Picture"
+                    value={drinkImg}
+                    onChange={updateDrinkImg} />
+                <button type="submit">Create new drink</button>
             </form>
         </section>
     );

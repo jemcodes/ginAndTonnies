@@ -8,10 +8,8 @@ function DrinkList() {
     const drinkList = useSelector(state => {
         return state.drink.allDrinks
     });
-    // console.log(drinkList)
 
     useEffect(() => {
-        // console.log('useEffect triggered')
         dispatch(getDrinks());
     }, [dispatch]);
 
