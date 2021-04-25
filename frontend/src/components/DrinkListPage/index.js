@@ -8,10 +8,10 @@ function DrinkList() {
     const drinkList = useSelector(state => {
         return state.drink.allDrinks
     });
-    console.log(drinkList)
+    // console.log(drinkList)
 
     useEffect(() => {
-        console.log('useEffect triggered')
+        // console.log('useEffect triggered')
         dispatch(getDrinks());
     }, [dispatch]);
 
@@ -23,11 +23,15 @@ function DrinkList() {
 
     return (
         <div>Drink List
-            {drinkList.map((drink) => {
-                return (
-                    <NavLink key={drink.id} exact to={`/drinks/${drink.id}`}>{drink.title}</NavLink>
-                )
-            })}
+            <ul>
+                {drinkList.map((drink) => (
+                <li key={drink.id}>    
+                    <NavLink  
+                        to={`/drinks/${drink.id}`}>{drink.title}
+                    </NavLink>
+                </li>)
+                )}
+            </ul>
         </div>
     )
 }
