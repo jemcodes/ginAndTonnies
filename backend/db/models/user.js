@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [3, 30],
+        len: [3, 50],
         isNotEmail(value) {
           if (Validator.isEmail(value)) {
             throw new Error('Cannot be an email.');
@@ -20,12 +20,18 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [3, 256],
+        len: [3, 255],
         /* my research on 4/21/21/turned up found a few issues where
         faker/isEmail can cause bugs, so commenting this section out for now */
         
         // isEmail(value)
       },
+    },
+    userBio: {
+      type: DataTypes.TEXT,
+    },
+    userImg: {
+      type: DataTypes.TEXT,
     },
     hashedPassword: {
       type: DataTypes.STRING.BINARY,
@@ -51,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       },
     });
   User.associate = function (models) {
-    // associations can be defined here
+    User.hasMany(models.Drink, { foreignKey: "userId" })
   };
 
   User.prototype.toSafeObject = function () {
