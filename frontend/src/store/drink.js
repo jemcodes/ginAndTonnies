@@ -1,7 +1,7 @@
 import { csrfFetch } from './csrf';
 
 const SHOW_DRINKS = 'drinks/SHOW_DRINKS';
-const ADD_DRINK = 'drinks/ADD_DRINK';
+// const SHOW_DRINK = 'drinks/SHOW_DRINK';
 
 const showDrinks = (allDrinks) => {
     return {
@@ -10,12 +10,12 @@ const showDrinks = (allDrinks) => {
     };
 };
 
-const addDrink = (singleDrink) => {
-    return {
-        type: ADD_DRINK,
-        payload: singleDrink,
-    };
-};
+// const showDrink = (singleDrink) => {
+//     return {
+//         type: SHOW_DRINK,
+//         payload: singleDrink,
+//     };
+// };
 
 export const getDrinks = () => async dispatch => {
     const response = await csrfFetch('/api/drinks');
@@ -25,27 +25,38 @@ export const getDrinks = () => async dispatch => {
     }
 };
 
-export const addSingleDrink = (id) => async dispatch => {
-    const response = await csrfFetch(`/api/drinks/${id}`);
-    if (response.ok) {
-        const singleDrink = await response.json();
-        dispatch(addDrink(singleDrink));
-    }
-}
+// export const getSingleDrink = (id) => async dispatch => {
+//     const response = await csrfFetch(`/api/drinks/${id}`);
+//     if (response.ok) {
+//         const singleDrink = await response.json();
+//         dispatch(showDrink(singleDrink));
+//     }
+// }
 
 const initialState = {
     allDrinks: []
 };
 
 const drinkReducer = (state = initialState, action) => {
-    let newState = {};
     switch (action.type) {
         case SHOW_DRINKS:
-            newState.allDrinks = action.payload
+            const newState = {};
+            newState.allDrinks = action.payload.drinkList
             return {
                 ...state,
                 ...newState
-            }
+            }   
+        // case SHOW_DRINK:
+        //     return {
+        //         ...state,
+        //     }   
+        default:
+            return state;
+    }
+};
+        
+export default drinkReducer;
+
         // case ADD_DRINK: 
         //     if (!state[action.singleDrink.id]) {
         //         newState = {
@@ -63,10 +74,3 @@ const drinkReducer = (state = initialState, action) => {
         //             ...action.singleDrink
         //         }
         //     };
-
-        default:
-            return state;
-    }
-};
-
-export default drinkReducer;

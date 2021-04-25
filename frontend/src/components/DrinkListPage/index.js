@@ -5,12 +5,13 @@ import { getDrinks } from '../../store/drink';
 
 function DrinkList() {
     const dispatch = useDispatch();
-    const { drinkList } = useSelector(state => {
-        console.log(state.drink.allDrinks);
+    const drinkList = useSelector(state => {
         return state.drink.allDrinks
     });
+    console.log(drinkList)
 
     useEffect(() => {
+        console.log('useEffect triggered')
         dispatch(getDrinks());
     }, [dispatch]);
 
@@ -19,8 +20,6 @@ function DrinkList() {
             <h1>No drinks found!</h1>
         );
     }
-
-    
 
     return (
         <div>Drink List
