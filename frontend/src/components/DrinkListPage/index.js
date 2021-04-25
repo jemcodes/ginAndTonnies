@@ -6,6 +6,7 @@ import { getDrinks } from '../../store/drink';
 function DrinkList() {
     const dispatch = useDispatch();
     const { drinkList } = useSelector(state => {
+        console.log(state.drink.allDrinks);
         return state.drink.allDrinks
     });
 
@@ -19,13 +20,13 @@ function DrinkList() {
         );
     }
 
-    console.log(drinkList);
+    
 
     return (
         <div>Drink List
             {drinkList.map((drink) => {
                 return (
-                    <NavLink key={drink.id} to={`/drinks/${drink.id}`}>{drink.title}</NavLink>
+                    <NavLink key={drink.id} exact to={`/drinks/${drink.id}`}>{drink.title}</NavLink>
                 )
             })}
         </div>
