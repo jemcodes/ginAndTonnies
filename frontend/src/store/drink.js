@@ -2,6 +2,7 @@ import { csrfFetch } from './csrf';
 
 const SHOW_DRINKS = 'drinks/SHOW_DRINKS';
 
+
 const showDrinks = (allDrinks) => {
     return {
         type: SHOW_DRINKS,
