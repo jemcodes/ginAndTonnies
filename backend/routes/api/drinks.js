@@ -5,7 +5,9 @@ const db = require('../../db/models');
 
 // GET a list of all the drinks
 router.get('/', asyncHandler(async (req, res) => {
-    const drinkList = await db.Drink.findAll();
+    const drinkList = await db.Drink.findAll({
+        include: [db.User]
+    });
     // console.log('THIS IS THE DRINK LIST:', drinkList)
     return res.json({ drinkList });
 }));

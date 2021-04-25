@@ -5,25 +5,34 @@ import { getDrinks } from '../../store/drink';
 
 function SingleDrinkPage() {
     const dispatch = useDispatch();
+
     useEffect(() => {
-        console.log('useEffect triggered')
         dispatch(getDrinks());
+        console.log('USE EFFECT HELLO')
     }, [dispatch]);
 
-    const { drinkId } = useParams;
-    console.log('THIS IS THE DRINKID', drinkId);
+
     const drinkList = useSelector(state => {
         return state.drink.allDrinks
     });
-    const currentDrink = drinkList.find(drink => drinkId === drink.id)
-    console.log(currentDrink)
+    console.log('THIS IS THE DRINK LIST:', drinkList)
+    const { id } = useParams();
+   
+    const currentDrink = drinkList.find((drink) => {
+        return drink.id === parseInt(id)
+    }) 
+    
+    if (!currentDrink) {
+        return null;
+    }
+
 
     return (
-        <div>
+        <div>Single drink
             <h2>{currentDrink.title}</h2>
             <h2>{currentDrink.content}</h2>
             <img alt={`A fresh cocktail`} src={currentDrink.drinkImg} />
-            <h2>Created by:{currentDrink.userId}</h2>
+            <h2>Created by: {currentDrink.User.username}</h2>
         </div>
     )
 
