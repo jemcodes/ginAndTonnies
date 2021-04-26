@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, Redirect, useParams } from 'react-router-dom';
 import { editDrink, getDrinks, deleteDrink } from '../../store/drink';
 
 function EditDrinkPage() {
@@ -13,9 +13,7 @@ function EditDrinkPage() {
     }, [dispatch]);
 
     const sessionUser = useSelector(state => state.session.user);
-    // console.log('This is my USER', sessionUser)
     const drinkList = useSelector(state => state.drink.allDrinks);
-    // console.log(drinkList)
 
     const [currentDrink, setCurrentDrink] = useState();
     const [title, setTitle] = useState('');
@@ -28,7 +26,6 @@ function EditDrinkPage() {
 
     useEffect(() => {
         const foundDrink = drinkList.find((drink) => {
-            // console.log('DRAAAAAANK', drink)
             return drink.id === parseInt(id)
         })
         if (foundDrink) {
@@ -37,11 +34,7 @@ function EditDrinkPage() {
             setContent(foundDrink.content)
             setDrinkImg(foundDrink.drinkImg)
         }
-    }, [drinkList])
-
-    // useEffect(() => {
-    //     dispatch(getDrinks());
-    // }, [dispatch, title, content, drinkImg]);
+    }, [drinkList, id])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -62,23 +55,18 @@ function EditDrinkPage() {
         if (!updatedDrink) {
             return null;
         }
-
-        console.log('This is my DRINK TITLE', currentDrink.title)
-
     };
 
-    // const handleCancelClick = (e) => {
-    //     e.preventDefault();
-    //     hideForm();
-    // };
-
-    // const deleteDrink = () => {
-    //     dispatch(deleteDrink(currentDrink.id));
-    // };
-    if (!currentDrink) {
-        return null;
+    const onDelete = async () => {
+        console.log('RIGHT AFTER ONDELETE')
+        const drinkWasDeleted = await dispatch(deleteDrink(currentDrink.id))
+        console.log('RIGHT AFTER DRINK WAS DELETED')
+        if (drinkWasDeleted) {
+            history.push(`/drinks/`);
+        }
+        console.log('HEY IS THIS WHEN THE DRINK IS DELETED?', drinkWasDeleted)
     }
-
+    
     return (
         <section className="edit-drink-form">
             <form onSubmit={handleSubmit}>
@@ -98,7 +86,7 @@ function EditDrinkPage() {
                     value={drinkImg}
                     onChange={updateDrinkImg} />
                 <button type="submit">Update Drink</button>
-                <button onClick={deleteDrink}>Delete This Drink 👋</button>
+                <button type="button" onClick={onDelete}>Delete This Drink 👋</button>
             </form>
         </section>
     );

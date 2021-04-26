@@ -40,7 +40,6 @@ export const getDrinks = () => async dispatch => {
 };
 
 export const createDrink = (newDrinkData) => async dispatch => {
-    // console.log('This is new drink data', newDrinkData)
     const response = await csrfFetch('/api/drinks', {
         method: 'POST',
         headers: {
@@ -51,9 +50,6 @@ export const createDrink = (newDrinkData) => async dispatch => {
     if (response.ok) {
         const newDrink = await response.json();
         dispatch(addNewDrink(newDrink));
-        // console.log('DISPATCH NEW DRINK', newDrink)
-        // console.log('MORE NEW DRANK', newDrink.newDrink)
-        // console.log(typeof newDrink)
         return newDrink.newDrink;
     }
 }
@@ -76,13 +72,16 @@ export const editDrink = (newDrinkData) => async dispatch => {
 };
 
 export const deleteDrink = (drinkId) => async dispatch => {
-    const response = await fetch(`/api/drinks/${drinkId}`, {
+    console.log('IS THIS THE REAL LIFE? IS THIS JUST THUNKERY?', drinkId)
+    const response = await csrfFetch(`/api/drinks/${drinkId}`, {
         method: 'DELETE',
     });
+    
+    console.log('THIS IS A RESPONSE!', response);
 
     if (response.ok) {
-        const drinkToDelete = await response.json();
-        dispatch(removeDrink(drinkToDelete.drinkId));
+        dispatch(removeDrink(drinkId));
+        return drinkId;
     }
 };
 
@@ -120,8 +119,9 @@ const drinkReducer = (state = initialState, action) => {
 
         case REMOVE_DRINK: {
             const drinkListWithDelete = state.allDrinks
-            delete drinkListWithDelete[action.drinkId];
-            newState.allDrinks = drinkListWithDelete
+            const deleteDrinkIndex = drinkListWithDelete.findIndex(drink => drink.id === action.payload)
+            delete drinkListWithDelete[deleteDrinkIndex];
+            newState.allDrinks = drinkListWithDelete;
             return {
                 ...state,
                 ...newState
