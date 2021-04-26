@@ -4,6 +4,10 @@ import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import DrinkListPage from './components/DrinkListPage';
+import SingleDrinkPage from './components/SingleDrinkPage';
+import CreateDrinkPage from './components/CreateDrinkPage';
+import EditDrinkPage from './components/EditDrinkPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +23,18 @@ function App() {
         <Switch>
           <Route path="/signup">
             <SignupFormPage />
+          </Route>
+          <Route path="/drinks/new">
+            <CreateDrinkPage />
+          </Route>
+          <Route path="/drinks/:id/edit">
+            <EditDrinkPage />
+          </Route>
+          <Route path="/drinks/:id">
+            <SingleDrinkPage />
+          </Route>
+          <Route path="/drinks">
+            <DrinkListPage />
           </Route>
         </Switch>
       )}
