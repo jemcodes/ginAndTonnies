@@ -62,6 +62,7 @@ router.delete('/:id(\\d+)', asyncHandler(async (req, res) => {
     const singleDrinkToDelete = await db.Drink.findByPk(drinkIdToDelete);
 
     const deletedDrink = await singleDrinkToDelete.destroy();
+    // console.log('THIS IS MY BE DELETED DRINK', deletedDrink)
 
     return res.json({deletedDrink});
 }));
