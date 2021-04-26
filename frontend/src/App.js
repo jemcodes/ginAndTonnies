@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import DrinkListPage from './components/DrinkListPage';
 import SingleDrinkPage from './components/SingleDrinkPage';
 import CreateDrinkPage from './components/CreateDrinkPage';
+import EditDrinkPage from './components/EditDrinkPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/drinks/new">
             <CreateDrinkPage />
+          </Route>
+          <Route path="/drinks/:id/edit">
+            <EditDrinkPage />
           </Route>
           <Route path="/drinks/:id">
             <SingleDrinkPage />

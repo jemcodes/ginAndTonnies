@@ -38,5 +38,30 @@ router.post('/', asyncHandler(async (req, res) => {
     return res.json( { newDrink: newDrinkWithUser });
 }));
 
+router.put('/:id(\\d+)/edit', asyncHandler(async (req, res) => {
+    const { title, content, drinkImg, userId } = req.body;
+
+    const updatedDrink = await db.Drink.create({
+        title,
+        content,
+        drinkImg,
+        userId
+    });
+
+    const updatedDrinkWithUser = await db.Drink.findByPk(updatedDrink.id, {
+        include: [db.User]
+    });
+    return res.json({ updatedDrink: updatedDrinkWithUser });
+}));
+
+router.delete('/:id(\\d+)', asyncHandler(async (req, res) => {
+    const drinkId = parseInt(req.params.id, 10);
+    const singleDrink = await db.Drink.findByPk(drinkId);
+    
+    if (singleDrink) {
+        await singleDrink.destroy();
+    }
+
+}));
 
 module.exports = router;

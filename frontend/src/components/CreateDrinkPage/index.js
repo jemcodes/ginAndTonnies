@@ -33,7 +33,6 @@ function CreateDrinkPage() {
         };
 
         const newDrink = await dispatch(createDrink(payload));
-        console.log('NEW DRINKZZZZZZZ', newDrink)
         if (newDrink) {
             history.push(`/drinks/${newDrink.id}`);
         }

@@ -24,7 +24,6 @@ function SingleDrinkPage() {
         return null;
     }
 
-
     return (
         <div>Single drink
             <h2>{currentDrink.title}</h2>
@@ -32,9 +31,7 @@ function SingleDrinkPage() {
             <img alt={`A fresh cocktail`} src={currentDrink.drinkImg} />
             <h2>Created by: {currentDrink.User.username}</h2>
         </div>
-    )
-
-    
+    ) 
 }
 
 export default SingleDrinkPage;
