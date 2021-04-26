@@ -6,9 +6,9 @@ import { getDrinks } from '../../store/drink';
 function SingleDrinkPage() {
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getDrinks());
-    }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(getDrinks());
+    // }, [dispatch]);
 
 
     const drinkList = useSelector(state => {
