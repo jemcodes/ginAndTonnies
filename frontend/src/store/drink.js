@@ -120,8 +120,9 @@ const drinkReducer = (state = initialState, action) => {
 
         case REMOVE_DRINK: {
             const drinkListWithDelete = state.allDrinks
-            delete drinkListWithDelete[action.drinkId];
-            newState.allDrinks = drinkListWithDelete
+            // console.log(drinkListWithDelete)
+            delete drinkListWithDelete[action.payload.drinkId];
+            newState.allDrinks = drinkListWithDelete;
             return {
                 ...state,
                 ...newState

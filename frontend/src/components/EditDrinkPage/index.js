@@ -67,6 +67,7 @@ function EditDrinkPage() {
 
     };
 
+
     // const handleCancelClick = (e) => {
     //     e.preventDefault();
     //     hideForm();
@@ -75,9 +76,14 @@ function EditDrinkPage() {
     // const deleteDrink = () => {
     //     dispatch(deleteDrink(currentDrink.id));
     // };
-    if (!currentDrink) {
-        return null;
-    }
+
+    // useEffect(() => {
+    //     dispatch(deleteDrink(foundDrink.id))
+    // }, [dispatch])
+
+    // if (!currentDrink) {
+    //     return null;
+    // }
 
     return (
         <section className="edit-drink-form">
@@ -98,7 +104,7 @@ function EditDrinkPage() {
                     value={drinkImg}
                     onChange={updateDrinkImg} />
                 <button type="submit">Update Drink</button>
-                <button onClick={deleteDrink}>Delete This Drink 👋</button>
+                <button type="button" onClick={() => deletedDrink(currentDrink.id)}>Delete This Drink 👋</button>
             </form>
         </section>
     );

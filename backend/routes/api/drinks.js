@@ -58,13 +58,12 @@ router.put('/:id(\\d+)', asyncHandler(async (req, res) => {
 }));
 
 router.delete('/:id(\\d+)', asyncHandler(async (req, res) => {
-    const drinkId = parseInt(req.params.id, 10);
-    const singleDrink = await db.Drink.findByPk(drinkId);
-    
-    if (singleDrink) {
-        await singleDrink.destroy();
-    }
+    const drinkIdToDelete = parseInt(req.params.id, 10);
+    const singleDrinkToDelete = await db.Drink.findByPk(drinkIdToDelete);
 
+    const deletedDrink = await singleDrinkToDelete.destroy();
+
+    return res.json({deletedDrink});
 }));
 
 module.exports = router;
