@@ -4,6 +4,7 @@ const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const drinksRouter = require('./drinks.js');
+const reviewsRouter = require('./reviews.js');
 const { setTokenCookie } = require('../../utils/auth.js');
 const { User } = require('../../db/models');
 const { restoreUser } = require('../../utils/auth.js');
@@ -12,6 +13,7 @@ const { requireAuth } = require('../../utils/auth.js');
 router.use('/session', sessionRouter);
 router.use('/users', usersRouter);
 router.use('/drinks', drinksRouter);
+router.use('/reviews', reviewsRouter);
 
 router.post('/test', function (req, res) {
     res.json({ requestBody: req.body });
