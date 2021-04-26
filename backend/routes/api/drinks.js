@@ -38,10 +38,13 @@ router.post('/', asyncHandler(async (req, res) => {
     return res.json( { newDrink: newDrinkWithUser });
 }));
 
-router.put('/:id(\\d+)/edit', asyncHandler(async (req, res) => {
+router.put('/:id(\\d+)', asyncHandler(async (req, res) => {
+    const drinkToUpdateId = parseInt(req.params.id, 10);
+    const singleDrinkToUpdate = await db.Drink.findByPk(drinkToUpdateId);
+
     const { title, content, drinkImg, userId } = req.body;
 
-    const updatedDrink = await db.Drink.create({
+    const updatedDrink = await singleDrinkToUpdate.update({
         title,
         content,
         drinkImg,

@@ -2,6 +2,7 @@ import { csrfFetch } from './csrf';
 
 const SHOW_DRINKS = 'drinks/SHOW_DRINKS';
 const ADD_DRINK = 'drinks/ADD_DRINK';
+const UPDATE_DRINK = 'drinks/UPDATE_DRINK';
 const REMOVE_DRINK = 'drinks/REMOVE_DRINK';
 
 const showDrinks = (allDrinks) => {
@@ -17,6 +18,13 @@ const addNewDrink = (newDrink) => {
         payload: newDrink,
     };
 };
+
+const updateDrink = (updatedDrink) => {
+    return {
+        type: UPDATE_DRINK,
+        payload: updatedDrink
+    }
+}
 
 const removeDrink = (drinkId) => ({
     type: REMOVE_DRINK,
@@ -50,18 +58,19 @@ export const createDrink = (newDrinkData) => async dispatch => {
     }
 }
 
-export const editDrink = (oldDrinkData) => async dispatch => {
-    const response = await csrfFetch(`/api/drinks/${oldDrinkData.id}`, {
+export const editDrink = (newDrinkData) => async dispatch => {
+    console.log(newDrinkData)
+    const response = await csrfFetch(`/api/drinks/${newDrinkData.id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(oldDrinkData),
+        body: JSON.stringify(newDrinkData),
     });
 
     if (response.ok) {
         const updatedDrink = await response.json();
-        dispatch(addNewDrink(updatedDrink));
+        dispatch(updateDrink(updatedDrink));
         return updatedDrink.updatedDrink;
     }
 };
@@ -99,6 +108,16 @@ const drinkReducer = (state = initialState, action) => {
                 ...state,
                 ...newState
             }
+        case UPDATE_DRINK:
+            const updatedDrinkList = state.allDrinks
+            const oldDrinkIndex = updatedDrinkList.findIndex(drink => drink.id === action.payload.updatedDrink.id)
+            updatedDrinkList[oldDrinkIndex] = action.payload.updatedDrink
+            newState.allDrinks = updatedDrinkList
+            return {
+                ...state,
+                ...newState
+            }
+
         case REMOVE_DRINK: {
             const drinkListWithDelete = state.allDrinks
             delete drinkListWithDelete[action.drinkId];

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 import { getDrinks } from '../../store/drink';
 
 function SingleDrinkPage() {
@@ -30,6 +30,7 @@ function SingleDrinkPage() {
             <h2>{currentDrink.content}</h2>
             <img alt={`A fresh cocktail`} src={currentDrink.drinkImg} />
             <h2>Created by: {currentDrink.User.username}</h2>
+            <NavLink to={`/drinks/${id}/edit`}>Update This Drink</NavLink>
         </div>
     ) 
 }

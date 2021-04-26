@@ -8,29 +8,36 @@ function EditDrinkPage() {
     const history = useHistory();
     const { id } = useParams();
 
-    // useEffect(() => {
-    //     dispatch(getDrinks());
-    // }, [dispatch]);
+    useEffect(() => {
+        dispatch(getDrinks());
+    }, [dispatch]);
 
     const sessionUser = useSelector(state => state.session.user);
-    console.log('This is my USER', sessionUser)
+    // console.log('This is my USER', sessionUser)
     const drinkList = useSelector(state => state.drink.allDrinks);
-    console.log(drinkList)
+    // console.log(drinkList)
 
-    const currentDrink = drinkList.find((drink) => {
-        console.log('DRAAAAAANK', drink)
-        return drink.id === parseInt(id)
-    })
-
-    console.log('This is my DRINK TITLE', currentDrink.title)
-
-    const [title, setTitle] = useState(currentDrink.title);
-    const [content, setContent] = useState(currentDrink.content);
-    const [drinkImg, setDrinkImg] = useState(currentDrink.drinkImg);
+    const [currentDrink, setCurrentDrink] = useState();
+    const [title, setTitle] = useState('');
+    const [content, setContent] = useState('');
+    const [drinkImg, setDrinkImg] = useState('');
 
     const updateTitle = (e) => setTitle(e.target.value);
     const updateContent = (e) => setContent(e.target.value);
     const updateDrinkImg = (e) => setDrinkImg(e.target.value);
+
+    useEffect(() => {
+        const foundDrink = drinkList.find((drink) => {
+            // console.log('DRAAAAAANK', drink)
+            return drink.id === parseInt(id)
+        })
+        if (foundDrink) {
+            setCurrentDrink(foundDrink)
+            setTitle(foundDrink.title)
+            setContent(foundDrink.content)
+            setDrinkImg(foundDrink.drinkImg)
+        }
+    }, [drinkList])
 
     // useEffect(() => {
     //     dispatch(getDrinks());
@@ -40,7 +47,7 @@ function EditDrinkPage() {
         e.preventDefault();
 
         const payload = {
-            ...drinkList,
+            id,
             title,
             content,
             drinkImg,
@@ -56,6 +63,7 @@ function EditDrinkPage() {
             return null;
         }
 
+        console.log('This is my DRINK TITLE', currentDrink.title)
 
     };
 
@@ -64,10 +72,12 @@ function EditDrinkPage() {
     //     hideForm();
     // };
 
-    const deleteDrink = (e) => {
-        e.preventDefault();
-        dispatch(deleteDrink(currentDrink.id));
-    };
+    // const deleteDrink = () => {
+    //     dispatch(deleteDrink(currentDrink.id));
+    // };
+    if (!currentDrink) {
+        return null;
+    }
 
     return (
         <section className="edit-drink-form">
