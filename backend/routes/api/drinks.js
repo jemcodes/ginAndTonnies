@@ -25,13 +25,17 @@ router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
 router.post('/', asyncHandler(async (req, res) => {
     const { title, content, drinkImg, userId } = req.body;
 
-    const newDrink = await db.Drink.build( {
+    const newDrink = await db.Drink.create( {
         title,
         content,
         drinkImg,
         userId
     });
-    return res.json( { newDrink });
+
+    const newDrinkWithUser = await db.Drink.findByPk(newDrink.id, {
+        include: [db.User]
+    });
+    return res.json( { newDrink: newDrinkWithUser });
 }));
 
 
