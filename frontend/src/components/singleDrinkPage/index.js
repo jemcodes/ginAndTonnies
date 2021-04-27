@@ -36,6 +36,7 @@ function SingleDrinkPage() {
 
     return (
         <div>
+            <NavLink to={`/drinks/`}>Return To Drinks</NavLink>
             <h2>{title}</h2>
             <h2>{content}</h2>
             <img alt={`A fresh cocktail`} src={drinkImg} />
