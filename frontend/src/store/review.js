@@ -75,7 +75,7 @@ export const editReview = (newReviewData) => async dispatch => {
 
 export const deleteReview = (drinkId, reviewId) => async dispatch => {
     console.log('IS THIS REVIEW GONNA DELETE?', reviewId)
-    const response = await csrfFetch(`/api/drinks/${drinkId}/reviews/`, {
+    const response = await csrfFetch(`/api/drinks/${drinkId}/reviews/${reviewId}`, {
         method: 'DELETE'
     });
     if (response.ok) {
@@ -116,8 +116,8 @@ const reviewReducer = (state = initialState, action) => {
             }
         case REMOVE_REVIEW: {
             const reviewListWithDelete = state.allReviews
-            const reviewDrinkIndex = reviewListWithDelete.findIndex(review => review.id === action.payload)
-            delete reviewListWithDelete[reviewDrinkIndex];
+            const deleteReviewIndex = reviewListWithDelete.findIndex(review => review.id === action.payload)
+            delete reviewListWithDelete[deleteReviewIndex];
             newState.allReviews = reviewListWithDelete;
             return {
                 ...state,

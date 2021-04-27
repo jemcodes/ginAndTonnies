@@ -33,10 +33,10 @@ function App() {
           <Route path="/drinks/:id/edit">
             <EditDrinkPage />
           </Route>
-          <Route path="/drinks/:id/reviews/new">
+          <Route path="/drinks/:drinkId/reviews/new">
             <CreateReviewPage />
           </Route>
-          <Route path="/drinks/:id/reviews/:id/edit">
+          <Route path="/drinks/:drinkId/reviews/:reviewId/edit">
             <EditReviewPage />
           </Route>
           <Route path="/drinks/:id/reviews">

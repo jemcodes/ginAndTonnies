@@ -8,7 +8,7 @@ import { useHistory, useParams } from 'react-router-dom';
 function CreateReviewPage() {
     const dispatch = useDispatch();
     const history = useHistory();
-    const { id } = useParams();
+    const { drinkId } = useParams();
 
     useEffect(() => {
         dispatch(getDrinks());
@@ -19,7 +19,7 @@ function CreateReviewPage() {
     const reviewedDrink = useSelector(state => state.drink.allDrinks);
     // console.log('THIS IS THE REVIEWED DRINK', reviewedDrink)
     const currentDrink = reviewedDrink.find((drink) => {
-        return drink.id === parseInt(id)
+        return drink.id === parseInt(drinkId)
     })
 
     const [rating, setRating] = useState('');
@@ -35,12 +35,12 @@ function CreateReviewPage() {
             rating,
             content,
             userId: sessionUser.id,
-            drinkId: currentDrink.id
+            drinkId: drinkId
         };
 
         const newReview = await dispatch(createReview(payload));
         if (newReview) {
-            history.push(`/drinks/${currentDrink.id}/reviews`);
+            history.push(`/drinks/${drinkId}/reviews`);
         }
     };
 
