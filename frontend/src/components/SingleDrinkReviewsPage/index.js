@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams,} from 'react-router-dom';
+import { useParams, NavLink} from 'react-router-dom';
 import { getReviews} from '../../store/review';
 
 
@@ -29,6 +29,7 @@ function SingleDrinkReviewsPage() {
                     <h2>User: {review.User.username}</h2>
                 </div>
             ))}
+            <NavLink to={`/drinks/${id}/reviews/new`}>Review This Drink</NavLink>
         </div>
     )
 }
