@@ -24,15 +24,15 @@ app.use(helmet({
     contentSecurityPolicy: false
 }));
 
-// app.use(
-//     csurf({
-//         cookie: {
-//             secure: isProduction,
-//             sameSite: isProduction && "Lax",
-//             httpOnly: true,
-//         },
-//     })
-// );
+app.use(
+    csurf({
+        cookie: {
+            secure: isProduction,
+            sameSite: isProduction && "Lax",
+            httpOnly: true,
+        },
+    })
+);
 
 app.use(routes);
 
