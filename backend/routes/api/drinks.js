@@ -2,13 +2,13 @@ const asyncHandler = require('express-async-handler')
 const express = require('express');
 const router = express.Router();
 const db = require('../../db/models');
+const reviewsRouter = require('./reviews.js');
 
 // GET a list of all the drinks
 router.get('/', asyncHandler(async (req, res) => {
     const drinkList = await db.Drink.findAll({
         include: [db.User]
     });
-    // console.log('THIS IS THE DRINK LIST:', drinkList)
     return res.json({ drinkList });
 }));
 
@@ -38,6 +38,7 @@ router.post('/', asyncHandler(async (req, res) => {
     return res.json( { newDrink: newDrinkWithUser });
 }));
 
+// PUT to update a single drink
 router.put('/:id(\\d+)', asyncHandler(async (req, res) => {
     const drinkToUpdateId = parseInt(req.params.id, 10);
     const singleDrinkToUpdate = await db.Drink.findByPk(drinkToUpdateId);
@@ -57,14 +58,18 @@ router.put('/:id(\\d+)', asyncHandler(async (req, res) => {
     return res.json({ updatedDrink: updatedDrinkWithUser });
 }));
 
+// DELETE to delete a single drink
 router.delete('/:id(\\d+)', asyncHandler(async (req, res) => {
     const drinkIdToDelete = parseInt(req.params.id, 10);
     const singleDrinkToDelete = await db.Drink.findByPk(drinkIdToDelete);
 
     const deletedDrink = await singleDrinkToDelete.destroy();
-    // console.log('THIS IS MY BE DELETED DRINK', deletedDrink)
 
     return res.json({deletedDrink});
 }));
+
+
+// ADDED TO TRY FOR NESTING ROUTES FOR
+router.use('/:id(\\d+)/reviews', reviewsRouter);
 
 module.exports = router;

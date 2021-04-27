@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, Redirect, useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { editDrink, getDrinks, deleteDrink } from '../../store/drink';
 
 function EditDrinkPage() {
@@ -58,13 +58,10 @@ function EditDrinkPage() {
     };
 
     const onDelete = async () => {
-        console.log('RIGHT AFTER ONDELETE')
         const drinkWasDeleted = await dispatch(deleteDrink(currentDrink.id))
-        console.log('RIGHT AFTER DRINK WAS DELETED')
         if (drinkWasDeleted) {
             history.push(`/drinks/`);
         }
-        console.log('HEY IS THIS WHEN THE DRINK IS DELETED?', drinkWasDeleted)
     }
     
     return (

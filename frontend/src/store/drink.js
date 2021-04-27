@@ -55,7 +55,6 @@ export const createDrink = (newDrinkData) => async dispatch => {
 }
 
 export const editDrink = (newDrinkData) => async dispatch => {
-    console.log(newDrinkData)
     const response = await csrfFetch(`/api/drinks/${newDrinkData.id}`, {
         method: 'PUT',
         headers: {
@@ -72,12 +71,9 @@ export const editDrink = (newDrinkData) => async dispatch => {
 };
 
 export const deleteDrink = (drinkId) => async dispatch => {
-    console.log('IS THIS THE REAL LIFE? IS THIS JUST THUNKERY?', drinkId)
     const response = await csrfFetch(`/api/drinks/${drinkId}`, {
         method: 'DELETE',
     });
-    
-    console.log('THIS IS A RESPONSE!', response);
 
     if (response.ok) {
         dispatch(removeDrink(drinkId));

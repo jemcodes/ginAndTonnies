@@ -10,11 +10,14 @@ module.exports = (sequelize, DataTypes) => {
     },
     userId: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: { model: "Drinks" }
     },
     drinkId: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: { model: "Users" },
+      onDelete: 'CASCADE'
     }
   }, {});
   Review.associate = function(models) {
