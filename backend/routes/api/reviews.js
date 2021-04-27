@@ -2,6 +2,7 @@ const asyncHandler = require('express-async-handler')
 const express = require('express');
 const router = express.Router({ mergeParams: true });
 const db = require('../../db/models');
+const { route } = require('./drinks');
 
 // GET a list of all the reviews
 router.get('/', asyncHandler(async (req, res, next) => {
@@ -45,5 +46,31 @@ router.post('/', asyncHandler(async (req, res) => {
     console.log(newReviewWithUserAndDrink)
     return res.json( {newReview: newReviewWithUserAndDrink })
 }))
+
+// PUT to update a single review
+router.put('/:id(\\d+)', asyncHandler(async (req, res) => {
+    const reviewToUpdateId = parseInt(req.params.id, 10);
+    const singleReviewToUpdate = await db.Review.findByPk(reviewToUpdateId);
+
+    const { rating, content, userId, drinkId } = req.body;
+
+    const updatedReview = await singleReviewToUpdate.update({
+        rating,
+        content,
+        userId,
+        drinkId
+    });
+
+    const updatedReviewWithUserAndDrink = await db.Review.findByPk(updatedReview.id, {
+        include: 
+        [
+            {model: db.User},
+            {model: db.Drink}
+        ]
+    });
+    return res.json({ updatedReview: updatedReviewWithUserAndDrink})
+}))
+
+// DELETE to delete a single review
 
 module.exports = router;
