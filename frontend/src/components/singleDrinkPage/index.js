@@ -15,6 +15,9 @@ function SingleDrinkPage() {
     // console.log('This is my USER', sessionUser)
     const drinkList = useSelector(state => state.drink.allDrinks);
     // console.log(drinkList)
+    const reviewList = useSelector(state => {
+        return state.review.allReviews
+    });
     
     const [currentDrink, setCurrentDrink] = useState();
     const [title, setTitle] = useState('');
@@ -48,6 +51,7 @@ function SingleDrinkPage() {
             <img alt={`A fresh cocktail`} src={drinkImg} />
             <h2>Created by: {currentDrink.User.username}</h2>
             <NavLink to={`/drinks/${id}/edit`}>Update This Drink</NavLink>
+            <NavLink to={`/drinks/${id}/reviews`}>See Reviews</NavLink>
         </div>
     ) 
 }
