@@ -9,7 +9,6 @@ router.get('/', asyncHandler(async (req, res) => {
     const drinkList = await db.Drink.findAll({
         include: [db.User]
     });
-    // console.log('THIS IS THE DRINK LIST:', drinkList)
     return res.json({ drinkList });
 }));
 
@@ -65,7 +64,6 @@ router.delete('/:id(\\d+)', asyncHandler(async (req, res) => {
     const singleDrinkToDelete = await db.Drink.findByPk(drinkIdToDelete);
 
     const deletedDrink = await singleDrinkToDelete.destroy();
-    // console.log('THIS IS MY BE DELETED DRINK', deletedDrink)
 
     return res.json({deletedDrink});
 }));

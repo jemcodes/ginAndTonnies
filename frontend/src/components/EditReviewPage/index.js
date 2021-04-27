@@ -8,30 +8,27 @@ function EditReviewPage() {
     const dispatch = useDispatch();
     const history = useHistory();
     const { drinkId, reviewId } = useParams();
-    console.log('THESE ARE FROM THE URL', drinkId, reviewId)
 
     useEffect(() => {
         dispatch(getDrinks());
-    }, [dispatch])
+        dispatch(getReviews(drinkId));
+    }, [dispatch, drinkId])
 
     const sessionUser = useSelector(state => state.session.user);
     const drinkList = useSelector(state => state.drink.allDrinks);
-    console.log('THIS IS THE DRNKLIST', drinkList)
     const currentDrink = drinkList.find((drink) => {
         return drink.id === parseInt(drinkId)
     });
-    console.log('THIS IS THE CURRENT DRINK', drinkId)
 
-    useEffect(() => {
-        dispatch(getReviews(drinkId));
-    }, [dispatch, drinkId]);
+    // useEffect(() => {
+    //     dispatch(getReviews(drinkId));
+    // }, [dispatch, drinkId]);
 
     const reviewList = useSelector(state => state.review.allReviews)
-    console.log('THIS IS THE REVIEW LIST', reviewList)
-    const foundReview = reviewList.find((review) => {
-        return review.id === parseInt(reviewId)
-    })
-    console.log('THIS IS THE FOUND REVIEW', foundReview)
+    // const foundReview = reviewList.find((review) => {
+    //     return review.id === parseInt(reviewId)
+    // })
+    
 
     const [currentReview, setCurrentReview] = useState();
     const [rating, setRating] = useState('');
@@ -40,17 +37,16 @@ function EditReviewPage() {
     const updateRating = (e) => setRating(e.target.value);
     const updateContent = (e) => setContent(e.target.value);
 
-    // useEffect(() => {
-    //     const foundReview = reviewList.find((review) => {
-    //         return review.id === parseInt(reviewId)
-    //     })
-    //     console.log('THIS IS THE FOUND REVIEW', foundReview)
-    //     if (foundReview) {
-    //         setCurrentReview(foundReview)
-    //         setRating(foundReview.rating)
-    //         setContent(foundReview.content)
-    //     }
-    // }, [reviewList, reviewId])
+    useEffect(() => {
+        const foundReview = reviewList.find((review) => {
+            return review.id === parseInt(reviewId)
+        })
+        if (foundReview) {
+            setCurrentReview(foundReview)
+            setRating(foundReview.rating)
+            setContent(foundReview.content)
+        }
+    }, [reviewList, reviewId])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -64,7 +60,6 @@ function EditReviewPage() {
         };
 
         const updatedReview = await dispatch(editReview(payload));
-        console.log('THIS IS THE CURRENT DRINK ID FOR URL', drinkId)
         if (updatedReview) {
             history.push(`/drinks/${drinkId}/reviews/`);
         }
@@ -75,13 +70,10 @@ function EditReviewPage() {
     };
 
     const onDelete = async () => {
-    console.log('RIGHT AFTER ONDELETE')
-    const reviewWasDeleted = await dispatch(deleteReview(reviewId))
-    console.log('RIGHT AFTER REWVIEW WAS DELETED')
+    const reviewWasDeleted = await dispatch(deleteReview(drinkId, reviewId))
         if (reviewWasDeleted) {
             history.push(`/drinks/${drinkId}/reviews/`);
          }
-        console.log('HEY IS THIS WHEN THE DRINK IS DELETED?', reviewWasDeleted)
     }
 
     return (

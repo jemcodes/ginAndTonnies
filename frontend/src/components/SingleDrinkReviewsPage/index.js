@@ -16,7 +16,15 @@ function SingleDrinkReviewsPage() {
 
     if (reviewList.length === 0) {
         return (
-            <h1>No reviews found!</h1>
+            <div>
+                <h1>No reviews found!</h1>
+                <div>
+                    <NavLink to={`/drinks/${id}/reviews/new`}>Review This Drink</NavLink>
+                </div>
+                <div>
+                    <NavLink to={`/drinks/`}>Return To Drink List</NavLink>
+                </div>
+            </div>
         );
     }
 
@@ -27,9 +35,15 @@ function SingleDrinkReviewsPage() {
                     <h2>Rating: {review.rating}</h2>
                     <h2>Review: {review.content}</h2>
                     <h2>User: {review.User.username}</h2>
+                    <NavLink to={`/drinks/${id}/reviews/${review.id}/edit`}>Update This Review</NavLink>
                 </div>
             ))}
-            <NavLink to={`/drinks/${id}/reviews/new`}>Review This Drink</NavLink>
+            <div>
+                <NavLink to={`/drinks/${id}/reviews/new`}>Review This Drink</NavLink>
+            </div>
+            <div>
+                <NavLink to={`/drinks/`}>Return To Drink List</NavLink>
+            </div>
         </div>
     )
 }

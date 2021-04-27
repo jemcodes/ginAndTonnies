@@ -11,21 +11,12 @@ function SingleDrinkPage() {
         dispatch(getDrinks());
     }, [dispatch]);
 
-    // console.log('This is my USER', sessionUser)
     const drinkList = useSelector(state => state.drink.allDrinks);
-    // console.log(drinkList)
-    // const reviewList = useSelector(state => {
-    //     return state.review.allReviews
-    // });
     
     const [currentDrink, setCurrentDrink] = useState();
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [drinkImg, setDrinkImg] = useState('');
-
-    // const updateTitle = (e) => setTitle(e.target.value);
-    // const updateContent = (e) => setContent(e.target.value);
-    // const updateDrinkImg = (e) => setDrinkImg(e.target.value);
    
     useEffect(() => {
         const foundDrink = drinkList.find((drink) => {

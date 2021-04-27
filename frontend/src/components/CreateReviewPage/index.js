@@ -15,9 +15,7 @@ function CreateReviewPage() {
     }, [dispatch]);
 
     const sessionUser = useSelector(state => state.session.user);
-    // console.log('THIS IS THE SESSIONUSER', sessionUser)
     const reviewedDrink = useSelector(state => state.drink.allDrinks);
-    // console.log('THIS IS THE REVIEWED DRINK', reviewedDrink)
     const currentDrink = reviewedDrink.find((drink) => {
         return drink.id === parseInt(drinkId)
     })

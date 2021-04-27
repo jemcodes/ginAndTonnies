@@ -13,7 +13,6 @@ router.get('/', asyncHandler(async (req, res, next) => {
         },
         include: db.User,
     });
-    // console.log(reviewsToShow)
     return res.json( reviewsToShow )
 }))
 
@@ -43,7 +42,6 @@ router.post('/', asyncHandler(async (req, res) => {
             {model: db.Drink}
         ]
     });
-    console.log(newReviewWithUserAndDrink)
     return res.json( {newReview: newReviewWithUserAndDrink })
 }))
 
