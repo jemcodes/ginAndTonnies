@@ -55,7 +55,7 @@ export const createDrink = (newDrinkData) => async dispatch => {
 }
 
 export const editDrink = (newDrinkData) => async dispatch => {
-    console.log(newDrinkData)
+    // console.log(newDrinkData)
     const response = await csrfFetch(`/api/drinks/${newDrinkData.id}`, {
         method: 'PUT',
         headers: {

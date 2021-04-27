@@ -2,6 +2,7 @@ import { csrfFetch } from './csrf';
 
 const SHOW_REVIEWS = 'reviews/SHOW_REVIEWS';
 const ADD_REVIEW = 'reviews/ADD_REVIEW';
+const UPDATE_REVIEW = 'reviews/UPDATE_REVIEW';
 
 const showReviews = (allReviews) => {
     return {
@@ -13,7 +14,14 @@ const showReviews = (allReviews) => {
 const addNewReview = (newReview) => {
     return {
         type: ADD_REVIEW,
-        payload: newReview,
+        payload: newReview
+    }
+}
+
+const updateReview = (updatedReview) => {
+    return {
+        type: UPDATE_REVIEW,
+        payload: updatedReview
     }
 }
 
@@ -41,6 +49,22 @@ export const createReview = (newReviewData) => async dispatch => {
     }
 }
 
+export const editReview = (newReviewData) => async dispatch => {
+    const response = await csrfFetch(`/api/drinks/${newReviewData.drinkId}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newReviewData),
+    });
+
+    if (response.ok) {
+        const updatedReview = await response.json();
+        dispatch(updateReview(updatedReview));
+        return updatedReview.updatedReview;
+    }
+}
+
 const initialState = {
     allReviews: []
 };
@@ -58,7 +82,15 @@ const reviewReducer = (state = initialState, action) => {
             const newReviewList = state.allReviews
             newReviewList.push(action.payload.newReview)
             newState.allReviews = newReviewList
-            
+            return {
+                ...state,
+                ...newState
+            }
+        case UPDATE_REVIEW:
+            const updatedReviewList = state.allReviews
+            const oldReviewIndex = updatedReviewList.findIndex(review => review.id === action.payload.updatedReview.id)
+            updatedReviewList[oldReviewIndex] = action.payload.updatedReview
+            newState.allReviews = updatedReviewList
             return {
                 ...state,
                 ...newState
