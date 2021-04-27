@@ -9,6 +9,7 @@ import SingleDrinkPage from './components/SingleDrinkPage';
 import CreateDrinkPage from './components/CreateDrinkPage';
 import EditDrinkPage from './components/EditDrinkPage';
 import SingleDrinkReviewsPage from './components/SingleDrinkReviewsPage';
+import CreateReviewPage from './components/CreateReviewPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/drinks/:id/edit">
             <EditDrinkPage />
+          </Route>
+          <Route path="/drinks/:id/reviews/new">
+            <CreateReviewPage />
           </Route>
           <Route path="/drinks/:id/reviews">
             <SingleDrinkReviewsPage />
