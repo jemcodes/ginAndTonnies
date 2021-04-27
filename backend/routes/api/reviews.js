@@ -26,6 +26,24 @@ router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
 }))
 
 // POST to create a new review
-router.post('/', asyncHandler(async (req, res)))
+router.post('/', asyncHandler(async (req, res) => {
+    const { rating, content, userId, drinkId } = req.body;
+
+    const newReview = await db.Review.create( {
+        rating,
+        content,
+        userId,
+        drinkId
+    });
+    const newReviewWithUserAndDrink = await db.Review.findByPk(newReview.id, {
+        include:
+        [
+            {model: db.User}, 
+            {model: db.Drink}
+        ]
+    });
+    console.log(newReviewWithUserAndDrink)
+    return res.json( {newReview: newReviewWithUserAndDrink })
+}))
 
 module.exports = router;
