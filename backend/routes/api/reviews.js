@@ -72,5 +72,13 @@ router.put('/:id(\\d+)', asyncHandler(async (req, res) => {
 }))
 
 // DELETE to delete a single review
+router.delete('/:id(\\d+)', asyncHandler(async (req, res) => {
+    const reviewToDeleteId = parseInt(req.params.id, 10);
+    const singleReviewToDelete = await db.Review.findByPk(reviewToDeleteId);
+
+    const deletedReview = await singleReviewToDelete.destroy();
+
+    return res.json({ deletedReview});
+}));
 
 module.exports = router;
