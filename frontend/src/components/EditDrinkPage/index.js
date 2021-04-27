@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, Redirect, useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { editDrink, getDrinks, deleteDrink } from '../../store/drink';
 
 function EditDrinkPage() {

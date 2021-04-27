@@ -1,59 +1,35 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, NavLink } from 'react-router-dom';
-import { getReviews } from '../../store/review';
+import { useParams,} from 'react-router-dom';
+import { getReviews} from '../../store/review';
 
 
 function SingleDrinkReviewsPage() {
     const dispatch = useDispatch();
-    const reviewList = useSelector(state => {
-        return state.review.allReviews
-    });
-    // const { id } = useParams();
-    console.log('THIS IS THE REVIEW LIST', reviewList)
-    
+    const { id } = useParams();
+
     useEffect(() => {
-        dispatch(getReviews());
-    }, [dispatch]);
+        dispatch(getReviews(id));
+    }, [dispatch, id]);
 
-    // const sessionUser = useSelector(state => state.session.user);
-    // const drinkList = useSelector(state => state.drink.allDrinks);
-  
-    // const [currentReview, setCurrentReview] = useState();
-    // const [rating, setRating] = useState();
-    // const [content, setContent] = useState();
-
-    // useEffect(() => {
-    //     const foundReview = reviewList.find((review) => {
-    //         return review.id === parseInt(id)
-    //     })
-    //     if (foundReview) {
-    //         setCurrentReview(foundReview)
-    //         setRating(foundReview.rating)
-    //         setContent(foundReview.content)
-    //     }
-    // }, [reviewList])
+    const reviewList = useSelector(state => state.review.allReviews);
 
     if (reviewList.length === 0) {
         return (
             <h1>No reviews found!</h1>
-        )
+        );
     }
 
-    return(
-        <div>Hello Reviews!
-            <ul>
-                {reviewList.map((review) => (
-                    <li key={review.id}>
-                        <NavLink
-                            to={`/drinks/${review.id}`}>{review.content}
-                        </NavLink>
-                    </li>)
-                )}
-            </ul>
+    return (
+        <div>Review List
+            {reviewList.map(review => (
+                <div key={review.id}>
+                    <h2>Rating: {review.rating}</h2>
+                    <h2>Review: {review.content}</h2>
+                    <h2>User: {review.User.username}</h2>
+                </div>
+            ))}
         </div>
-        
-
     )
 }
 

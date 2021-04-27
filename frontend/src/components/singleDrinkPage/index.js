@@ -11,13 +11,12 @@ function SingleDrinkPage() {
         dispatch(getDrinks());
     }, [dispatch]);
 
-    const sessionUser = useSelector(state => state.session.user);
     // console.log('This is my USER', sessionUser)
     const drinkList = useSelector(state => state.drink.allDrinks);
     // console.log(drinkList)
-    const reviewList = useSelector(state => {
-        return state.review.allReviews
-    });
+    // const reviewList = useSelector(state => {
+    //     return state.review.allReviews
+    // });
     
     const [currentDrink, setCurrentDrink] = useState();
     const [title, setTitle] = useState('');
@@ -38,7 +37,7 @@ function SingleDrinkPage() {
             setContent(foundDrink.content)
             setDrinkImg(foundDrink.drinkImg)
         }
-    }, [drinkList])
+    }, [drinkList, id])
     
     if (!currentDrink) {
         return null;
