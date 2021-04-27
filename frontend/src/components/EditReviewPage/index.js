@@ -71,13 +71,13 @@ function EditReviewPage() {
     };
 
     const onDelete = async () => {
-    //     // console.log('RIGHT AFTER ONDELETE')
-    //     // // const drinkWasDeleted = await dispatch(deleteDrink(currentDrink.id))
-    //     // console.log('RIGHT AFTER DRINK WAS DELETED')
-    //     // if (drinkWasDeleted) {
-    //     //     history.push(`/drinks/`);
-    //     // }
-    //     // console.log('HEY IS THIS WHEN THE DRINK IS DELETED?', drinkWasDeleted)
+    // console.log('RIGHT AFTER ONDELETE')
+    // const reviewWasDeleted = await dispatch(deleteDrink(currentDrink.id))
+    // console.log('RIGHT AFTER DRINK WAS DELETED')
+    // if (drinkWasDeleted) {
+    //    history.push(`/drinks/`);
+    //      }
+    //  console.log('HEY IS THIS WHEN THE DRINK IS DELETED?', drinkWasDeleted)
     }
 
     return (

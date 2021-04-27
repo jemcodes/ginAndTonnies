@@ -3,6 +3,7 @@ import { csrfFetch } from './csrf';
 const SHOW_REVIEWS = 'reviews/SHOW_REVIEWS';
 const ADD_REVIEW = 'reviews/ADD_REVIEW';
 const UPDATE_REVIEW = 'reviews/UPDATE_REVIEW';
+const REMOVE_REVIEW = 'reviews/REMOVE_REVIEW';
 
 const showReviews = (allReviews) => {
     return {
@@ -22,6 +23,13 @@ const updateReview = (updatedReview) => {
     return {
         type: UPDATE_REVIEW,
         payload: updatedReview
+    }
+}
+
+const removeReview = (reviewId) => {
+    return {
+        type: REMOVE_REVIEW,
+        payload: reviewId
     }
 }
 
@@ -50,7 +58,7 @@ export const createReview = (newReviewData) => async dispatch => {
 }
 
 export const editReview = (newReviewData) => async dispatch => {
-    const response = await csrfFetch(`/api/drinks/${newReviewData.drinkId}`, {
+    const response = await csrfFetch(`/api/drinks/${newReviewData.drinkId}/reviews${newReviewData.id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -62,6 +70,17 @@ export const editReview = (newReviewData) => async dispatch => {
         const updatedReview = await response.json();
         dispatch(updateReview(updatedReview));
         return updatedReview.updatedReview;
+    }
+};
+
+export const deleteReview = (drinkId, reviewId) => async dispatch => {
+    console.log('IS THIS REVIEW GONNA DELETE?', reviewId)
+    const response = await csrfFetch(`/api/drinks/${drinkId}/reviews/`, {
+        method: 'DELETE'
+    });
+    if (response.ok) {
+        dispatch(removeReview(reviewId));
+        return reviewId;
     }
 }
 
@@ -95,6 +114,16 @@ const reviewReducer = (state = initialState, action) => {
                 ...state,
                 ...newState
             }
+        case REMOVE_REVIEW: {
+            const reviewListWithDelete = state.allReviews
+            const reviewDrinkIndex = reviewListWithDelete.findIndex(review => review.id === action.payload)
+            delete reviewListWithDelete[reviewDrinkIndex];
+            newState.allReviews = reviewListWithDelete;
+            return {
+                ...state,
+                ...newState
+            }
+        }
         default:
             return state;
     }
