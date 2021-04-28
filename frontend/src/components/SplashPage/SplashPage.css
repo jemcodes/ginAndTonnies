@@ -66,3 +66,50 @@ button {
     color: white;
 } */
 
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #F7F7F7;
+    border: 2px solid red;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+}
+
+.splash-wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* NAVIGATION - MOVE TO NAV, min 2007*/
+/* 
+.main-nav ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    gride-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a {
+    background-color: #F7F7F7;
+    display: block;
+    text-decoration: non;
+    padding: 0.8rem;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    bax-shadow: 0 1px 5px rgba(104,104,104, 0.8);
+}
+
+.main-nav a:hover {
+    background-color: #000;
+    color: #F7F7F7;
+}
+
+*/
+

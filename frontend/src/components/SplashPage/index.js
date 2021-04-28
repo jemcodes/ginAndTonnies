@@ -3,6 +3,7 @@ import DemoButton from '../DemoButton';
 
 function SplashPage() {
     return (
+        // splass-wrapper begins
         <div className="splash-wrapper">
             <section className="top-container">
                 <header className="showcase">
@@ -14,7 +15,7 @@ function SplashPage() {
                 </div>
             </section>
             <section className="demo-row">
-                <div className="demo-button">
+                <div>
                     <DemoButton />
                 </div>
             </section>

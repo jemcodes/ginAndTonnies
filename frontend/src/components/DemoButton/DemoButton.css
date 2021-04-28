@@ -1,0 +1,12 @@
+.demo-button {
+    background: #020202;
+    color: #fff;
+    font-size: 1em;
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}

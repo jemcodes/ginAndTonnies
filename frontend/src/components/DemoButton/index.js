@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { login } from '../../store/session';
+import './DemoButton.css';
 
 function DemoButton() {
     const dispatch = useDispatch();
@@ -11,7 +12,7 @@ function DemoButton() {
     
     return (
         <form onSubmit={handleSubmit}>
-            <button>DEMO</button>
+            <button className="demo-button">DEMO LOGIN</button>
         </form>
     )
 }
