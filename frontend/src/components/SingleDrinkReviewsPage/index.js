@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, NavLink} from 'react-router-dom';
+import { useParams, NavLink, Redirect } from 'react-router-dom';
 import { getReviews} from '../../store/review';
 
 
@@ -13,6 +13,7 @@ function SingleDrinkReviewsPage() {
     }, [dispatch, id]);
 
     const reviewList = useSelector(state => state.review.allReviews);
+    const sessionUser = useSelector(state => state.session.user);
 
     if (reviewList.length === 0) {
         return (
@@ -26,6 +27,12 @@ function SingleDrinkReviewsPage() {
                 </div>
             </div>
         );
+    }
+
+    if (!sessionUser) {
+        return (
+            <Redirect to="/" />
+        )
     }
 
     return (

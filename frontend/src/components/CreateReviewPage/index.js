@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createReview } from '../../store/review';
 import { getDrinks } from '../../store/drink';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, Redirect } from 'react-router-dom';
 
 
 function CreateReviewPage() {
@@ -25,6 +25,12 @@ function CreateReviewPage() {
 
     const updateRating = (e) => setRating(e.target.value);
     const updateContent = (e) => setContent(e.target.value);
+
+    if (!sessionUser) {
+        return (
+            <Redirect to="/" />
+        )
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();

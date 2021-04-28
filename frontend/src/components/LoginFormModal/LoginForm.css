@@ -1,3 +1,7 @@
+body {
+    background-color: red;
+}
+
 .label-text {
     font-size: 36px;
     font-family: Georgia, 'Times New Roman', Times, serif;

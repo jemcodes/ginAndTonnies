@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createDrink } from '../../store/drink';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Redirect } from 'react-router-dom';
 
 
 function CreateDrinkPage() {
@@ -13,10 +13,17 @@ function CreateDrinkPage() {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [drinkImg, setDrinkImg] = useState('');
+    const [errors, setErrors] = useState([]);
 
     const updateTitle = (e) => setTitle(e.target.value);
     const updateContent = (e) => setContent(e.target.value);
     const updateDrinkImg = (e) => setDrinkImg(e.target.value);
+
+    if (!sessionUser) {
+        return (
+            <Redirect to="/" />
+        )
+    }
 
     // useEffect(() => {
     //     dispatch(createDrink(payload));
@@ -41,7 +48,13 @@ function CreateDrinkPage() {
             userId: sessionUser.id
         };
 
-        const newDrink = await dispatch(createDrink(payload));
+        const newDrink = await dispatch(createDrink(payload))
+            .catch(async (res) => {
+                const data = await res.json();
+                if (data && data.errors) setErrors(data.errors);
+            })
+        ;
+
         if (newDrink) {
             history.push(`/drinks/${newDrink.id}`);
         }
@@ -50,6 +63,11 @@ function CreateDrinkPage() {
     return (
         <section className="create-drink-form">
             <form onSubmit={handleSubmit}>
+                <ul>
+                    {errors.map((error, index) => <li key={index}>
+                        {error}
+                    </li>)}
+                </ul>
                 <input
                     type="text"
                     placeholder="Drink Title"

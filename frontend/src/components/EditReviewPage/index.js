@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, Redirect } from 'react-router-dom';
 import { editReview, getReviews, deleteReview } from '../../store/review';
 import { getDrinks } from '../../store/drink';
 
@@ -47,6 +47,12 @@ function EditReviewPage() {
             setContent(foundReview.content)
         }
     }, [reviewList, reviewId])
+
+    if (!sessionUser) {
+        return (
+            <Redirect to="/" />
+        )
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();

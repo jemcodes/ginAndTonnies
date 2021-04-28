@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, Redirect } from 'react-router-dom';
 import { editDrink, getDrinks, deleteDrink } from '../../store/drink';
 
 function EditDrinkPage() {
@@ -35,6 +35,12 @@ function EditDrinkPage() {
             setDrinkImg(foundDrink.drinkImg)
         }
     }, [drinkList, id])
+
+    if (!sessionUser) {
+        return (
+            <Redirect to="/" />
+        )
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();

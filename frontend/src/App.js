@@ -48,6 +48,9 @@ function App() {
           <Route path="/drinks">
             <DrinkListPage />
           </Route>
+          <Route path="/" exact>
+            <h1>HOME PAGE OMG</h1>
+          </Route>
         </Switch>
       )}
     </>
