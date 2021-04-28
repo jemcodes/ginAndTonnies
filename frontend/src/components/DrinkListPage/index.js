@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { getDrinks } from '../../store/drink';
 
 function DrinkList() {
@@ -8,10 +8,17 @@ function DrinkList() {
     const drinkList = useSelector(state => {
         return state.drink.allDrinks
     });
+    const sessionUser = useSelector(state => state.session.user);
 
     useEffect(() => {
         dispatch(getDrinks());
     }, [dispatch]);
+
+    if (!sessionUser) {
+        return (
+            <Redirect to="/" />
+        )
+    }
 
     if (drinkList.length === 0) {
         return (
@@ -32,6 +39,7 @@ function DrinkList() {
             </ul>
         </div>
     )
-}
+    
+};
 
 export default DrinkList;

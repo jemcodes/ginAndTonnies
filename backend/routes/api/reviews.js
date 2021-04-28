@@ -3,7 +3,9 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 const db = require('../../db/models');
 const { route } = require('./drinks');
-const { requireAuth } = require('../../utils/auth')
+const { requireAuth } = require('../../utils/auth');
+const { handleValidationErrors } = require('../../utils/validation');
+const { validationResult, check } = require('express-validator');
 
 // GET a list of all the reviews
 router.get('/', requireAuth, asyncHandler(async (req, res, next) => {
@@ -24,10 +26,22 @@ router.get('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
         include: [db.User]
     });
     return res.json(singleReview);
-}))
+}));
+
+const validateReviewCreation = [
+    check('rating')
+        .exists({ checkFalsy: true })
+        .isNumeric()
+        .withMessage('Please provide a number.'),
+    check('content')
+        .exists({ checkFalsy: true })
+        .isLength({ min: 1 })
+        .withMessage('Please provide some content for your review.'),
+    handleValidationErrors,
+];
 
 // POST to create a new review
-router.post('/', requireAuth, asyncHandler(async (req, res) => {
+router.post('/', requireAuth, validateReviewCreation, asyncHandler(async (req, res) => {
     const { rating, content, userId, drinkId } = req.body;
 
     const newReview = await db.Review.create( {
@@ -47,7 +61,7 @@ router.post('/', requireAuth, asyncHandler(async (req, res) => {
 }))
 
 // PUT to update a single review
-router.put('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
+router.put('/:id(\\d+)', requireAuth, validateReviewCreation, asyncHandler(async (req, res) => {
     const reviewToUpdateId = parseInt(req.params.id, 10);
     const singleReviewToUpdate = await db.Review.findByPk(reviewToUpdateId);
 

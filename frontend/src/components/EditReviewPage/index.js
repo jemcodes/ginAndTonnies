@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, Redirect } from 'react-router-dom';
 import { editReview, getReviews, deleteReview } from '../../store/review';
 import { getDrinks } from '../../store/drink';
 
@@ -33,6 +33,7 @@ function EditReviewPage() {
     const [currentReview, setCurrentReview] = useState();
     const [rating, setRating] = useState('');
     const [content, setContent] = useState('');
+    const [errors, setErrors] = useState([]);
 
     const updateRating = (e) => setRating(e.target.value);
     const updateContent = (e) => setContent(e.target.value);
@@ -48,6 +49,12 @@ function EditReviewPage() {
         }
     }, [reviewList, reviewId])
 
+    if (!sessionUser) {
+        return (
+            <Redirect to="/" />
+        )
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -59,7 +66,13 @@ function EditReviewPage() {
             drinkId: drinkId
         };
 
-        const updatedReview = await dispatch(editReview(payload));
+        const updatedReview = await dispatch(editReview(payload))
+            .catch(async (res) => {
+                const data = await res.json();
+                if (data && data.errors) setErrors(data.errors);
+            })
+        ;
+
         if (updatedReview) {
             history.push(`/drinks/${drinkId}/reviews/`);
         }
@@ -79,6 +92,11 @@ function EditReviewPage() {
     return (
         <section className="edit-review-form">
             <form onSubmit={handleSubmit}>
+                <ul>
+                    {errors.map((error, index) => <li key={index}>
+                        {error}
+                    </li>)}
+                </ul>
                 <input
                     type="text"
                     placeholder="Rating"

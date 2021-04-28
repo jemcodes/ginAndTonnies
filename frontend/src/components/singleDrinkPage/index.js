@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams, NavLink, Redirect } from 'react-router-dom';
 import { getDrinks } from '../../store/drink';
 
 function SingleDrinkPage() {
@@ -12,6 +12,7 @@ function SingleDrinkPage() {
     }, [dispatch]);
 
     const drinkList = useSelector(state => state.drink.allDrinks);
+    const sessionUser = useSelector(state => state.session.user);
     
     const [currentDrink, setCurrentDrink] = useState();
     const [title, setTitle] = useState('');
@@ -29,6 +30,12 @@ function SingleDrinkPage() {
             setDrinkImg(foundDrink.drinkImg)
         }
     }, [drinkList, id])
+
+    if (!sessionUser) {
+        return (
+            <Redirect to="/" />
+        )
+    }
     
     if (!currentDrink) {
         return null;
