@@ -1,0 +1,68 @@
+/* .splash-wrapper {
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 500px;
+    background-color: #F7F7F7;
+}
+
+.splash-hero {
+    grid-column: 1 / 5;
+    text-align: end;
+    background-image: url(../../images/gandtbkgnd.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.splash-demo-panel {
+    grid-column: 1 / 5;
+    margin-top: 0.5em;
+    text-align: end;
+}
+
+.section {
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin-top: 0.5em;
+}
+
+h1 {
+    margin-right: 0.2em;
+    margin-top: 0.2em;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.cards {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: -8px 13px 35px 2px rgba(133, 133, 133, 1);
+    margin-top: 2em;
+    height: 100%;
+    align-items: center;
+}
+
+.cards:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    grid-column: 1 / 5;
+    margin: 0.5em;
+}
+
+button {
+    display: block;
+    margin: auto;
+    background-color: black;
+    border: none;
+    color: white;
+} */
+
