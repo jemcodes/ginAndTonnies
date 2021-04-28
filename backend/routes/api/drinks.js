@@ -4,6 +4,8 @@ const router = express.Router();
 const db = require('../../db/models');
 const reviewsRouter = require('./reviews.js');
 const { requireAuth } = require('../../utils/auth');
+const { handleValidationErrors } = require('../../utils/validation');
+const { validationResult, check } = require('express-validator');
 
 // GET a list of all the drinks
 router.get('/', requireAuth, asyncHandler(async (req, res) => {
@@ -22,8 +24,23 @@ router.get('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
     return res.json({ singleDrink });
 }));
 
+const validateDrinkCreation = [
+    check('title')
+        .exists({ checkFalsy: true })
+        .isLength({ min: 1, max: 100})
+        .withMessage('Please provide a title with no more than 100 characters.'),
+    check('content')
+        .exists({ checkFalsy: true })
+        .isLength({ min: 1 })
+        .withMessage('Please provide a description of this drink.'),
+    check('drinkImg')
+        .isURL()
+        .withMessage('Drink image must be a valid URL.'),
+    handleValidationErrors,
+];
+
 // POST to create a new drink
-router.post('/', requireAuth, asyncHandler(async (req, res) => {
+router.post('/', requireAuth, validateDrinkCreation, asyncHandler(async (req, res) => {
     const { title, content, drinkImg, userId } = req.body;
 
     const newDrink = await db.Drink.create( {
@@ -40,7 +57,7 @@ router.post('/', requireAuth, asyncHandler(async (req, res) => {
 }));
 
 // PUT to update a single drink
-router.put('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
+router.put('/:id(\\d+)', requireAuth, validateDrinkCreation, asyncHandler(async (req, res) => {
     const drinkToUpdateId = parseInt(req.params.id, 10);
     const singleDrinkToUpdate = await db.Drink.findByPk(drinkToUpdateId);
 
