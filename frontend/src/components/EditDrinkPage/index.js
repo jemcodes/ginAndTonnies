@@ -19,6 +19,7 @@ function EditDrinkPage() {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [drinkImg, setDrinkImg] = useState('');
+    const [errors, setErrors] = useState([]);
 
     const updateTitle = (e) => setTitle(e.target.value);
     const updateContent = (e) => setContent(e.target.value);
@@ -53,7 +54,14 @@ function EditDrinkPage() {
             userId: sessionUser.id
         };
 
-        const updatedDrink = await dispatch(editDrink(payload));
+        const updatedDrink = await dispatch(editDrink(payload))
+            .catch(async (res) => {
+                const data = await res.json();
+                if (data && data.errors) setErrors(data.errors);
+            })
+        ;
+
+
         if (updatedDrink) {
             history.push(`/drinks/${updatedDrink.id}`);
         }
@@ -73,6 +81,11 @@ function EditDrinkPage() {
     return (
         <section className="edit-drink-form">
             <form onSubmit={handleSubmit}>
+                <ul>
+                    {errors.map((error, index) => <li key={index}>
+                        {error}
+                    </li>)}
+                </ul>
                 <input
                     type="text"
                     placeholder="Drink Title"
