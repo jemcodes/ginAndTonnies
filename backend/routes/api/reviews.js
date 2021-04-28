@@ -3,9 +3,10 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 const db = require('../../db/models');
 const { route } = require('./drinks');
+const { requireAuth } = require('../../utils/auth')
 
 // GET a list of all the reviews
-router.get('/', asyncHandler(async (req, res, next) => {
+router.get('/', requireAuth, asyncHandler(async (req, res, next) => {
     const drinkId = parseInt(req.params.id, 10);
     const reviewsToShow = await db.Review.findAll( {
         where: {
@@ -17,7 +18,7 @@ router.get('/', asyncHandler(async (req, res, next) => {
 }))
 
 // GET a single review
-router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
+router.get('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
     const reviewId = parseInt(req.params.id, 10);
     const singleReview = await db.Review.findByPk(reviewId, {
         include: [db.User]
@@ -26,7 +27,7 @@ router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
 }))
 
 // POST to create a new review
-router.post('/', asyncHandler(async (req, res) => {
+router.post('/', requireAuth, asyncHandler(async (req, res) => {
     const { rating, content, userId, drinkId } = req.body;
 
     const newReview = await db.Review.create( {
@@ -46,7 +47,7 @@ router.post('/', asyncHandler(async (req, res) => {
 }))
 
 // PUT to update a single review
-router.put('/:id(\\d+)', asyncHandler(async (req, res) => {
+router.put('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
     const reviewToUpdateId = parseInt(req.params.id, 10);
     const singleReviewToUpdate = await db.Review.findByPk(reviewToUpdateId);
 
@@ -70,7 +71,7 @@ router.put('/:id(\\d+)', asyncHandler(async (req, res) => {
 }))
 
 // DELETE to delete a single review
-router.delete('/:id(\\d+)', asyncHandler(async (req, res) => {
+router.delete('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
     const reviewToDeleteId = parseInt(req.params.id, 10);
     const singleReviewToDelete = await db.Review.findByPk(reviewToDeleteId);
 
