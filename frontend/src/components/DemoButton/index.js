@@ -11,7 +11,7 @@ function DemoButton() {
     }
     
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="demo-row">
             <button className="demo-button">DEMO LOGIN</button>
         </form>
     )

@@ -6,39 +6,42 @@ function SplashPage() {
         // splass-wrapper begins
         <div className="splash-wrapper">
             <section className="top-container">
-                <header className="showcase">
+                {/* <header className="showcase">
                     <h1>gin & tonnies</h1>
                     <p>lorem ipsum text</p>
-                </header>
+                </header> */}
                 <div className="splash-hero-image">
                     <img alt={"Cocktails in the background behind app logo"} src={process.env.PUBLIC_URL + './images/gandtbkgnd.png'} />
                 </div>
             </section>
-            <section className="demo-row">
-                <div>
+            <section>
+                <div className='splash-demo-button'>
                     <DemoButton />
                 </div>
             </section>
             <section className="feature-row">
-                <div>
+                <div className="feature-row-left">
                     Image Placeholder
+                    <div>
+                        <h3>CHECK IN AND RATE BEER</h3>
+                        <p>{"Keep track of what you’ve tried and what you thought of it by checking in a beer and rating it."}</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>CHECK IN AND RATE BEER</h3>
-                    <p>{"Keep track of what you’ve tried and what you thought of it by checking in a beer and rating it."}</p>
-                </div>
-                <div>
-                    <h3>DRINK NEW BEERS, UNLOCK BADGES</h3>
-                    <p>{"Expand your palate by trying new & different beer styles and unlock achievements along the way."}</p>
+            </section>
+            <section className="feature-row">
+                <div className="feature-row-right">
+                    Image Placeholder
+                    <div>
+                        <h3>DRINK NEW BEERS, UNLOCK BADGES</h3>
+                        <p>{"Expand your palate by trying new & different beer styles and unlock achievements along the way."}</p>
+                    </div>
                 </div>
             </section>
             <section className="secondary-image">
-                <div>
-                    Secondary picture here
-                </div>
+                <img alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/ruyan-ayten-lPHrhCJ8nUo-unsplash.jpg'} />
                 <div>
                     <h2>{"Explore nearby popular bars, breweries, and beers."}</h2>
-                    <h3>{"Not sure where to grab a pint? Untappd shows you popular bars and venues nearby and what’s on tap."}</h3>
+                    <p>{"Not sure where to grab a pint? Untappd shows you popular bars and venues nearby and what’s on tap."}</p>
                 </div>
             </section>
             <section className="secondary-feature-row">

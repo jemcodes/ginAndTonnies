@@ -103,13 +103,73 @@ img {
     color: #000;
     text-transform: uppercase;
     font-size: 1.1rem;
-    bax-shadow: 0 1px 5px rgba(104,104,104, 0.8);
+    box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
 }
 
 .main-nav a:hover {
     background-color: #000;
     color: #F7F7F7;
 }
-
 */
+
+/*Top Container*/
+
+.top-container {
+    grid-template-areas:
+    'splash-hero-image splash-hero-image splash-hero-image splash-hero-image'
+    'splash-hero-image splash-hero-image splash-hero-image splash-hero-image'
+    'demo-row demo-row demo-row demo-row'
+    /* 'feature-row feature-row feature-row feature-row' */
+
+}
+
+.splash-hero-image {
+    grid-area: splash-hero-image;
+    /* min-height: 400px; */
+    /* background-image: url(../../images/gandtbkgnd.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
+}
+
+.feature-row {
+    /* grid-area: feature-row; */
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.feature-row-left {
+    background-color: #fff;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
+}
+
+.feature-row-right {
+    background-color: #fff;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
+}
+
+.secondary-image {
+    background-color: #F7F7F7; 
+    box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+}
+
+.demo-row {
+    grid-area: demo-row;
+}
+
+
 
