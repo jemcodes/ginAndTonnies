@@ -1,26 +1,34 @@
 import './SplashPage.css'
+import DemoButton from '../DemoButton';
 
 function SplashPage() {
     return (
         <div className="splash-wrapper">
-            <div className="splash-hero"><h3>Welcome to gin & tonnies</h3>
-            </div>
-            <div className="splash-demo-panel">
-                <h1>
-                    Welcome To gin & tonnies
-                </h1>
-                <h3>Drink Delightfully</h3>
-            </div>
-            <div className="section">
-                <div className="cards">
-                    <h2>Ratings & Reviews</h2>
-                    <button>See More</button>
+            <section className="top-container">
+                <header className="showcase">
+                    <h1>gin & tonnies</h1>
+                    <p>lorem ipsum text</p>
+                </header>
+                <div className="splash-hero-image">
+                    <img alt={"Cocktails in the background behind app logo"} src={process.env.PUBLIC_URL + './images/gandtbkgnd.png'} />
                 </div>
-                <div className="cards">
-                    <h2>Badges</h2>
-                    <button>See More</button>
+            </section>
+            <section className="splash-demo">
+                <DemoButton />
+            </section>
+            <section className="feature-row">
+                <div>
+                    Image Placeholder
                 </div>
-            </div>
+                <div>
+                    <h4>CHECK IN AND RATE BEER</h4>
+                    <p>{"Keep track of what you’ve tried and what you thought of it by checking in a beer and rating it."}</p>
+                </div>
+                <div>
+                    <h4>DRINK NEW BEERS, UNLOCK BADGES</h4>
+                    <p>{"Expand your palate by trying new & different beer styles and unlock achievements along the way."}</p>
+                </div>
+            </section>
             <div className="footer"><h3>Contact Me</h3></div>
         </div>
     )
