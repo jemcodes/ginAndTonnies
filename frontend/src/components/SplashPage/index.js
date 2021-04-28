@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import './SplashPage.css'
 import DemoButton from '../DemoButton';
+
 
 function SplashPage() {
     return (
@@ -19,7 +21,7 @@ function SplashPage() {
                     <DemoButton />
                 </div>
             </section>
-            <section className="feature-row">
+            <section className="feature-row-container">
                 <div className="feature-row-left">
                     Image Placeholder
                     <div>
@@ -27,8 +29,6 @@ function SplashPage() {
                         <p>{"Keep track of what you’ve tried and what you thought of it by checking in a beer and rating it."}</p>
                     </div>
                 </div>
-            </section>
-            <section className="feature-row">
                 <div className="feature-row-right">
                     Image Placeholder
                     <div>
@@ -45,7 +45,9 @@ function SplashPage() {
                 </div>
             </section>
             <section className="secondary-feature-row">
-                <h1>Other Great Features</h1>
+                <div className="secondary-feature-heading">
+                    <h1>Other Great Features</h1>
+                </div>
                 <div className="feature-box">
                     <h2>📔</h2>
                     <h3>{"UPDATED MENUS"}</h3>
@@ -64,15 +66,18 @@ function SplashPage() {
                 </div>
             </section>
             <footer>
-                <div>
-                    <p>jane martin &copy; 2021</p>
-                </div>
-                <div>
-                    <p>github link</p>
-                </div>
-                <div>
-                    <p>linkedin link</p>
-                </div>
+                <ul>
+                    <div> 
+                        <li>jane martin &copy; 2021</li>
+                        </div>
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/jemcodes">Github</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/jemcodes/">LinkedIn</a>
+                    </li>
+                </ul>
             </footer>
             {/* splash-wrapper ends */}
         </div>

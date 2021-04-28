@@ -19,24 +19,26 @@ function Navigation({ isLoaded }) {
         );
     } else {
         sessionLinks = (
-            <nav>
-                <ul>
-                    <li>
-                        <LoginFormModal />
-                    </li>
-                    <li>
-                        <NavLink to="/signup">
-                            <button type="button">
-                                Sign Up
-                            </button>
-                        </NavLink>
-                    </li>
-                    {/* <li>
-                        <DemoButton />
-                    </li> */}
-                </ul>
-            </nav>
-
+            <div>
+                <nav className="main-nav">
+                    
+                    <ul>
+                        <li>
+                            <LoginFormModal />
+                        </li>
+                        <li>
+                            <NavLink to="/signup">
+                                <button type="button">
+                                    Sign Up
+                                </button>
+                            </NavLink>
+                        </li>
+                        {/* <li>
+                            <DemoButton />
+                        </li> */}
+                    </ul>
+                </nav>
+            </div>
         );
     }
 
