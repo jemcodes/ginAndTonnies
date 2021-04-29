@@ -9,11 +9,6 @@ function SplashPage() {
         <div className="splash-wrapper">
             <section className="top-container">
                 <div className="showcase">
-                    {/* <h1>Your Web Presense</h1> */}
-                    <p>lorem ipsum text lorem ipsum text lorem ipsum text
-                        lorem ipsum text lorem ipsum text lorem ipsum text
-                        lorem ipsum text lorem ipsum text lorem ipsum text!
-                    </p>
                     <img className="logo-banner" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtthin2.png'} />
                     <button id="log-in-button" type="button">Sign In</button>
                     <button id="sign-up-button" type="button">Create An Account</button>
@@ -47,7 +42,7 @@ function SplashPage() {
                     <img className="drinks-header-2" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader2.png'} />
                     <div>
                         <h2>DRINK NEW COCKTAILS, UNLOCK NEW BADGES</h2>
-                        <p>{"Expand your palate by trying new & different beer styles and unlock achievements along the way."}</p>
+                        <p>{"Expand your palate by trying new & different bevvies and unlock achievements along the way."}</p>
                     </div>
                 </div>
             </section>
@@ -55,8 +50,8 @@ function SplashPage() {
                 <div className="more-info">
                 {/* <img alt={"Colorful cocktail display"} src={'https://images.unsplash.com/photo-1502819126416-d387f86d47a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80'} /> */}
                     <div className="more-info-text">
-                        <h1>{"Explore nearby popular bars, breweries, and beers."}</h1>
-                        <h2>{"Not sure where to grab a pint? Untappd shows you popular bars and venues nearby and what’s on tap."}</h2>
+                        <h1>{"Explore popular venues and cocktails."}</h1>
+                        <h2>{"Not sure where to grab a drink? We'll show you popular venues nearby and what’s on the menu."}</h2>
                         {/* <a target="_blank" href="#">Buy Now</a> */}
                     </div>
                 </div>
