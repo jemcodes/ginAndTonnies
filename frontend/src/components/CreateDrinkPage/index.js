@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createDrink } from '../../store/drink';
 import { useHistory, Redirect } from 'react-router-dom';
+import './CreateDrink.css';
 
 
 function CreateDrinkPage() {
@@ -68,21 +69,24 @@ function CreateDrinkPage() {
                         {error}
                     </li>)}
                 </ul>
-                <input
-                    type="text"
-                    placeholder="Drink Title"
-                    value={title}
-                    onChange={updateTitle} />
-                <input
-                    type="text"
-                    placeholder="Drink Description"
-                    value={content}
-                    onChange={updateContent} />
-                <input
-                    type="text"
-                    placeholder="Drink Picture"
-                    value={drinkImg}
-                    onChange={updateDrinkImg} />
+                <div id="create-drink-container">
+                    <input className="create-drink-title"
+                        type="text"
+                        placeholder="DRINK TITLE"
+                        value={title}
+                        onChange={updateTitle} />
+                    <input
+                        type="text"
+                        placeholder="DRINK DESCRIPTION"
+                        value={content}
+                        onChange={updateContent} />
+                    <input
+                        type="text"
+                        placeholder="DRINK PICTURE"
+                        value={drinkImg}
+                        onChange={updateDrinkImg} />
+                </div>
+                <h2>Let's check out your new bevvie!</h2>
                 <button type="submit">Create new drink</button>
             </form>
         </section>
