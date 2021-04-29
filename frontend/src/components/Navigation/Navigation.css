@@ -1,14 +1,14 @@
 /* .main-nav ul {
     max-width: 100%;
-    background-color: black;
+    background-color: gray;
     display: grid;
     grid-gap: 20px;
     padding: 0;
     list-style: none;
     grid-template-columns: repeat(4, 1fr);
-} */
+}
 
-/* .main-nav a {
+.main-nav a {
     background-color: #F7F7F7;
     display: block;
     text-decoration: non;
@@ -24,3 +24,21 @@
     background-color: #000;
     color: #F7F7F7;
 } */
+
+#nav-bar {
+    border: 3px solid blue;
+    background: #F1F6F2;
+    text-align: center;
+    /* padding: 0.5rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-links li {
+    border: 3px solid blue;
+    list-style: none;
+    /* display: inline; */
+    display: flex;
+}

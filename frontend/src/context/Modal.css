@@ -1,3 +1,5 @@
+/* ORIGINAL MODAL STYLING
+
 #modal {
   position: fixed;
   top: 0;
@@ -20,5 +22,97 @@
 
 #modal-content {
   position: absolute;
-  background-color:red;
+  background-color:green;
+} 
+END ORIGINAL MODAL STYLING
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Raleway&display=swap');
+/* font-family: 'Alice', serif;
+font-family: 'Raleway', sans-serif; */
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16pt;
+  color: #0D2217;
 }
+
+
+#modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-content {
+  position: fixed;
+  background-color: #FFF;
+  width: 30vw;
+  height: 40vh;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  /* border: 3px solid blue; */
+} 
+
+#modal-content img {
+  width: 50%;
+  /* border: 3px solid red; */
+}
+
+input {
+  /* border: 3px solid red; */
+  position: relative;
+  border: none;
+  width: 70%;
+  display: block;
+  margin: 40px auto;
+  background-color: #F7F7F7;
+}
+
+#modal-user-field {
+  background-color: #E3EEE6;
+  /* border: 3px solid red; */
+  padding: 15px;
+  border-radius: 4px;
+  /* margin: 1vh; */
+  font-size: 14pt;
+  font-family: 'Raleway', sans-serif;
+  color: #0D2217;
+}
+
+#modal-password-field {
+  background-color: #E3EEE6;
+  /* border: 3px solid red; */
+  padding: 15px;
+  border-radius: 4px;
+  /* margin: 1vh; */
+  font-size: 14pt;
+  font-family: 'Raleway', sans-serif;
+  color: #0D2217;
+}
+
+.welcome-button {
+  /* border: 3px solid red; */
+  background-color: #0D2217;
+  margin: 40px 0 0 0;
+  color: #FFF;
+}
+

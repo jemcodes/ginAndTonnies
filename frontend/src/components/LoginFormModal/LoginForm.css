@@ -1,10 +1,10 @@
 body {
-    background-color: #F7F7F7;
-}
-
-.label-text {
-    font-size: 36px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: red;
 }
 
+.navigation-links li {
+    border: 3px solid blue;
+    list-style: none;
+    /* display: inline; */
+    display: flex;
+}
