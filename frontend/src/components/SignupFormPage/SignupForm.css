@@ -24,6 +24,21 @@ body {
     width: 25%;
 }
 
+#signup-container h1 {
+    color: #E3EEE6;
+    margin: 2px;
+    font-family: 'Alice', serif; 
+    font-size: 32pt;
+} 
+
+#signup-container h2 {
+    color: #000;
+    margin: 2px;
+    font-size: 22pt;
+}
+
+
+
 input {
   /* border: 3px solid red; */
   position: relative;

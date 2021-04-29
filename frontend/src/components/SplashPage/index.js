@@ -64,8 +64,8 @@ function SplashPage() {
                 <div className="more-info">
                 {/* <img alt={"Colorful cocktail display"} src={'https://images.unsplash.com/photo-1502819126416-d387f86d47a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80'} /> */}
                     <div className="more-info-text">
-                        <h1>{"Explore popular venues and cocktails."}</h1>
-                        <h2>{"Not sure where to grab a drink? We'll show you popular venues nearby and what’s on the menu."}</h2>
+                        <h1>{"Explore popular cocktails."}</h1>
+                        <h2>{`Liquor ipsum dolor sit amet bailey's irish cream moonwalk; the macallan glenlivet. Cuba libre, hi-fi rusty nail. Auchroisk ruby dutchess mudslide dark and stormy brave bull paddy. Bruichladdich piña colada wolfram glenmorangie jack and coke harper's dalmore joker ballantine planter's punch. Agua de valencia corn n' oil link up glendronach auchentoshan glenfarclas glenfarclas glen scotia caol ila, old mr. boston. Aberlour, french 75, jim beam hanky-panky hanky-panky seven and seven royal widow leite de onça sloe gin? Zombie blue blazer hurricane mickey slim aberlour pimm's cup vodka martini red lotus flirtini two fingers bacardi pink gin cape cod. Glen garioch irish coffee, "tom and jerry." Churchill jack and coke dewar's scotch whisky haig & haig "pinch" savoy corpse reviver.`}</h2>
                         {/* <a target="_blank" href="#">Buy Now</a> */}
                     </div>
                 </div>
