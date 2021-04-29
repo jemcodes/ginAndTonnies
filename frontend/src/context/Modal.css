@@ -27,6 +27,16 @@
 END ORIGINAL MODAL STYLING
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Raleway&display=swap');
+/* font-family: 'Alice', serif;
+font-family: 'Raleway', sans-serif; */
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16pt;
+  color: #333;
+}
+
 
 #modal {
   position: fixed;
@@ -59,18 +69,30 @@ END ORIGINAL MODAL STYLING
   border-radius: 4px;
   text-align: center;
   padding: 10px;
+  border: 3px solid red;
 } 
 
 #modal-content img {
   width: 50%;
+  border: 3px solid red;
 }
 
 #modal-field {
   background-color: green;
+  border: 3px solid red;
 }
 
 input {
+  border: 3px solid red;
   width: 50%;
   display: block;
   margin: 0 auto;
+  /* border: none; */
+  background-color: #F7F7F7;
+}
+
+.welcome-button {
+  border: 3px solid red;
+  background-color: #BAD5C2;
+  color: #337233;
 }

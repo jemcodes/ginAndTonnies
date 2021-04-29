@@ -59,7 +59,7 @@ function LoginForm() {
                     required
                 />
             </label>
-            <button type="submit">WELCOME BACK</button>
+            <button className="welcome-button" type="submit">WELCOME BACK</button>
         </form>
     );
 }
