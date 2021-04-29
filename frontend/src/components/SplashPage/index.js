@@ -77,9 +77,10 @@ function SplashPage() {
             </section> */}
             <footer>
                 <ul className={"footer-links"}>
-                    <li><a target="_blank" href="#">jane martin</a></li>
-                    <li><a target="_blank" href="#">github</a></li>
-                    <li><a target="_blank" href="#">linkedin</a></li>
+                    <li>mixed with joy by jane martin &copy; 2021</li>
+                    <li><a target="_blank" href="https://github.com/jemcodes">GitHub</a><i class="fab fa-github"></i></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/jemcodes/">LinkedIn</a><i class="fab fa-linkedin"></i></li>
+                    <li>🍸cheers!🍸</li>
                 </ul>
             </footer>
             {/* splash-wrapper ends */}

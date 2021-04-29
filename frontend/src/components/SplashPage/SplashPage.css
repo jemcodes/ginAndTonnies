@@ -203,7 +203,7 @@ img {
 /* Footer */
 footer {
     margin-top: 0.5rem;
-    background: #BAD5C2;
+    background: #F1F6F2;
     text-align: center;
     /* padding: 0.5rem; */
 
@@ -219,9 +219,18 @@ footer {
 .footer-links li {
     display: inline;
     list-style: none;
-    padding: 0rem 15rem;
-    font-size: 20pt;
+    padding: 0rem 8rem;
+    font-size: 18pt;
+    color: #337233;
 }
 .footer-links a {
     color: #337233;
+}
+
+.fa-github {
+    padding: 0 0 0 6px;
+}
+
+.fa-linkedin {
+    padding: 0 0 0 6px;
 }
