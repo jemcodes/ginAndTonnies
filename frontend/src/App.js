@@ -11,6 +11,7 @@ import EditDrinkPage from './components/EditDrinkPage';
 import SingleDrinkReviewsPage from './components/SingleDrinkReviewsPage';
 import CreateReviewPage from './components/CreateReviewPage';
 import EditReviewPage from './components/EditReviewPage';
+import SplashPage from './components/SplashPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -49,7 +50,7 @@ function App() {
             <DrinkListPage />
           </Route>
           <Route path="/" exact>
-            <h1>HOME PAGE OMG</h1>
+            <SplashPage />
           </Route>
         </Switch>
       )}

@@ -1,0 +1,12 @@
+button{
+    background: #020202;
+    color: #fff;
+    font-size: 1em;
+    padding: 18px 22px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
