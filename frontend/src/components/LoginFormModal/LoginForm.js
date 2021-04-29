@@ -42,7 +42,7 @@ function LoginForm() {
             </ul>
             <label id="modal-user">
         <input id="modal-user-field"
-                    placeholder="Username or Email"
+                    placeholder="USERNAME OR EMAIL"
                     type="text"
                     value={credential}
                     onChange={(e) => setCredential(e.target.value)}
@@ -51,7 +51,7 @@ function LoginForm() {
             </label>
         <label id="modal-password">
             <input id="modal-password-field"
-                        placeholder="Password"
+                        placeholder="PASSWORD"
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}

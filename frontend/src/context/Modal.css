@@ -34,7 +34,7 @@ font-family: 'Raleway', sans-serif; */
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 16pt;
-  color: #333;
+  color: #0D2217;
 }
 
 
@@ -62,47 +62,56 @@ body {
 }
 
 #modal-content {
-  position: absolute;
+  position: relative;
   background-color: #FFF;
-  width: 35vw;
-  height: 50vh;
-  border-radius: 4px;
+  width: 30vw;
+  height: 40vh;
+  border-radius: 8px;
   text-align: center;
   padding: 10px;
-  border: 3px solid red;
+  /* border: 3px solid blue; */
 } 
 
 #modal-content img {
   width: 50%;
-  border: 3px solid red;
-}
-
-#modal-user-field {
-  background-color: green;
-  border: 3px solid red;
-  padding: 15px;
-  border-radius: 4px;
-  /* margin: 1vh; */
-}
-
-#modal-password-field {
-  background-color: green;
-  border: 3px solid red;
-  padding: 15px;
-  border-radius: 4px;
-  /* margin: 1vh; */
+  /* border: 3px solid red; */
 }
 
 input {
-  border: 3px solid red;
-  width: 50%;
+  /* border: 3px solid red; */
+  border: none;
+  width: 70%;
   display: block;
-  margin: 0 auto;
+  margin: 40px auto;
   background-color: #F7F7F7;
 }
 
-.welcome-button {
-  border: 3px solid red;
-  background-color: #BAD5C2;
-  color: #337233;
+#modal-user-field {
+  background-color: #E3EEE6;
+  /* border: 3px solid red; */
+  padding: 15px;
+  border-radius: 4px;
+  /* margin: 1vh; */
+  font-size: 14pt;
+  font-family: 'Raleway', sans-serif;
+  color: #0D2217;
 }
+
+#modal-password-field {
+  background-color: #E3EEE6;
+  /* border: 3px solid red; */
+  padding: 15px;
+  border-radius: 4px;
+  /* margin: 1vh; */
+  font-size: 14pt;
+  font-family: 'Raleway', sans-serif;
+  color: #0D2217;
+}
+
+.welcome-button {
+  /* border: 3px solid red; */
+  background-color: #0D2217;
+  margin: 40px 0 0 0;
+  color: #FFF;
+}
+
