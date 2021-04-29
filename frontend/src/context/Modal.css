@@ -77,9 +77,20 @@ body {
   border: 3px solid red;
 }
 
-#modal-field {
+#modal-user-field {
   background-color: green;
   border: 3px solid red;
+  padding: 15px;
+  border-radius: 4px;
+  /* margin: 1vh; */
+}
+
+#modal-password-field {
+  background-color: green;
+  border: 3px solid red;
+  padding: 15px;
+  border-radius: 4px;
+  /* margin: 1vh; */
 }
 
 input {
@@ -87,7 +98,6 @@ input {
   width: 50%;
   display: block;
   margin: 0 auto;
-  /* border: none; */
   background-color: #F7F7F7;
 }
 

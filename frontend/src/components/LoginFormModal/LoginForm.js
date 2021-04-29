@@ -49,17 +49,16 @@ function LoginForm() {
                     required
                 />
             </label>
-            <label id="modal-password">
-
-        <input id="modal-password-field"
-                    placeholder="Password"
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-            </label>
-            <button className="welcome-button" type="submit">WELCOME BACK</button>
+        <label id="modal-password">
+            <input id="modal-password-field"
+                        placeholder="Password"
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+            />
+        </label>
+        <button className="welcome-button" type="submit">WELCOME BACK</button>
         </form>
     );
 }
