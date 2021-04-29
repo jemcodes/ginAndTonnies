@@ -35,7 +35,7 @@ function SignupFormPage() {
             </ul>
             <label class="label-text">
                 Email
-        <input
+        <input id="signup-email-field"
                     type="text"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}

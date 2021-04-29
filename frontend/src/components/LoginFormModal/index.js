@@ -3,17 +3,18 @@ import { Modal } from '../../context/Modal';
 import LoginForm from './LoginForm';
 import "./LoginForm.css";
 
+
 function LoginFormModal() {
     const [showModal, setShowModal] = useState(false);
 
     return (
         <>
-            <button onClick={() => setShowModal(true)}>Log In</button>
+            {/* <button className="navigation-links" onClick={() => setShowModal(true)}>SIGN IN</button>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     <LoginForm />
                 </Modal>
-            )}
+            )} */}
         </>
     );
 }

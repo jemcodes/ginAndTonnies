@@ -1,17 +1,33 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './SplashPage.css'
+import { Modal } from '../../context/Modal';
+import LoginForm from '../LoginFormModal/LoginForm';
 import DemoButton from '../DemoButton';
 
 
 function SplashPage() {
+    const [showModal, setShowModal] = useState(false);
+
     return (
         // splass-wrapper begins
         <div className="splash-wrapper">
             <section className="top-container">
                 <div className="showcase">
                     <img className="logo-banner" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtthin2.png'} />
+                    <button id="log-in-button" onClick={() => setShowModal(true)}>SIGN IN</button>
+                    {showModal && (
+                        <Modal onClose={() => setShowModal(false)}>
+                            <LoginForm />
+                        </Modal>
+                    )}
+                    <NavLink to="/signup">
+                        <button type="button" id="sign-up-button">
+                            CREATE AN ACCOUNT
+                            </button>
+                    </NavLink>
                     <button id="log-in-button" type="button">Sign In</button>
-                    <button id="sign-up-button" type="button">Create An Account</button>
+                    {/* <button  type="button">Create An Account</button> */}
                     {/* <a target="_blank" href="#">Read More</a> */}
                 </div>
                 {/* <div className={"top-box top-box-a"}>

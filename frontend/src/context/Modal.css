@@ -62,7 +62,7 @@ body {
 }
 
 #modal-content {
-  position: relative;
+  position: fixed;
   background-color: #FFF;
   width: 30vw;
   height: 40vh;
@@ -79,6 +79,7 @@ body {
 
 input {
   /* border: 3px solid red; */
+  position: relative;
   border: none;
   width: 70%;
   display: block;

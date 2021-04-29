@@ -14,37 +14,45 @@ function Navigation({ isLoaded }) {
         sessionLinks = (
             <div>
                 <ProfileButton user={sessionUser} />
-                <NavLink to="/drinks/new">Create A Drink</NavLink>
+                <NavLink to="/drinks/new">
+                    <button type="button">
+                        Create A Drink
+                    </button>
+                </NavLink>
             </div>
         );
     } else {
         sessionLinks = (
             <div>
-                <nav className="main-nav">
-                    <ul>
-                        <li><LoginFormModal /></li>
-                        <li><NavLink to="/signup">
-                                <button type="button">
-                                    Sign Up
-                                </button>
-                            </NavLink>
-                        </li>
-                        {/* <li>
-                            <DemoButton />
-                        </li> */}
-                    </ul>
-                </nav>
+                <ul className="navigation-links">
+                    <LoginFormModal />
+                    <li><NavLink to="/signup">
+                            <button type="button">
+                                CREATE AN ACCOUNT
+                            </button>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <DemoButton />
+                    </li>
+                </ul>
             </div>
         );
     }
 
     return (
-        <ul>
-            <li>
-                <NavLink exact to="/">Home</NavLink>
-                {isLoaded && sessionLinks}
-            </li>
-        </ul>
+        <div className='nav-bar'>
+            <ul className="navigation-links">
+                <li>
+                    <NavLink exact to="/">
+                        <button type="button">
+                            HOME
+                        </button>
+                    </NavLink>
+                    {isLoaded && sessionLinks}
+                </li>
+            </ul>
+        </div>
     );
 }
 
