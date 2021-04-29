@@ -1,3 +1,5 @@
+/* ORIGINAL MODAL STYLING
+
 #modal {
   position: fixed;
   top: 0;
@@ -20,5 +22,44 @@
 
 #modal-content {
   position: absolute;
-  background-color:red;
+  background-color:green;
+} 
+END ORIGINAL MODAL STYLING
+*/
+
+
+#modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-content {
+  position: absolute;
+  background-color: #FFF;
+  width: 35vw;
+  height: 50vh;
+  border-radius: 4px;
+  text-align: center;
+} 
+
+#modal-content img {
+  width: 50%;
 }
