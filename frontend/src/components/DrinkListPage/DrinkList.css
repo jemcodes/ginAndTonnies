@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Raleway&display=swap');
+/* font-family: 'Alice', serif;
+font-family: 'Raleway', sans-serif; */
+
+#drink-list-container {
+    border: 5px solid green;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+#drink-list-container h1 {
+    color: #333;
+    font-family: 'Alice', serif;
+    padding: 15px 40px;
+    margin: 10px 0 5px 0;
+}
+
+#drink-list-container p {
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    padding: 15px 40px;
+    margin: 10px 0 5px 0;
+    display: flex;
+}
+
+.drink-profile-container {
+    border: 3px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+    text-align: center;
+}
+
+#drink-profile {
+    list-style: none;
+}
+
+.drink-img-container {
+    position: relative;
+    width: 200px;     
+    height: 300px;
+    overflow: hidden;
+}
+
+#drink-profile-img {
+    position: absolute;
+     max-width: 100%;
+     width: 100%;
+     height: auto;
+     top: 50%;     
+     left: 50%;
+     transform: translate( -50%, -50%);
+}
+
+.drink-title-text {
+    display: inline;
+    position: relative;
+    margin-top: 14vh;
+    margin-left: 14vw;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30pt;
+    text-decoration: none;
+}
