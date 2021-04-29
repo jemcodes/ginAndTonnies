@@ -5,6 +5,87 @@ font-family: 'Raleway', sans-serif; */
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 16pt;
-  color: #0D2217;
+  color: #F7F7F7;
 }
 
+#signup-container {
+    background-color: #143322;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#signup-banner {
+    /* background-color: blue; */
+    width: 25%;
+}
+
+input {
+  /* border: 3px solid red; */
+  position: relative;
+  border: none;
+  width: 70%;
+  display: block;
+  margin: 40px auto;
+  background-color: #F7F7F7;
+}
+
+#signup-email-field {
+    background-color: #E3EEE6;
+    /* border: 3px solid red; */
+    width: 20vw;
+    padding: 15px;
+    border-radius: 4px;
+    /* margin: 1vh; */
+    font-size: 14pt;
+    font-family: 'Raleway', sans-serif;
+    color: #0D2217;
+}
+
+#signup-username-field {
+    background-color: #E3EEE6;
+    /* border: 3px solid red; */
+    width: 20vw;
+    padding: 15px;
+    border-radius: 4px;
+    /* margin: 1vh; */
+    font-size: 14pt;
+    font-family: 'Raleway', sans-serif;
+    color: #0D2217;
+}
+
+#signup-password-field {
+    background-color: #E3EEE6;
+    width: 20vw;
+    /* border: 3px solid red; */
+    padding: 15px;
+    border-radius: 4px;
+    /* margin: 1vh; */
+    font-size: 14pt;
+    font-family: 'Raleway', sans-serif;
+    color: #0D2217;
+}
+
+#signup-confirm-field {
+    background-color: #E3EEE6;
+    width: 20vw;
+    /* border: 3px solid red; */
+    padding: 15px;
+    border-radius: 4px;
+    /* margin: 1vh; */
+    font-size: 14pt;
+    font-family: 'Raleway', sans-serif;
+    color: #0D2217;
+}
+
+.signup-form-button {
+    background-color: transparent;
+    border: 2px solid #FFF;
+    border-radius: 4px;
+    margin: 40px 0 40px 0;
+    color: #FFF;
+}
