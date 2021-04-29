@@ -7,3 +7,49 @@ body {
   font-size: 16pt;
   color: #F7F7F7;
 }
+
+input {
+  /* border: 3px solid red; */
+  position: relative;
+  border: none;
+  width: 70%;
+  display: block;
+  margin: 40px auto;
+  background-color: #F7F7F7;
+}
+
+.create-drink-title {
+    background-color: #E3EEE6;
+    /* border: 3px solid red; */
+    width: 60vw;
+    padding: 15px;
+    border-radius: 4px;
+    /* margin: 1vh; */
+    font-size: 14pt;
+    font-family: 'Raleway', sans-serif;
+    color: #0D2217;
+}
+
+.create-drink-content {
+    background-color: #E3EEE6;
+    /* border: 3px solid red; */
+    width: 60vw;
+    padding: 15px;
+    border-radius: 4px;
+    /* margin: 1vh; */
+    font-size: 14pt;
+    font-family: 'Raleway', sans-serif;
+    color: #0D2217;
+}
+
+.create-drink-img {
+    background-color: #E3EEE6;
+    /* border: 3px solid red; */
+    width: 60vw;
+    padding: 15px;
+    border-radius: 4px;
+    /* margin: 1vh; */
+    font-size: 14pt;
+    font-family: 'Raleway', sans-serif;
+    color: #0D2217;
+}

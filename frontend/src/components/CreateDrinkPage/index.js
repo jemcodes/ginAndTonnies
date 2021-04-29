@@ -72,17 +72,17 @@ function CreateDrinkPage() {
                 <div id="create-drink-container">
                     <input className="create-drink-title"
                         type="text"
-                        placeholder="DRINK TITLE"
+                        placeholder="YOUR BEVERAGE TITLE"
                         value={title}
                         onChange={updateTitle} />
-                    <input
+                    <input className="create-drink-content"
                         type="text"
-                        placeholder="DRINK DESCRIPTION"
+                        placeholder="DESCRIBE YOUR DRINK HERE"
                         value={content}
                         onChange={updateContent} />
-                    <input
+                    <input className="create-drink-img"
                         type="text"
-                        placeholder="DRINK PICTURE"
+                        placeholder="ADD AN IMAGE URL TO SHOW IT OFF"
                         value={drinkImg}
                         onChange={updateDrinkImg} />
                 </div>
