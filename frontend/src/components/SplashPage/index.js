@@ -14,9 +14,10 @@ function SplashPage() {
                         lorem ipsum text lorem ipsum text lorem ipsum text
                         lorem ipsum text lorem ipsum text lorem ipsum text!
                     </p>
-                    <a target="_blank" href="#">Read More</a>
+                    <img alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtbkgnd.png'} />
+                    {/* <a target="_blank" href="#">Read More</a> */}
                 </header>
-                <div className={"top-box top-box-a"}>
+                {/* <div className={"top-box top-box-a"}>
                     <h4>Membership</h4>
                     <p className="price">$199/mo</p>
                     <a target="_blank" href="#">Buy Now</a>
@@ -25,11 +26,10 @@ function SplashPage() {
                     <h4>Pro Membership</h4>
                     <p className="price">$199/mo</p>
                     <a target="_blank" href="#">Buy Now</a>
-                </div>
+                </div> */}
             </section>
             <section className="boxes">
                 <div className='box'>
-                    <h3>Analytics</h3>
                     <DemoButton />
                 </div>
             </section>
