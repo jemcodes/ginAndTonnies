@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Raleway&display=swap');
+/* font-family: 'Alice', serif;
+font-family: 'Raleway', sans-serif; */
+
 html {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #000;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16pt;
     color: #333;
     background-color: #F7F7F7;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     line-height: 1.4;
     margin: 0;
     /* width: 100%; */
@@ -19,7 +24,7 @@ img {
 }
 
 .splash-wrapper {
-    border: 3px solid green;
+    /* border: 3px solid green; */
     display: grid;
     position: relative;
     width: 100%;
@@ -28,31 +33,76 @@ img {
 
 /*Top Container*/
 .top-container {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     margin: 0;
     width: 100%;
+    position: relative;
     display: grid;
     grid-template-areas:
     'splash-hero-image splash-hero-image splash-hero-image splash-hero-image'
     'splash-hero-image splash-hero-image splash-hero-image splash-hero-image';
-    box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
+    /* box-shadow: 0 1px 5px rgba(104,104,104, 0.8); */
 }
-.showcase {
+
+/* .showcase {
     grid-area: splash-hero-image;
-    /* background-image: url(../../images/gandtbkgnd.png);
+    background-image: url(../../images/gandtbkgnd.png);
     background-size: cover;
     background-position: center-top;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
     min-width: 100%;
-    /* min-width: 700px; */
+    min-width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
+} */
+
+.showcase {
+    /* border: 3px solid red; */
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.showcase img {
+  width: 100%;
+  margin: 0;
+  height: auto;
+}
+
+#log-in-button {
+    position: absolute;
+    display: inline-block;
+    margin: 30px 10px;
+    right: 14%;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 18px 22px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#sign-up-button {
+    position: absolute;
+    display: inline-block;
+    margin: 30px 10px;
+    right: 1%;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 18px 22px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .showcase h1 {
@@ -62,11 +112,11 @@ img {
 .showcase img {
     min-width: 100%;
     /* max-height: 730px; */
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .boxes  {
-    border: 3px solid purple;
+    /* border: 3px solid purple; */
     background-color: #fff;
     padding: 1rem 2rem;
     display: flex;
@@ -76,7 +126,7 @@ img {
 }
 
 .feature-row-container {
-    border: 3px solid pink;
+    /* border: 3px solid pink; */
     grid-template-areas:
     'feature-row-left feature-row-right'
     'feature-row-left feature-row-right';
@@ -100,6 +150,11 @@ img {
     text-align: center;
     padding: 3rem 5rem;
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
+}
+
+.feature-row-container h2 {
+    font-family: 'Alice', serif;
+    font-size: 40px;
 }
 
 .info {
@@ -128,6 +183,11 @@ img {
     text-align: center;
 }
 
+.more-info-text h1 {
+    font-family: 'Alice', serif;
+    font-size: 70px;
+}
+
 /* .secondary-image img {
     width: 100%;
 }
@@ -143,19 +203,24 @@ img {
 /* Footer */
 footer {
     margin-top: 0.5rem;
-    background: #000;
+    background: #BAD5C2;
     text-align: center;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 .footer-links li {
     display: inline;
     list-style: none;
-    padding: 3rem;
+    padding: 0rem 15rem;
+    font-size: 20pt;
 }
 .footer-links a {
-    color: white;
+    color: #337233;
 }

@@ -14,7 +14,9 @@ function SplashPage() {
                         lorem ipsum text lorem ipsum text lorem ipsum text
                         lorem ipsum text lorem ipsum text lorem ipsum text!
                     </p>
-                    <img alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtthin.png'} />
+                    <img className="logo-banner" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtthin2.png'} />
+                    <button id="log-in-button" type="button">Sign In</button>
+                    <button id="sign-up-button" type="button">Create An Account</button>
                     {/* <a target="_blank" href="#">Read More</a> */}
                 </div>
                 {/* <div className={"top-box top-box-a"}>
@@ -35,16 +37,16 @@ function SplashPage() {
             </section>
             <section className="feature-row-container">
                 <div className="feature-row-left">
-                    Image Placeholder
+                    <img className="drinks-header-1" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader1.png'} />
                     <div>
-                        <h3>CHECK IN AND RATE BEER</h3>
-                        <p>{"Keep track of what you’ve tried and what you thought of it by checking in a beer and rating it."}</p>
+                        <h2>RATE YOUR FAVORITE COCKTAILS</h2>
+                        <p>{"Keep track of your favorite drinks by checking in a cocktail and rating it."}</p>
                     </div>
                 </div>
                 <div className="feature-row-right">
-                    Image Placeholder
+                    <img className="drinks-header-2" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader2.png'} />
                     <div>
-                        <h3>DRINK NEW BEERS, UNLOCK BADGES</h3>
+                        <h2>DRINK NEW COCKTAILS, UNLOCK NEW BADGES</h2>
                         <p>{"Expand your palate by trying new & different beer styles and unlock achievements along the way."}</p>
                     </div>
                 </div>
