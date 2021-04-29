@@ -14,7 +14,7 @@ function SplashPage() {
                         lorem ipsum text lorem ipsum text lorem ipsum text
                         lorem ipsum text lorem ipsum text lorem ipsum text!
                     </p>
-                    <img alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtbkgnd.png'} />
+                    <img alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtthin.png'} />
                     {/* <a target="_blank" href="#">Read More</a> */}
                 </div>
                 {/* <div className={"top-box top-box-a"}>
