@@ -39,8 +39,8 @@ function SplashPage() {
                 <div className="feature-row-right">
                     <img className="drinks-header-2" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader2.png'} />
                     <div>
-                        <h2>DRINK NEW COCKTAILS, UNLOCK NEW BADGES</h2>
-                        <p>{"Expand your palate by trying new & different bevvies and unlock achievements along the way."}</p>
+                        <h2>RATE YOUR FAVORITE COCKTAILS</h2>
+                        <p>{"Keep track of your favorite drinks by checking in a cocktail and rating it."}</p>
                     </div>
                 </div>
             </section>
