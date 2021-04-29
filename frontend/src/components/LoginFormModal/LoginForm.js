@@ -5,21 +5,32 @@ import { useDispatch } from "react-redux";
 
 function LoginForm() {
     const dispatch = useDispatch();
-    // const history = useHistory();
+    const history = useHistory();
     const [credential, setCredential] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setErrors([]);
-        return dispatch(sessionActions.login({ credential, password })).catch(
+        // setErrors([]);
+        // return dispatch(sessionActions.login({ credential, password })).catch(
+        //     async (res) => {
+        //         const data = await res.json();
+        //         if (data && data.errors) setErrors(data.errors);
+        //     },
+        // );
+        const successfulLogin = await dispatch(sessionActions.login({ credential, password })).catch(
             async (res) => {
                 const data = await res.json();
                 if (data && data.errors) setErrors(data.errors);
-            },
-            // history.push(`/drinks/`)
-        );
+        });
+        if (successfulLogin) {
+            history.push(`/drinks/`);
+        }
+
+        if (!successfulLogin) {
+            return null;
+        }
     };
 
     return (
