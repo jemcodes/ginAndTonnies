@@ -9,7 +9,7 @@ function SplashPage() {
         <div className="splash-wrapper">
             <section className="top-container">
                 <div className="showcase">
-                    <h1>Your Web Presense</h1>
+                    {/* <h1>Your Web Presense</h1> */}
                     <p>lorem ipsum text lorem ipsum text lorem ipsum text
                         lorem ipsum text lorem ipsum text lorem ipsum text
                         lorem ipsum text lorem ipsum text lorem ipsum text!
@@ -50,11 +50,13 @@ function SplashPage() {
                 </div>
             </section>
             <section className="info">
+                <div className="more-info">
                 {/* <img alt={"Colorful cocktail display"} src={'https://images.unsplash.com/photo-1502819126416-d387f86d47a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80'} /> */}
-                <div className="more-info-text">
-                    <h1>{"Explore nearby popular bars, breweries, and beers."}</h1>
-                    <h2>{"Not sure where to grab a pint? Untappd shows you popular bars and venues nearby and what’s on tap."}</h2>
-                    {/* <a target="_blank" href="#">Buy Now</a> */}
+                    <div className="more-info-text">
+                        <h1>{"Explore nearby popular bars, breweries, and beers."}</h1>
+                        <h2>{"Not sure where to grab a pint? Untappd shows you popular bars and venues nearby and what’s on tap."}</h2>
+                        {/* <a target="_blank" href="#">Buy Now</a> */}
+                    </div>
                 </div>
             </section>
             {/* <section className="secondary-feature-row">

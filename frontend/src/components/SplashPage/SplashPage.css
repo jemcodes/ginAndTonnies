@@ -5,13 +5,13 @@ html {
 }
 
 body {
-    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
     background-color: #F7F7F7;
     border: 2px solid red;
     line-height: 1.4;
     margin: 0;
+    /* width: 100%; */
 }
 
 img {
@@ -21,7 +21,7 @@ img {
 .splash-wrapper {
     border: 3px solid green;
     display: grid;
-    /* position: relative; */
+    position: relative;
     width: 100%;
     
 }
@@ -43,7 +43,11 @@ img {
     background-size: cover;
     background-position: center-top;
     background-repeat: no-repeat; */
-    width: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    min-width: 100%;
+    /* min-width: 700px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,20 +56,18 @@ img {
 }
 
 .showcase h1 {
-    grid-area: showcase1;
+    position: absolute;
 }
 
 .showcase img {
-    /* background-image: url(../../images/gandtbkgnd.png); */
-    /* background-size: cover;
-    background-position: center-top;
-    background-repeat: no-repeat; */
-    max-width: 100%;
+    min-width: 100%;
+    /* max-height: 730px; */
     border: 3px solid red;
 }
 
 .boxes  {
     border: 3px solid purple;
+    background-color: #fff;
     padding: 1rem 2rem;
     display: flex;
     flex-direction: row;
@@ -78,7 +80,7 @@ img {
     grid-template-areas:
     'feature-row-left feature-row-right'
     'feature-row-left feature-row-right';
-    margin: 1rem 50rem 1rem 50rem;
+    margin: 3rem 25rem 3rem 25rem;
     display: grid;
     gap: 10rem;
     /* margin: 40px; */
@@ -94,15 +96,26 @@ img {
 .feature-row-right {
     grid-area: feature-row-right;
     background-color: #fff;
+    background-color: #fff;
     text-align: center;
-     padding: 3rem rem;
+    padding: 3rem 5rem;
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
 }
+
 .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.more-info {
     background-image: linear-gradient(rgba(251, 251, 251, 0.7), rgb(251, 251, 251) 80%), url('https://images.unsplash.com/photo-1502819126416-d387f86d47a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80');
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
+    min-width: 100%;
     background-color: #F7F7F7; 
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
     display: grid;
