@@ -2,6 +2,10 @@
 /* font-family: 'Alice', serif;
 font-family: 'Raleway', sans-serif; */
 
+body {
+    background-color: #F7F7F7;
+}
+
 #drink-list-container {
     border: 5px solid green;
     margin: 20px auto;
@@ -10,7 +14,7 @@ font-family: 'Raleway', sans-serif; */
     /* text-align: center; */
 }
 
-#drink-list-container h1 {
+#drink-list-container h1, h2 {
     color: #333;
     font-family: 'Alice', serif;
     padding: 15px 40px;
@@ -61,6 +65,11 @@ font-family: 'Raleway', sans-serif; */
     margin-top: 14vh;
     margin-left: 14vw;
     font-family: 'Raleway', sans-serif;
-    font-size: 30pt;
+    font-size: 26pt;
     text-decoration: none;
+    color: #1B442E;
+}
+
+.drink-title-text:hover {
+    color: #2F7750;
 }

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, Redirect } from 'react-router-dom';
 import { getDrinks } from '../../store/drink';
+import CreateDrinkPage from '../CreateDrinkPage';
 import './DrinkList.css';
 
 function DrinkList() {
@@ -46,6 +47,10 @@ function DrinkList() {
                     )}
                 </div>
             </ul>
+            <div>
+                <h2>Don't see the beverage you're looking for? Create a new drink here!</h2>
+                <CreateDrinkPage />
+            </div>
         </div>
     )
     
