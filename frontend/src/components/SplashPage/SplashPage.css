@@ -66,7 +66,7 @@ button {
     color: white;
 } */
 
-body {
+/* body {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
@@ -95,21 +95,19 @@ img {
 
 .splash-hero-image {
     grid-area: splash-hero-image;
-    /* min-height: 400px; */
-    /* background-image: url(../../images/gandtbkgnd.png);
+    background-image: url(../../images/gandtbkgnd.png);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;   */
+    background-repeat: no-repeat;  
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: end;
     justify-content: center;
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
 }
 
 .demo-row {
-    grid-area: demo-row;
-
+    padding: 40px;
 }
 
 .feature-row-container {
@@ -191,4 +189,3 @@ footer a:hover {
     background-color: #000;
     color: #F7F7F7;
 }
-
