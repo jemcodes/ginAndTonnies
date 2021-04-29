@@ -8,7 +8,7 @@ function SplashPage() {
         // splass-wrapper begins
         <div className="splash-wrapper">
             <section className="top-container">
-                <header className="showcase">
+                <div className="showcase">
                     <h1>Your Web Presense</h1>
                     <p>lorem ipsum text lorem ipsum text lorem ipsum text
                         lorem ipsum text lorem ipsum text lorem ipsum text
@@ -16,7 +16,7 @@ function SplashPage() {
                     </p>
                     <img alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtbkgnd.png'} />
                     {/* <a target="_blank" href="#">Read More</a> */}
-                </header>
+                </div>
                 {/* <div className={"top-box top-box-a"}>
                     <h4>Membership</h4>
                     <p className="price">$199/mo</p>
@@ -50,10 +50,10 @@ function SplashPage() {
                 </div>
             </section>
             <section className="info">
-                <img alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/ruyan-ayten-lPHrhCJ8nUo-unsplash.jpg'} />
-                <div>
-                    <h2>{"Explore nearby popular bars, breweries, and beers."}</h2>
-                    <p>{"Not sure where to grab a pint? Untappd shows you popular bars and venues nearby and what’s on tap."}</p>
+                {/* <img alt={"Colorful cocktail display"} src={'https://images.unsplash.com/photo-1502819126416-d387f86d47a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80'} /> */}
+                <div className="more-info-text">
+                    <h1>{"Explore nearby popular bars, breweries, and beers."}</h1>
+                    <h2>{"Not sure where to grab a pint? Untappd shows you popular bars and venues nearby and what’s on tap."}</h2>
                     {/* <a target="_blank" href="#">Buy Now</a> */}
                 </div>
             </section>
@@ -80,9 +80,9 @@ function SplashPage() {
             </section> */}
             <footer>
                 <ul className={"footer-links"}>
-                    <li><a target="_blank" href="#">Buy Now</a></li>
-                    <li><a target="_blank" href="#">Buy Now</a></li>
-                    <li><a target="_blank" href="#">Buy Now</a></li>
+                    <li><a target="_blank" href="#">jane martin</a></li>
+                    <li><a target="_blank" href="#">github</a></li>
+                    <li><a target="_blank" href="#">linkedin</a></li>
                 </ul>
             </footer>
             {/* splash-wrapper ends */}

@@ -17,39 +17,70 @@ body {
 img {
     max-width: 100%;
 }
+
 .splash-wrapper {
     border: 3px solid green;
     display: grid;
+    /* position: relative; */
+    width: 100%;
+    
 }
 
 /*Top Container*/
 .top-container {
+    border: 3px solid blue;
+    margin: 0;
+    width: 100%;
+    display: grid;
     grid-template-areas:
     'splash-hero-image splash-hero-image splash-hero-image splash-hero-image'
-    'splash-hero-image splash-hero-image splash-hero-image splash-hero-image'
-    'demo-row demo-row demo-row demo-row';
+    'splash-hero-image splash-hero-image splash-hero-image splash-hero-image';
+    box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
 }
-.splash-hero-image {
+.showcase {
     grid-area: splash-hero-image;
-    background-image: url(../../images/gandtbkgnd.png);
+    /* background-image: url(../../images/gandtbkgnd.png);
     background-size: cover;
     background-position: center-top;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
 }
-.demo-row {
-    padding: 40px;
+
+.showcase h1 {
+    grid-area: showcase1;
 }
+
+.showcase img {
+    /* background-image: url(../../images/gandtbkgnd.png); */
+    /* background-size: cover;
+    background-position: center-top;
+    background-repeat: no-repeat; */
+    max-width: 100%;
+    border: 3px solid red;
+}
+
+.boxes  {
+    border: 3px solid purple;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: flex-end;
+}
+
 .feature-row-container {
+    border: 3px solid pink;
     grid-template-areas:
     'feature-row-left feature-row-right'
     'feature-row-left feature-row-right';
+    margin: 1rem 50rem 1rem 50rem;
     display: grid;
-    grid-gap: 20px;
+    gap: 10rem;
     /* margin: 40px; */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -57,27 +88,37 @@ img {
     grid-area: feature-row-left;
     background-color: #fff;
     text-align: center;
-    padding: 1.5rem 2rem;
+    padding: 3rem 5rem;
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
 }
 .feature-row-right {
     grid-area: feature-row-right;
     background-color: #fff;
     text-align: center;
-    padding: 1.5rem 2rem;
+     padding: 3rem rem;
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
 }
-.secondary-image {
+.info {
+    background-image: linear-gradient(rgba(251, 251, 251, 0.7), rgb(251, 251, 251) 80%), url('https://images.unsplash.com/photo-1502819126416-d387f86d47a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80');
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
     background-color: #F7F7F7; 
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0.5rem;
+    gap: 20px;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 5rem;
 }
-.secondary-image img {
+
+.more-info-text {
+    text-align: center;
+}
+
+/* .secondary-image img {
     width: 100%;
 }
+
 .secondary-feature-row {
     display: grid;
     grid-gap: 20px;
@@ -85,38 +126,23 @@ img {
 }
 .feature-box {
     width: 100%;
-}
+} */
 /* Footer */
 footer {
-    background-color: #000;
-    color: white;
-    display: grid;
-    grid-gap: 20px;
-    padding: 0;
-    grid-template-columns: repeat(4, 1fr);
-}
-footer li {
-    list-style: none;
-}
-footer a {
-    background-color: #F7F7F7;
-    display: block;
-    text-decoration: non;
-    padding: 0.8rem;
+    margin-top: 0.5rem;
+    background: #000;
     text-align: center;
-    color: #000;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-footer a:hover {
-    background-color: #000;
-    color: #F7F7F7;
+.footer-links li {
+    display: inline;
+    list-style: none;
+    padding: 3rem;
 }
-@media (max-width: 700px) {
-    .top-container {
-        grid-template-areas:
-        'splash-hero-image splash-hero-image'
-        'feature-row-left feature-row-right'
-    }
+.footer-links a {
+    color: white;
 }
