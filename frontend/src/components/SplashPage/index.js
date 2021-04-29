@@ -25,11 +25,9 @@ function SplashPage() {
                     <a target="_blank" href="#">Buy Now</a>
                 </div> */}
             </section>
-            <section className="boxes">
                 <div className='box'>
                     <DemoButton />
                 </div>
-            </section>
             <section className="feature-row-container">
                 <div className="feature-row-left">
                     <img className="drinks-header-1" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader1.png'} />
