@@ -1,4 +1,4 @@
-.main-nav ul {
+/* .main-nav ul {
     max-width: 100%;
     background-color: black;
     display: grid;
@@ -6,7 +6,7 @@
     padding: 0;
     list-style: none;
     grid-template-columns: repeat(4, 1fr);
-}
+} */
 
 /* .main-nav a {
     background-color: #F7F7F7;

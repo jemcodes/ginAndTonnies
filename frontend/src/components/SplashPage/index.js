@@ -8,16 +8,28 @@ function SplashPage() {
         // splass-wrapper begins
         <div className="splash-wrapper">
             <section className="top-container">
-                {/* <header className="showcase">
-                    <h1>gin & tonnies</h1>
-                    <p>lorem ipsum text</p>
-                </header> */}
-                <div className="splash-hero-image">
-                    <img alt={"Cocktails in the background behind app logo"} src={process.env.PUBLIC_URL + './images/gandtbkgnd.png'} />
+                <header className="showcase">
+                    <h1>Your Web Presense</h1>
+                    <p>lorem ipsum text lorem ipsum text lorem ipsum text
+                        lorem ipsum text lorem ipsum text lorem ipsum text
+                        lorem ipsum text lorem ipsum text lorem ipsum text!
+                    </p>
+                    <a target="_blank" href="#">Read More</a>
+                </header>
+                <div className={"top-box top-box-a"}>
+                    <h4>Membership</h4>
+                    <p className="price">$199/mo</p>
+                    <a target="_blank" href="#">Buy Now</a>
+                </div>
+                <div className={"top-box top-box-b"}>
+                    <h4>Pro Membership</h4>
+                    <p className="price">$199/mo</p>
+                    <a target="_blank" href="#">Buy Now</a>
                 </div>
             </section>
-            <section>
-                <div className='splash-demo-button'>
+            <section className="boxes">
+                <div className='box'>
+                    <h3>Analytics</h3>
                     <DemoButton />
                 </div>
             </section>
@@ -37,14 +49,15 @@ function SplashPage() {
                     </div>
                 </div>
             </section>
-            <section className="secondary-image">
+            <section className="info">
                 <img alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/ruyan-ayten-lPHrhCJ8nUo-unsplash.jpg'} />
                 <div>
                     <h2>{"Explore nearby popular bars, breweries, and beers."}</h2>
                     <p>{"Not sure where to grab a pint? Untappd shows you popular bars and venues nearby and what’s on tap."}</p>
+                    {/* <a target="_blank" href="#">Buy Now</a> */}
                 </div>
             </section>
-            <section className="secondary-feature-row">
+            {/* <section className="secondary-feature-row">
                 <div className="secondary-feature-heading">
                     <h1>Other Great Features</h1>
                 </div>
@@ -64,19 +77,12 @@ function SplashPage() {
                     <h3>{"LOCAL EVENTS"}</h3>
                     <h4>{"Stay up-to-date with venue and brewery events alerts."}</h4>
                 </div>
-            </section>
+            </section> */}
             <footer>
-                <ul>
-                    <div> 
-                        <li>jane martin &copy; 2021</li>
-                        </div>
-                    
-                    <li>
-                        <a target="_blank" href="https://github.com/jemcodes">Github</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.linkedin.com/in/jemcodes/">LinkedIn</a>
-                    </li>
+                <ul className={"footer-links"}>
+                    <li><a target="_blank" href="#">Buy Now</a></li>
+                    <li><a target="_blank" href="#">Buy Now</a></li>
+                    <li><a target="_blank" href="#">Buy Now</a></li>
                 </ul>
             </footer>
             {/* splash-wrapper ends */}

@@ -21,13 +21,9 @@ function Navigation({ isLoaded }) {
         sessionLinks = (
             <div>
                 <nav className="main-nav">
-                    
                     <ul>
-                        <li>
-                            <LoginFormModal />
-                        </li>
-                        <li>
-                            <NavLink to="/signup">
+                        <li><LoginFormModal /></li>
+                        <li><NavLink to="/signup">
                                 <button type="button">
                                     Sign Up
                                 </button>
