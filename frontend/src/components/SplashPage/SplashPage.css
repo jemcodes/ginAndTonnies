@@ -212,7 +212,7 @@ body {
 }
 
 .more-info-text {
-    border: 3px solid red;
+    /* border: 3px solid red; */
     text-align: center;
     margin: 0 16vw 0 16vw;
 }
