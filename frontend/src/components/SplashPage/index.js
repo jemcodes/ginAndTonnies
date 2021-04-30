@@ -4,6 +4,7 @@ import './SplashPage.css'
 import { Modal } from '../../context/Modal';
 import LoginForm from '../LoginFormModal/LoginForm';
 import DemoButton from '../DemoButton';
+import Footer from '../Footer';
 
 
 function SplashPage() {
@@ -14,7 +15,8 @@ function SplashPage() {
         <div className="splash-wrapper">
             <section className="top-container">
                 <div className="showcase">
-                    <img className="logo-banner" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtthin2.png'} />
+                    <img className="logo-banner" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtbkgnd.png'} />
+                    <div className="button-container">
                     <button id="log-in-button" onClick={() => setShowModal(true)}>SIGN IN</button>
                     {showModal && (
                         <Modal onClose={() => setShowModal(false)}>
@@ -26,9 +28,10 @@ function SplashPage() {
                             CREATE AN ACCOUNT
                             </button>
                     </NavLink>
-                    <button id="log-in-button" type="button">Sign In</button>
+                    {/* <button id="log-in-button" type="button">Sign In</button> */}
                     {/* <button  type="button">Create An Account</button> */}
                     {/* <a target="_blank" href="#">Read More</a> */}
+                    </div>
                 </div>
                 {/* <div className={"top-box top-box-a"}>
                     <h4>Membership</h4>
@@ -45,14 +48,14 @@ function SplashPage() {
                     <DemoButton />
                 </div>
             <section className="feature-row-container">
-                <div className="feature-row-left">
+                <div className="feature-card">
                     <img className="drinks-header-1" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader1.png'} />
                     <div>
                         <h2>RATE YOUR FAVORITE COCKTAILS</h2>
                         <p>{"Keep track of your favorite drinks by checking in a cocktail and rating it."}</p>
                     </div>
                 </div>
-                <div className="feature-row-right">
+                <div className="feature-card">
                     <img className="drinks-header-2" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader2.png'} />
                     <div>
                         <h2>RATE YOUR FAVORITE COCKTAILS</h2>
@@ -91,15 +94,8 @@ function SplashPage() {
                     <h4>{"Stay up-to-date with venue and brewery events alerts."}</h4>
                 </div>
             </section> */}
-            <footer>
-                <ul className={"footer-links"}>
-                    <li>mixed with joy by jane martin &copy; 2021</li>
-                    <li><a target="_blank" href="https://github.com/jemcodes">GitHub</a><i class="fab fa-github"></i></li>
-                    <li><a target="_blank" href="https://www.linkedin.com/in/jemcodes/">LinkedIn</a><i class="fab fa-linkedin"></i></li>
-                    <li>🍸cheers!🍸</li>
-                </ul>
-            </footer>
             {/* splash-wrapper ends */}
+            <Footer />
         </div>
     )
 }

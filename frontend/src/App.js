@@ -22,14 +22,16 @@ function App() {
 
   return (
     <>
-      <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
           <Route path="/signup">
             <SignupFormPage />
           </Route>
           <Route path="/drinks/new">
-            <CreateDrinkPage />
+            <>
+              <Navigation isLoaded={isLoaded} />
+              <CreateDrinkPage />
+            </>
           </Route>
           <Route path="/drinks/:id/edit">
             <EditDrinkPage />
