@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
@@ -7,6 +7,7 @@ import DemoButton from '../DemoButton';
 import './Navigation.css';
 
 function Navigation({ isLoaded }) {
+    const { id } = useParams();
     const sessionUser = useSelector(state => state.session.user);
 
     let sessionLinks;
@@ -19,6 +20,18 @@ function Navigation({ isLoaded }) {
                         Create A Drink
                     </button>
                 </NavLink>
+                <NavLink to="/drinks/">
+                    <button type="button">
+                        View Drinks
+                    </button>
+                </NavLink>
+                {id && (
+                    <NavLink to={`/drinks/${id}/reviews`}>
+                        <button type="button">
+                            See Reviews
+                        </button>
+                    </NavLink>
+                )}
             </div>
         );
     } else {

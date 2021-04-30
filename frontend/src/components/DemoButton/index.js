@@ -9,10 +9,9 @@ function DemoButton() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        return (
-            dispatch(login({credential: 'Demo-lition', password: 'password'})),
+            dispatch(login({credential: 'Demo-lition', password: 'password'}))
+
             history.push(`/drinks/`)
-        )
     }
     
     return (

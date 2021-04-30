@@ -7,8 +7,8 @@ body {
 }
 
 #drink-list-container {
-    border: 5px solid green;
-    margin: 20px auto;
+    /* border: 5px solid green; */
+    margin: 4rem 10rem;
     display: flex;
     flex-direction: column;
     /* text-align: center; */
@@ -17,54 +17,63 @@ body {
 #drink-list-container h1, h2 {
     color: #333;
     font-family: 'Alice', serif;
-    padding: 15px 40px;
-    margin: 10px 0 5px 0;
+    /* border: 3px solid red; */
+    padding: 1rem 3rem;
+    margin: 1rem 0 0 0;
+    text-align: left;
 }
 
 #drink-list-container p {
     color: #333;
     font-family: 'Raleway', sans-serif;
-    padding: 15px 40px;
-    margin: 10px 0 5px 0;
-    display: flex;
+    padding: 1rem 2rem;
+    margin: rem 0 2rem 0;
+    text-align: center;
+    /* display: flex; */
 }
 
 .drink-profile-container {
-    border: 3px solid blue;
+    border: 3px solid #DDD;
+    margin: -1rem 10rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    align-items: flex-start;
+    align-items: stretch;
+    /* flex-wrap: wrap; */
     text-align: center;
+    box-shadow: 2px 3px 8px rgba(27,68,46, 0.2);
 }
 
 #drink-profile {
+    display: flex;
+    flex-wrap: no-wrap;
     list-style: none;
-    
+    border: 1px solid #DDD;
+    margin: 1rem 2rem;
 }
 
 .drink-img-container {
     position: relative;
-    width: 200px;     
+    min-width: 200px;
+    max-width: 200px;   
     height: 300px;
     overflow: hidden;
 }
 
 #drink-profile-img {
-    position: absolute;
-     max-width: 100%;
+     /* position: absolute; */
      width: 100%;
-     height: auto;
+    /* padding: 2rem; */
+     /* height: auto;
      top: 50%;     
      left: 50%;
-     transform: translate( -50%, -50%);
+     transform: translate( -50%, -50%); */
 }
 
 .drink-title-text {
     display: inline;
     position: relative;
-    margin-top: 14vh;
-    margin-left: 14vw;
     font-family: 'Raleway', sans-serif;
     font-size: 26pt;
     text-decoration: none;
@@ -73,4 +82,11 @@ body {
 
 .drink-title-text:hover {
     color: #2F7750;
+}
+
+.drink-profile-content {
+    flex-grow: 4;
+    text-align: center;
+    margin: 1rem 3rem 0 3rem;
+    padding: 2rem;
 }

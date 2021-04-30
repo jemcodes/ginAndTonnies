@@ -4,6 +4,7 @@ import { NavLink, Redirect } from 'react-router-dom';
 import { getDrinks } from '../../store/drink';
 import CreateDrinkPage from '../CreateDrinkPage';
 import './DrinkList.css';
+import Footer from '../Footer';
 
 function DrinkList() {
     const dispatch = useDispatch();
@@ -30,19 +31,21 @@ function DrinkList() {
 
     return (
         <div id="drink-list-container">
-            <h1>Top Rated Cocktails</h1>
-            <p>`Seven and seven gordon's mimosa hairy jack rose. Sea breeze wolfschmitt caridan balblair french 75, aberfeldy old mr. boston paradise cragganmore cointreau fleischmann's pulteney. Benromach piña colada matador, gilbey's tullibardine sundowner lejon montgomery polmos krakow stolichnaya vesper fish house punch piscola sidecar glenlossie, tanqueray salty dog. Caipiroska tennessee cowboy pisco sour glenmorangie johnny walker red. Pisco sour piscola polmos krakow aberlour, glenturret wolfram glenfarclas. French 75: hurricane whiskey sour vodka sunrise link up caribou lou.`</p>
             <ul>
                 <div className="drink-profile-container">
+                    <h1>Top Rated Cocktails</h1>
+                    <p>Seven and seven gordon's mimosa hairy jack rose. Sea breeze wolfschmitt caridan balblair french 75, aberfeldy old mr. boston paradise cragganmore cointreau fleischmann's pulteney. Benromach piña colada matador, gilbey's tullibardine sundowner lejon montgomery polmos krakow stolichnaya vesper fish house punch piscola sidecar glenlossie, tanqueray salty dog. Caipiroska tennessee cowboy pisco sour glenmorangie johnny walker red. Pisco sour piscola polmos krakow aberlour, glenturret wolfram glenfarclas. French 75: hurricane whiskey sour vodka sunrise link up caribou lou.</p>
                     {drinkList.map((drink) => (
                         <li key={drink.id} id="drink-profile">
                         <div className="drink-img-container">
                             <img alt={`${drink.title}`} src={drink.drinkImg} id="drink-profile-img"/>
                         </div>
-                        <NavLink className="drink-title-text" 
-                            to={`/drinks/${drink.id}`}>{drink.title}
-                        </NavLink>
-                            <p>{drink.content}</p>
+                        <div className="drink-profile-content">
+                            <NavLink className="drink-title-text" 
+                                to={`/drinks/${drink.id}`}>{drink.title}
+                            </NavLink>
+                                <p>{drink.content}</p>
+                        </div>
                     </li>)
                     )}
                 </div>

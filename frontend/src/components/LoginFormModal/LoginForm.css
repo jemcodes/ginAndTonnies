@@ -1,10 +1,10 @@
-body {
+/* body {
     background-color: red;
-}
+} */
 
-.navigation-links li {
+/* .navigation-links li {
     border: 3px solid blue;
     list-style: none;
-    /* display: inline; */
+    display: inline;
     display: flex;
-}
+} */

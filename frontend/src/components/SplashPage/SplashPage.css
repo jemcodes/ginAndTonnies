@@ -2,11 +2,11 @@
 /* font-family: 'Alice', serif;
 font-family: 'Raleway', sans-serif; */
 
-html {
+/* html {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
     color: #000;
-}
+} */
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -41,6 +41,7 @@ body {
 }
 
 /* .showcase {
+    border: 3px solid orange;
     grid-area: splash-hero-image;
     background-image: url(../../images/gandtbkgnd.png);
     background-size: cover;
@@ -83,13 +84,22 @@ body {
 
 .showcase */
 
-#log-in-button {
+.button-container {
     position: absolute;
-    margin: 1vh 1vw;
     top: 0%;
-    right: 14%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+#log-in-button {
+    /* position: absolute; */
+    margin: 20px 10px;
     background-color: transparent;
-    border: 2px solid #FFF;
+    border: 2px solid white;
     color: white;
     font-size: 20px;
     text-transform: uppercase;
@@ -99,12 +109,10 @@ body {
 }
 
 #sign-up-button {
-    position: absolute;
-    margin: 1vh 1vw;
-    top: 0%;
-    right: 1%;
+    /* position: absolute; */
+    margin: 20px 20px;
     background-color: transparent;
-    border: 2px solid #FFF;
+    border: 2px solid white;
     color: white;
     font-size: 20px;
     text-transform: uppercase;
@@ -138,54 +146,42 @@ body {
     /* grid-template-areas:
     'feature-row-left feature-row-right'
     'feature-row-left feature-row-right'; */
-    margin: 3vh 25vw 3vh 25vw;
+    margin: 3vh 15vw 3vh 15vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    gap: 4vw;
+    flex-wrap: wrap;
     /* margin: 40px; */
     /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
     /* position: relative; */
+    
 }
-.feature-row-left {
-    grid-area: feature-row-left;
+.feature-card {
     background-color: #fff;
     text-align: center;
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
+    margin: 1rem;
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.feature-row-left img {
+.feature-card img {
     /* background-color: red; */
-    max-width: 580px;
-    height: auto;
-}
-
-.feature-row-right {
-    grid-area: feature-row-right;
-    background-color: #fff;
-    text-align: center;
-    padding: 1rem 3rem;
-    box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.feature-row-right img {
-    /* background-color: red; */
-    max-width: 580px;
-    height: auto;
+    max-width: 20rem;
 }
 
 .feature-row-container h2 {
     font-family: 'Alice', serif;
-    font-size: 40px;
+    font-size: 30pt;
+    margin: 0;
+}
+
+.feature-row-container p {
+    font-size: 16pt;
+    margin: 0;
 }
 
 .info {
@@ -234,37 +230,3 @@ body {
 .feature-box {
     width: 100%;
 } */
-/* Footer */
-footer {
-    margin-top: 0.5rem;
-    background: #F1F6F2;
-    text-align: center;
-    /* padding: 0.5rem; */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-.footer-links li {
-    display: inline;
-    list-style: none;
-    padding: 0rem 8rem;
-    font-size: 18pt;
-    color: #337233;
-}
-.footer-links a {
-    color: #337233;
-}
-
-.fa-github {
-    padding: 0 0 0 6px;
-}
-
-.fa-linkedin {
-    padding: 0 0 0 6px;
-}

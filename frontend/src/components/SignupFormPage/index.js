@@ -29,15 +29,15 @@ function SignupFormPage() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="signup-form-background" onSubmit={handleSubmit}>
             <ul>
                 {errors.map((error, idx) => <li key={idx}>{error}</li>)}
             </ul>
             <div id="signup-container">
                 <img id="signup-banner"src={process.env.PUBLIC_URL + './images/drinksheader2.png'} alt={"Colorful drinks"} />
                 <h1>DRINKS ARE BETTER WITH FRIENDS</h1>
-                <h2>that's why we're glad you're here</h2>
-                <label class="signup-label-text">
+                <h2>we're glad you're here!</h2>
+                <label>
                 <input id="signup-email-field"
                     placeholder="EMAIL"
                     type="text"
@@ -74,6 +74,7 @@ function SignupFormPage() {
                 />
                 </label>
                 <button className="signup-form-button" type="submit">Sign Up</button>
+                <a className="cancel-signup" href="/">CANCEL</a>
             </div>
         </form>
     );

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Raleway&display=swap');
+/* font-family: 'Alice', serif;
+font-family: 'Raleway', sans-serif; */
+
+footer {
+    margin-top: 0.5rem;
+    background: #F1F6F2;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.oh-hai-it-me {
+
+}
+
+.oh-hai-it-me li {
+    margin: 0.2rem;
+    line-height: 1.4;
+    list-style: none;
+    color: #337233;
+    font-size: 18pt;
+}
+
+.footer-links li {
+    display: inline;
+    list-style: none;
+    padding: 0rem 1rem;
+    font-size: 18pt;
+    color: #337233;
+}
+.footer-links a {
+    color: #337233;
+}
+
+.fa-github {
+    padding: 0 0 0 1rem;
+}
+
+.fa-linkedin {
+    padding: 0 0 0 1rem;
+}

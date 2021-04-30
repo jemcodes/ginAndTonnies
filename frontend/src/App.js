@@ -22,14 +22,16 @@ function App() {
 
   return (
     <>
-      <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
           <Route path="/signup">
             <SignupFormPage />
           </Route>
           <Route path="/drinks/new">
-            <CreateDrinkPage />
+            <>
+              <Navigation isLoaded={isLoaded} />
+              <CreateDrinkPage />
+            </>
           </Route>
           <Route path="/drinks/:id/edit">
             <EditDrinkPage />
@@ -44,10 +46,16 @@ function App() {
             <SingleDrinkReviewsPage />
           </Route>
           <Route path="/drinks/:id">
-            <SingleDrinkPage />
+            <>
+              <Navigation isLoaded={isLoaded} />
+              <SingleDrinkPage />
+            </>
           </Route>
           <Route path="/drinks">
-            <DrinkListPage />
+            <>
+              <Navigation isLoaded={isLoaded} />
+              <DrinkListPage />
+            </>
           </Route>
           <Route path="/" exact>
             <SplashPage />
