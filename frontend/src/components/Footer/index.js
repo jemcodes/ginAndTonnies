@@ -4,8 +4,7 @@ function Footer() {
     return (
         <footer>
             <ul className="oh-hai-it-me">
-                <li>mixed with joy by jane martin &copy; 2021</li>
-                <li>🍸cheers!🍸</li>
+                <li>mixed with joy by jane martin &copy; 2021  &zwnj; 🍸cheers!🍸</li>
             </ul>
             <ul className={"footer-links"}>
                 

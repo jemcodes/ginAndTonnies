@@ -17,8 +17,10 @@ body {
 #drink-list-container h1, h2 {
     color: #333;
     font-family: 'Alice', serif;
+    /* border: 3px solid red; */
     padding: 1rem 3rem;
     margin: 1rem 0 0 0;
+    text-align: left;
 }
 
 #drink-list-container p {

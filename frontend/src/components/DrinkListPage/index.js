@@ -4,6 +4,7 @@ import { NavLink, Redirect } from 'react-router-dom';
 import { getDrinks } from '../../store/drink';
 import CreateDrinkPage from '../CreateDrinkPage';
 import './DrinkList.css';
+import Footer from '../Footer';
 
 function DrinkList() {
     const dispatch = useDispatch();
