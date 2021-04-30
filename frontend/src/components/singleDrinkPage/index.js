@@ -47,11 +47,21 @@ function SingleDrinkPage() {
             {/* <NavLink to={`/drinks/`}>Return To Drinks</NavLink> */}
                 <h1 id="single-drink-title">{title}</h1>
                 <h2 id="single-drink-creator">Created by: {currentDrink.User.username}</h2>
-            <div id="single-drink-container">
-                <img alt={`A fresh cocktail`} src={drinkImg} />
-                <p id="single-drink content">{content}</p>
-                <NavLink to={`/drinks/${id}/edit`}>Update This Drink</NavLink>
-                <NavLink to={`/drinks/${id}/reviews`}>See Reviews</NavLink>
+            <div id="single-drink-img-wrapper">
+                <img className="single-drink-img" alt={`A fresh cocktail`} src={drinkImg} />
+                <p id="single-drink-content">{content}</p>
+            </div>
+            <div className="drink-profile-details">
+                <NavLink to={`/drinks/${id}`}>
+                    <button className="drink-detail-button" type="button">
+                        Learn More
+                                        </button>
+                </NavLink>
+                <NavLink to={`/drinks/${id}/reviews`}>
+                    <button className="drink-detail-button" type="button">
+                        See Reviews
+                                        </button>
+                </NavLink>
             </div>
         </div>
     ) 
