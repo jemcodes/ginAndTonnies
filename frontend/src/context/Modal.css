@@ -115,3 +115,11 @@ body {
   color: #FFF;
 }
 
+#modal-close {
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+  cursor: pointer;
+  transform: rotate(45deg);
+  font-size: 45pt;
+}
