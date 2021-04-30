@@ -8,7 +8,7 @@ body {
 
 #drink-list-container {
     border: 5px solid green;
-    margin: 20px auto;
+    margin: -1rem 10rem;
     display: flex;
     flex-direction: column;
     /* text-align: center; */
@@ -26,45 +26,47 @@ body {
     font-family: 'Raleway', sans-serif;
     padding: 15px 40px;
     margin: 10px 0 5px 0;
-    display: flex;
+    /* display: flex; */
 }
 
 .drink-profile-container {
     border: 3px solid blue;
+    margin: -1rem 10rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    align-items: flex-start;
+    align-items: stretch;
+    /* flex-wrap: wrap; */
     text-align: center;
 }
 
 #drink-profile {
+    display: flex;
+    flex-wrap: no-wrap;
     list-style: none;
-    
 }
 
 .drink-img-container {
     position: relative;
-    width: 200px;     
+    min-width: 200px;
+    max-width: 200px;   
     height: 300px;
     overflow: hidden;
 }
 
 #drink-profile-img {
-    position: absolute;
-     max-width: 100%;
+     /* position: absolute; */
      width: 100%;
-     height: auto;
+     /* height: auto;
      top: 50%;     
      left: 50%;
-     transform: translate( -50%, -50%);
+     transform: translate( -50%, -50%); */
 }
 
 .drink-title-text {
     display: inline;
     position: relative;
-    margin-top: 14vh;
-    margin-left: 14vw;
     font-family: 'Raleway', sans-serif;
     font-size: 26pt;
     text-decoration: none;
@@ -73,4 +75,9 @@ body {
 
 .drink-title-text:hover {
     color: #2F7750;
+}
+
+.drink-profile-content {
+    flex-grow: 4;
+    text-align: center;
 }

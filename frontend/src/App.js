@@ -46,10 +46,16 @@ function App() {
             <SingleDrinkReviewsPage />
           </Route>
           <Route path="/drinks/:id">
-            <SingleDrinkPage />
+            <>
+              <Navigation isLoaded={isLoaded} />
+              <SingleDrinkPage />
+            </>
           </Route>
           <Route path="/drinks">
-            <DrinkListPage />
+            <>
+              <Navigation isLoaded={isLoaded} />
+              <DrinkListPage />
+            </>
           </Route>
           <Route path="/" exact>
             <SplashPage />

@@ -39,10 +39,12 @@ function DrinkList() {
                         <div className="drink-img-container">
                             <img alt={`${drink.title}`} src={drink.drinkImg} id="drink-profile-img"/>
                         </div>
-                        <NavLink className="drink-title-text" 
-                            to={`/drinks/${drink.id}`}>{drink.title}
-                        </NavLink>
-                            <p>{drink.content}</p>
+                        <div className="drink-profile-content">
+                            <NavLink className="drink-title-text" 
+                                to={`/drinks/${drink.id}`}>{drink.title}
+                            </NavLink>
+                                <p>{drink.content}</p>
+                        </div>
                     </li>)
                     )}
                 </div>

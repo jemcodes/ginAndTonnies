@@ -29,11 +29,14 @@
     border: 3px solid blue;
     background: #F1F6F2;
     text-align: center;
-    /* padding: 0.5rem; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.navigation-links {
+    padding-left: 0;
 }
 
 .navigation-links li {
