@@ -65,7 +65,6 @@ body {
   position: fixed;
   background-color: #FFF;
   width: 30vw;
-  height: 40vh;
   border-radius: 8px;
   text-align: center;
   padding: 10px;
@@ -77,13 +76,13 @@ body {
   /* border: 3px solid red; */
 }
 
-input {
+.sign-up-form input {
   /* border: 3px solid red; */
   position: relative;
   border: none;
   width: 70%;
   display: block;
-  margin: 40px auto;
+  margin: 20px auto;
   background-color: #F7F7F7;
 }
 
@@ -112,7 +111,7 @@ input {
 .welcome-button {
   /* border: 3px solid red; */
   background-color: #0D2217;
-  margin: 40px 0 0 0;
+  margin: 20px 0 40px 0;
   color: #FFF;
 }
 
