@@ -2,6 +2,12 @@
 /* font-family: 'Alice', serif;
 font-family: 'Raleway', sans-serif; */
 
+body {
+    height: 100%;
+    padding-bottom: 40px;
+    position: relative;
+}
+
 footer {
     margin-top: 0.5rem;
     background: #F1F6F2;
@@ -12,7 +18,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;

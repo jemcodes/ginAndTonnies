@@ -46,11 +46,18 @@ function DrinkList() {
                                     to={`/drinks/${drink.id}`}>{drink.title}
                                 </NavLink>
                                 <p>{drink.content}</p>
-                                <NavLink to={`/drinks/${drink.id}/reviews`}>
-                                    <button className="drink-list-button" type="button">
-                                        See Reviews
-                        </button>
-                                </NavLink>
+                                <div className="drink-profile-details">
+                                    <NavLink to={`/drinks/${drink.id}`}>
+                                        <button className="drink-detail-button" type="button">
+                                            Learn More
+                                        </button>
+                                    </NavLink>
+                                    <NavLink to={`/drinks/${drink.id}/reviews`}>
+                                        <button className="drink-detail-button" type="button">
+                                            See Reviews
+                                        </button>
+                                    </NavLink>
+                                </div>
                             </div>
                     </li>)
                     )}
@@ -59,6 +66,7 @@ function DrinkList() {
             <div>
                 <CreateDrinkPage />
             </div>
+            <Footer />
         </div>
     )
     

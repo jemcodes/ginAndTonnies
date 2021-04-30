@@ -54,9 +54,15 @@ input {
     padding: 15px;
     border-radius: 4px;
     margin: 1vh;
+    border: 1px solid #A3B4AB;
     font-size: 14pt;
     font-family: 'Raleway', sans-serif;
     color: #0D2217;
+}
+
+.create-drink-title:focus{
+  outline: 3px solid #C3D6CC;
+  border: none;
 }
 
 .create-drink-content {
@@ -68,16 +74,22 @@ input {
     border-radius: 4px;
     margin: 1vh;
     font-size: 14pt;
+    border: 1px solid #A3B4AB;
     font-family: 'Raleway', sans-serif;
     color: #0D2217;
     overflow: scroll;
 }
 
-p.create-drink-guide {
-  margin: 0;
-  /* padding: -16px; */
-  text-align: start;
+.create-drink-content:focus{
+  outline: 3px solid #C3D6CC;
+  border: none;
 }
+
+/* p.create-drink-guide {
+  margin: 0;
+  padding: -16px;
+  text-align: start;
+} */
 
 .create-drink-img {
     background-color: #E3EEE6;
@@ -85,13 +97,31 @@ p.create-drink-guide {
     width: 35vw;
     padding: 1rem;
     border-radius: 4px;
-    margin: -1rem 1vh 1vh;
+    border: 1px solid #A3B4AB;
+    margin: 1vh;
     font-size: 14pt;
     font-family: 'Raleway', sans-serif;
     color: #0D2217;
+}
+
+.create-drink-img:focus{
+  outline: 3px solid #C3D6CC;
+  border: none;
 }
 
 .create-submit-block h2 {
   margin: 0 auto;
   text-align: center;
 }
+
+.drink-create-button {
+    background-color: #E3EEE6;
+    border: 1px solid #A3B4AB;
+    color: #1B442E;
+    margin: 1rem 0 2rem 0;
+}
+
+/* .drink-create-button:hover {
+  outline: 3px solid #C3D6CC;
+  border: none;
+} */

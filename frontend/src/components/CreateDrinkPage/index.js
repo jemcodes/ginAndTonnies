@@ -88,16 +88,16 @@ function CreateDrinkPage() {
                             onChange={updateContent} />
                         </label>
                         <label>
-                        <p className="create-drink-guide">vertical images work best 🍸</p>
+                        {/* <p className="create-drink-guide"></p> */}
                         <input className="create-drink-img"
                             type="text"
-                            placeholder="ADD AN IMAGE URL TO SHOW IT OFF"
+                                    placeholder="ADD AN IMAGE URL - VERTICAL IMAGES WORK BEST 🍸"
                             value={drinkImg}
                             onChange={updateDrinkImg} />
                         </label>
                         <div className="create-submit-block">
                             <h2>Let's check out your new bevvie!</h2>
-                            <button type="submit">Create new drink</button>
+                            <button className="drink-create-button" type="submit">Create new drink</button>
                         </div>
                     </div>
                 </div>
