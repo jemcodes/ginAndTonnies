@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, NavLink, Redirect } from 'react-router-dom';
 import { getDrinks } from '../../store/drink';
+import './singleDrink.css';
 
 function SingleDrinkPage() {
     const dispatch = useDispatch();
@@ -42,14 +43,16 @@ function SingleDrinkPage() {
     }
 
     return (
-        <div>
-            <NavLink to={`/drinks/`}>Return To Drinks</NavLink>
-            <h2>{title}</h2>
-            <h2>{content}</h2>
-            <img alt={`A fresh cocktail`} src={drinkImg} />
-            <h2>Created by: {currentDrink.User.username}</h2>
-            <NavLink to={`/drinks/${id}/edit`}>Update This Drink</NavLink>
-            <NavLink to={`/drinks/${id}/reviews`}>See Reviews</NavLink>
+        <div id="single-drink-wrapper">
+            {/* <NavLink to={`/drinks/`}>Return To Drinks</NavLink> */}
+                <h1 id="single-drink-title">{title}</h1>
+                <h2 id="single-drink-creator">Created by: {currentDrink.User.username}</h2>
+            <div id="single-drink-container">
+                <img alt={`A fresh cocktail`} src={drinkImg} />
+                <p id="single-drink content">{content}</p>
+                <NavLink to={`/drinks/${id}/edit`}>Update This Drink</NavLink>
+                <NavLink to={`/drinks/${id}/reviews`}>See Reviews</NavLink>
+            </div>
         </div>
     ) 
 }
