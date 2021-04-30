@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, Redirect } from 'react-router-dom';
+import { NavLink, Redirect, useParams } from 'react-router-dom';
 import { getDrinks } from '../../store/drink';
 import CreateDrinkPage from '../CreateDrinkPage';
 import './DrinkList.css';
@@ -8,6 +8,7 @@ import Footer from '../Footer';
 
 function DrinkList() {
     const dispatch = useDispatch();
+    // const { id } = useParams();
     const drinkList = useSelector(state => {
         return state.drink.allDrinks
     });
@@ -40,9 +41,17 @@ function DrinkList() {
                         <div className="drink-img-container">
                             <img alt={`${drink.title}`} src={drink.drinkImg} id="drink-profile-img"/>
                         </div>
-                        <div className="drink-profile-content">
+                            <div className="drink-profile-content">
+                                <NavLink className="drink-title-text"
+                                    to={`/drinks/${drink.id}`}>{drink.title}
+                                </NavLink>
                                 <p>{drink.content}</p>
-                        </div>
+                                <NavLink to={`/drinks/${drink.id}/reviews`}>
+                                    <button className="drink-list-button" type="button">
+                                        See Reviews
+                        </button>
+                                </NavLink>
+                            </div>
                     </li>)
                     )}
                 </div>

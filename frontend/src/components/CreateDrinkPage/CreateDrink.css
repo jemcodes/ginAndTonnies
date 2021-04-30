@@ -38,8 +38,9 @@ body {
     box-shadow: 2px 3px 8px rgba(27,68,46, 0.2);
 }
 
-#create-drink-container h1 {
+#create-drink-container > h1 {
   font-family: 'Alice', serif;
+  text-align: center;
 }
 
 input {

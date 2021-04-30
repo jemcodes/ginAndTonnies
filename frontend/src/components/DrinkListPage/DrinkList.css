@@ -11,16 +11,16 @@ body {
     margin: 4rem 10rem;
     display: flex;
     flex-direction: column;
+
     /* text-align: center; */
 }
 
 #drink-list-container h1, h2 {
     color: #333;
     font-family: 'Alice', serif;
-    /* border: 3px solid red; */
     padding: 1rem 3rem;
     margin: 1rem 0 0 0;
-    text-align: left;
+    /* text-align: left; */
 }
 
 #drink-list-container p {
@@ -30,6 +30,7 @@ body {
     margin: rem 0 2rem 0;
     text-align: center;
     /* display: flex; */
+
 }
 
 .drink-profile-container {
@@ -47,10 +48,17 @@ body {
 
 #drink-profile {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     flex-wrap: no-wrap;
     list-style: none;
-    border: 1px solid #DDD;
+    box-shadow: 3px 3px 5px rgba(216,216,216, 0.7);
     margin: 1rem 2rem;
+}
+
+#drink-profile:hover {
+    box-shadow: 3px 3px 5px rgba(172,172,172, 0.7);
 }
 
 .drink-img-container {
@@ -80,13 +88,24 @@ body {
     color: #1B442E;
 }
 
-.drink-title-text:hover {
+/* .drink-title-text:hover {
     color: #2F7750;
-}
+} */
 
 .drink-profile-content {
     flex-grow: 4;
     text-align: center;
-    margin: 1rem 3rem 0 3rem;
-    padding: 2rem;
+    /* margin: 1rem 3rem 0 3rem; */
+    /* padding: 2rem; */
+}
+
+.drink-profile-reviews {
+    margin: 1rem 12rem 0 12rem ;
+    border-top: 1px solid #CCC;
+}
+
+.drink-list-button {
+    background-color: #E3EEE6;
+    color: #1B442E;
+    margin: -1rem 0 2rem 0;
 }

@@ -8,8 +8,8 @@ body {
   color: #F7F7F7;
 }
 
-/* .signup-form-background {
-    background-image: linear-gradient(rgba(165, 72, 56, 0.4), rgb(254, 248, 247) 50%), url('https://images.pexels.com/photos/3171815/pexels-photo-3171815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+.signup-form-background {
+    background-image: linear-gradient(rgba(254, 248, 247, 0.8), rgb(254, 248, 247) 85%), url('https://images.pexels.com/photos/3171815/pexels-photo-3171815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
@@ -17,8 +17,8 @@ body {
     background-color: #F7F7F7;  
     display: flex;
     padding: 1rem 0 45rem 0;
-    border: 1px solid red;
-} */
+    /* border: 1px solid red; */
+}
 
 #signup-container {
     background-color: #FFF;
