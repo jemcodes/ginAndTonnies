@@ -15,7 +15,7 @@ function SplashPage() {
         <div className="splash-wrapper">
             <section className="top-container">
                 <div className="showcase">
-                    <img className="logo-banner" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtbkgnd.png'} />
+                    <img className="logo-banner" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/gandtthin2.png'} />
                     <div className="button-container">
                     <button id="log-in-button" onClick={() => setShowModal(true)}>SIGN IN</button>
                     {showModal && (

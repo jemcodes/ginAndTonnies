@@ -49,7 +49,7 @@ const drinksData = [
     {
         title: `Pure Holler Dream`,
         content: `Glentauchers, kahlua wine cooler old grand dad skyy auchentoshan missouri mule long island iced tea piña colada. Glen grant paralyzer flaming dr pepper. Pappy van winkle. Culto a la vida remy martin, my fair lady vodka sunrise long island iced tea the last word the blenheim.`,
-        drinkImg: 'https://images.unsplash.com/photo-1497534446932-c925b458314e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1007&q=80',
+        drinkImg: 'https://images.pexels.com/photos/1484678/pexels-photo-1484678.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         userId: 1,
         createdAt: new Date(),
         updatedAt: new Date()

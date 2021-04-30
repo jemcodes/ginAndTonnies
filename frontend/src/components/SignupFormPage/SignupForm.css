@@ -8,8 +8,9 @@ body {
   color: #F7F7F7;
 }
 
+
 #signup-container {
-    background-color: #143322;
+    background-color: #FFF;
     width: 30%;
     margin: 0 auto;
     display: flex;
@@ -17,6 +18,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 2px 3px 8px rgba(27,68,46, 0.2);
 }
 
 #signup-banner {
@@ -25,19 +28,16 @@ body {
 }
 
 #signup-container h1 {
-    color: #E3EEE6;
-    margin: 2px;
+    color: #000;
+    margin: 1rem 0 -1rem 0;
     font-family: 'Alice', serif; 
-    font-size: 32pt;
+    font-size: 28pt;
 } 
 
 #signup-container h2 {
     color: #000;
-    margin: 2px;
     font-size: 22pt;
 }
-
-
 
 input {
   /* border: 3px solid red; */
@@ -55,11 +55,15 @@ input {
     width: 20vw;
     padding: 15px;
     border-radius: 4px;
-    /* margin: 1vh; */
+    margin: 2rem 0 1rem 0;
     font-size: 14pt;
     font-family: 'Raleway', sans-serif;
     color: #0D2217;
 }
+
+#signup-email-field:focus {
+    outline: 3px solid #D9EEE3;
+} 
 
 #signup-username-field {
     background-color: #E3EEE6;
@@ -67,11 +71,15 @@ input {
     width: 20vw;
     padding: 15px;
     border-radius: 4px;
-    /* margin: 1vh; */
+    margin: 1rem 0 1rem 0;
     font-size: 14pt;
     font-family: 'Raleway', sans-serif;
     color: #0D2217;
 }
+
+#signup-username-field:focus {
+    outline: 3px solid #D9EEE3;
+} 
 
 #signup-password-field {
     background-color: #E3EEE6;
@@ -79,11 +87,15 @@ input {
     /* border: 3px solid red; */
     padding: 15px;
     border-radius: 4px;
-    /* margin: 1vh; */
+    margin: 1rem 0 1rem 0;
     font-size: 14pt;
     font-family: 'Raleway', sans-serif;
     color: #0D2217;
 }
+
+#signup-password-field:focus {
+    outline: 3px solid #D9EEE3;
+} 
 
 #signup-confirm-field {
     background-color: #E3EEE6;
@@ -91,16 +103,31 @@ input {
     /* border: 3px solid red; */
     padding: 15px;
     border-radius: 4px;
-    /* margin: 1vh; */
+    margin: 1rem 0 2rem 0;
     font-size: 14pt;
     font-family: 'Raleway', sans-serif;
     color: #0D2217;
 }
 
+#signup-confirm-field:focus {
+    outline: 3px solid #D9EEE3;
+} 
+
 .signup-form-button {
     background-color: transparent;
-    border: 2px solid #FFF;
+    border: 2px solid #0D2217;
     border-radius: 4px;
-    margin: 40px 0 40px 0;
-    color: #FFF;
+    margin: 1rem 0 3rem 0;
+    color: #0D2217;
+}
+
+.signup-form-button:hover {
+    background-color: #ECF6F1;
+    font-size: 16.5pt;
+}
+
+.cancel-signup {
+    color: #0D2217;
+    padding: -2rem 0 2rem 0;
+    margin: -1rem 0 3rem 0;
 }
