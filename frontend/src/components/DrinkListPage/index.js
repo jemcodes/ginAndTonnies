@@ -41,9 +41,6 @@ function DrinkList() {
                             <img alt={`${drink.title}`} src={drink.drinkImg} id="drink-profile-img"/>
                         </div>
                         <div className="drink-profile-content">
-                            <NavLink className="drink-title-text" 
-                                to={`/drinks/${drink.id}`}>{drink.title}
-                            </NavLink>
                                 <p>{drink.content}</p>
                         </div>
                     </li>)

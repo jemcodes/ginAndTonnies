@@ -52,14 +52,14 @@ function SplashPage() {
                     <img className="drinks-header-1" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader1.png'} />
                     <div>
                         <h2>RATE YOUR FAVORITE COCKTAILS</h2>
-                        <p>{"Keep track of your favorite drinks by checking in a cocktail and rating it."}</p>
+                        <p>{"Bacardi white horse: savoy affair bearded lady agent orange!"}</p>
                     </div>
                 </div>
                 <div className="feature-card">
                     <img className="drinks-header-2" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader2.png'} />
                     <div>
-                        <h2>RATE YOUR FAVORITE COCKTAILS</h2>
-                        <p>{"Keep track of your favorite drinks by checking in a cocktail and rating it."}</p>
+                        <h2>CRAFT & SHARE NEW DRINKS!</h2>
+                        <p>{"Lorraine blue lagoon: imperial black russian smoky martini."}</p>
                     </div>
                 </div>
             </section>

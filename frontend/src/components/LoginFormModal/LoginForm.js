@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from 'react-router-dom';
+import { useHistory, NavLink, Redirect } from 'react-router-dom';
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 
@@ -58,7 +58,12 @@ function LoginForm() {
                         required
             />
         </label>
-        <button className="welcome-button" type="submit">WELCOME BACK</button>
+        <div className="signin-or-signup">
+            <button className="welcome-button" type="submit">WELCOME BACK</button>
+            <NavLink className="signup-instead"
+                to={`/signup`}>New around here? Sign up!
+            </NavLink>
+        </div>
         </form>
     );
 }

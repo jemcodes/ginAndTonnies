@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import './SignupForm.css';
+import Footer from '../Footer';
 
 function SignupFormPage() {
     const dispatch = useDispatch();
@@ -13,7 +14,7 @@ function SignupFormPage() {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [errors, setErrors] = useState([]);
 
-    if (sessionUser) return <Redirect to="/" />;
+    if (sessionUser) return <Redirect to="/drinks" />;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -74,7 +75,10 @@ function SignupFormPage() {
                 />
                 </label>
                 <button className="signup-form-button" type="submit">Sign Up</button>
-                <a className="cancel-signup" href="/">CANCEL</a>
+                <NavLink className="signup-instead"
+                    to={`/`}>CANCEL
+            </NavLink>
+                <Footer />
             </div>
         </form>
     );

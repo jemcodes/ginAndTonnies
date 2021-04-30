@@ -8,11 +8,22 @@ body {
   color: #F7F7F7;
 }
 
+/* .signup-form-background {
+    background-image: linear-gradient(rgba(165, 72, 56, 0.4), rgb(254, 248, 247) 50%), url('https://images.pexels.com/photos/3171815/pexels-photo-3171815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    min-width: 100%;
+    background-color: #F7F7F7;  
+    display: flex;
+    padding: 1rem 0 45rem 0;
+    border: 1px solid red;
+} */
 
 #signup-container {
     background-color: #FFF;
     width: 30%;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,6 +43,7 @@ body {
     margin: 1rem 0 -1rem 0;
     font-family: 'Alice', serif; 
     font-size: 28pt;
+    margin: 1rem 0 -2rem 0;
 } 
 
 #signup-container h2 {
@@ -117,7 +129,7 @@ input {
     background-color: transparent;
     border: 2px solid #0D2217;
     border-radius: 4px;
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 2rem 0;
     color: #0D2217;
 }
 
@@ -129,5 +141,5 @@ input {
 .cancel-signup {
     color: #0D2217;
     padding: -2rem 0 2rem 0;
-    margin: -1rem 0 3rem 0;
+    margin: -2rem 0 3rem 0;
 }

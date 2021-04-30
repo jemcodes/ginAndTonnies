@@ -62,13 +62,14 @@ input {
     background-color: #E3EEE6;
     /* border: 3px solid red; */
     width: 35vw;
-    height: 25vh;
+    height: 5vh;
     padding: 15px;
     border-radius: 4px;
     margin: 1vh;
     font-size: 14pt;
     font-family: 'Raleway', sans-serif;
     color: #0D2217;
+    overflow: scroll;
 }
 
 p.create-drink-guide {
