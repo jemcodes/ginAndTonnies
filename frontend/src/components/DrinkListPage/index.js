@@ -51,7 +51,6 @@ function DrinkList() {
                 </div>
             </ul>
             <div>
-                <h2>Don't see the beverage you're looking for? Create a new drink here!</h2>
                 <CreateDrinkPage />
             </div>
         </div>

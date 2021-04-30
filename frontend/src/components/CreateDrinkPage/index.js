@@ -70,35 +70,37 @@ function CreateDrinkPage() {
                     </li>)}
                 </ul>
                 <div id="create-drink-wrapper">
-                    <div id="create-drink-guide">
-                        <h1>Add New Drink</h1>
-                        <h2>Didn't find what you were looking for? Use this form to add a new beer.</h2>
-                    </div>
-                <div id="create-drink-container">
-                    <label id="create-drink-guidelines">
-                    <input className="create-drink-title"
-                        type="text"
-                        placeholder="YOUR BEVERAGE TITLE"
-                        value={title}
-                        onChange={updateTitle} />
+                    <div id="create-drink-container">
+                        <h1>Didn't find what you were looking for? Use this form to add a new drink.</h1>
+                        <div className="create-drink-contents">
+                            <label>
+                            <input className="create-drink-title"
+                                type="text"
+                                placeholder="YOUR BEVERAGE TITLE"
+                                value={title}
+                                onChange={updateTitle} />
+                            </label>
+                        <label>
+                        <input className="create-drink-content"
+                            type="text"
+                            placeholder="DESCRIBE YOUR DRINK HERE"
+                            value={content}
+                            onChange={updateContent} />
                         </label>
-                    <label id="create-drink-guidelines">
-                    <input className="create-drink-content"
-                        type="text"
-                        placeholder="DESCRIBE YOUR DRINK HERE"
-                        value={content}
-                        onChange={updateContent} />
-                    </label>
-                        <label id="create-drink-guidelines">vertical images work best 🍸
-                    <input className="create-drink-img"
-                        type="text"
-                        placeholder="ADD AN IMAGE URL TO SHOW IT OFF"
-                        value={drinkImg}
-                        onChange={updateDrinkImg} />
-                    </label>
+                        <label>
+                        <p className="create-drink-guide">vertical images work best 🍸</p>
+                        <input className="create-drink-img"
+                            type="text"
+                            placeholder="ADD AN IMAGE URL TO SHOW IT OFF"
+                            value={drinkImg}
+                            onChange={updateDrinkImg} />
+                        </label>
+                        <div className="create-submit-block">
+                            <h2>Let's check out your new bevvie!</h2>
+                            <button type="submit">Create new drink</button>
+                        </div>
+                    </div>
                 </div>
-                <h2>Let's check out your new bevvie!</h2>
-                <button type="submit">Create new drink</button>
                 </div>
             </form>
         </section>
