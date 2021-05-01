@@ -50,19 +50,21 @@ function SingleDrinkPage() {
             <div id="single-drink-img-wrapper">
                 <img className="single-drink-img" alt={`A fresh cocktail`} src={drinkImg} />
                 <p id="single-drink-content">{content}</p>
-            </div>
-            <div className="drink-profile-details">
-                <NavLink to={`/drinks/${id}`}>
-                    <button className="drink-detail-button" type="button">
-                        Learn More
+                <div id="single-drink-buttons">
+                    <NavLink to={`/drinks/${id}/edit`}>
+                        <button className="drink-detail-button" type="button">
+                            Update This Drink
+                    </button>
+                    </NavLink>
+                    <NavLink to={`/drinks/${id}/reviews`}>
+                        <button className="drink-detail-button" type="button">
+                            See Reviews
                                         </button>
-                </NavLink>
-                <NavLink to={`/drinks/${id}/reviews`}>
-                    <button className="drink-detail-button" type="button">
-                        See Reviews
-                                        </button>
-                </NavLink>
+                    </NavLink>
+                </div>
             </div>
+                {/* <NavLink to={`/drinks/${id}/edit`}>Update This Drink</NavLink>
+                <NavLink to={`/drinks/${id}/reviews`}>See Reviews</NavLink> */}
         </div>
     ) 
 }
