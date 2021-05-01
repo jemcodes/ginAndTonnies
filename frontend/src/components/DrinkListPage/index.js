@@ -31,6 +31,7 @@ function DrinkList() {
     }
 
     return (
+        <div>
         <div id="drink-list-container">
             <ul>
                 <div className="drink-profile-container">
@@ -52,11 +53,11 @@ function DrinkList() {
                                             Learn More
                                         </button>
                                     </NavLink>
-                                    <NavLink to={`/drinks/${drink.id}/reviews`}>
+                                    {/* <NavLink to={`/drinks/${drink.id}/reviews`}>
                                         <button className="drink-detail-button" type="button">
                                             See Reviews
                                         </button>
-                                    </NavLink>
+                                    </NavLink> */}
                                 </div>
                             </div>
                     </li>)
@@ -66,7 +67,8 @@ function DrinkList() {
             <div>
                 <CreateDrinkPage />
             </div>
-            <Footer />
+        </div>
+        <Footer />
         </div>
     )
     

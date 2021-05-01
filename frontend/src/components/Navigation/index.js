@@ -14,7 +14,6 @@ function Navigation({ isLoaded }) {
     if (sessionUser) {
         sessionLinks = (
             <div>
-                <ProfileButton user={sessionUser} />
                 <NavLink to="/drinks/">
                     <button id="nav-all-drinks-button" type="button">
                         View All Drinks
@@ -25,13 +24,15 @@ function Navigation({ isLoaded }) {
                         Create A Drink
                     </button>
                 </NavLink>
-                {id && (
+                <h1>Cheers {sessionUser.username}!</h1>
+                <ProfileButton user={sessionUser} />
+                {/* {id && (
                     <NavLink to={`/drinks/${id}/reviews`}>
                         <button id="nav-see-reviews-button" type="button">
                             See Reviews
                         </button>
                     </NavLink>
-                )}
+                )} */}
             </div>
         );
     } else {

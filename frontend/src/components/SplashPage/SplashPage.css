@@ -201,10 +201,8 @@ body {
     background-color: #F7F7F7; 
     box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
     display: flex;
-    gap: 20px;
-    grid-template-rows: repeat(2, 1fr);
     padding: 3rem;
-    margin-bottom: 4vh;
+    /* margin-bottom: 4vh; */
 }
 
 .more-info-text {

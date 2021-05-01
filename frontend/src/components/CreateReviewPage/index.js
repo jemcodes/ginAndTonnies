@@ -52,7 +52,7 @@ function CreateReviewPage() {
         ;
 
         if (newReview) {
-            history.push(`/drinks/${drinkId}/reviews`);
+            history.push(`/drinks/${drinkId}`);
         }
     };
 

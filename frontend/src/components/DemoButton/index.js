@@ -7,9 +7,9 @@ function DemoButton() {
     const dispatch = useDispatch();
     const history = useHistory();
     
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-            dispatch(login({credential: 'Demo-lition', password: 'password'}))
+            await dispatch(login({credential: 'Demo-lition', password: 'password'}))
             history.push(`/drinks/`)
     }
     

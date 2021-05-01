@@ -14,7 +14,7 @@ router.get('/', requireAuth, asyncHandler(async (req, res, next) => {
         where: {
             drinkId
         },
-        include: db.User,
+        include: [db.User, db.Drink],
     });
     return res.json( reviewsToShow )
 }))

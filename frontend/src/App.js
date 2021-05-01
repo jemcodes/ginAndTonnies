@@ -12,6 +12,7 @@ import SingleDrinkReviewsPage from './components/SingleDrinkReviewsPage';
 import CreateReviewPage from './components/CreateReviewPage';
 import EditReviewPage from './components/EditReviewPage';
 import SplashPage from './components/SplashPage';
+import Footer from './components/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function App() {
             <>
               <Navigation isLoaded={isLoaded} />
               <CreateDrinkPage />
+              <Footer />
             </>
           </Route>
           <Route path="/drinks/:id/edit">
@@ -49,12 +51,6 @@ function App() {
             <>
               <Navigation isLoaded={isLoaded} />
               <EditReviewPage />
-            </>
-          </Route>
-          <Route path="/drinks/:id/reviews">
-            <>
-              <Navigation isLoaded={isLoaded} />
-              <SingleDrinkReviewsPage />
             </>
           </Route>
           <Route path="/drinks/:id">

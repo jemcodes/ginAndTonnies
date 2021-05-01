@@ -51,7 +51,7 @@ function SplashPage() {
                 <div className="feature-card">
                     <img className="drinks-header-1" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader1.png'} />
                     <div>
-                        <h2>RATE YOUR FAVORITE COCKTAILS</h2>
+                        <h2 >RATE YOUR FAVORITE COCKTAILS</h2>
                         <p>{"Bacardi white horse: savoy affair bearded lady agent orange!"}</p>
                     </div>
                 </div>
