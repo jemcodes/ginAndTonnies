@@ -45,3 +45,45 @@
     /* display: inline; */
     display: flex;
 }
+
+#nav-home-button {
+    background-color: #E3EEE6;
+    border: 1px solid #A3B4AB;
+    color: #1B442E;
+    margin: 1rem;
+}
+
+#nav-profile-button {
+    background-color: #E3EEE6;
+    border: 1px solid #A3B4AB;
+    color: #1B442E;
+    margin: 1rem;
+}
+
+#nav-all-drinks-button {
+    background-color: #E3EEE6;
+    border: 1px solid #A3B4AB;
+    color: #1B442E;
+    margin: 1rem;
+}
+
+#nav-create-drink-button {
+    background-color: #E3EEE6;
+    border: 1px solid #A3B4AB;
+    color: #1B442E;
+    margin: 1rem;
+}
+
+#nav-see-reviews-button {
+    background-color: #E3EEE6;
+    border: 1px solid #A3B4AB;
+    color: #1B442E;
+    margin: 1rem;
+}
+
+#nav-logout-button {
+    background-color: #E3EEE6;
+    border: 1px solid #A3B4AB;
+    color: #1B442E;
+    margin: 1rem;
+}

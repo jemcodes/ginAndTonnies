@@ -58,7 +58,7 @@ function SplashPage() {
                 <div className="feature-card">
                     <img className="drinks-header-2" alt={"Colorful cocktail display"} src={process.env.PUBLIC_URL + './images/drinksheader2.png'} />
                     <div>
-                        <h2>CRAFT & SHARE NEW DRINKS!</h2>
+                        <h2>CRAFT AND SHARE NEW DRINKS!</h2>
                         <p>{"Lorraine blue lagoon: imperial black russian smoky martini."}</p>
                     </div>
                 </div>

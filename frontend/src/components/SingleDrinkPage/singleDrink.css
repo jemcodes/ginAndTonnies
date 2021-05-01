@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Raleway&display=swap');
+/* font-family: 'Alice', serif;
+font-family: 'Raleway', sans-serif; */
+
+body {
+    background-color: #F7F7F7;
+}
+
+#no-reviews-found {
+    color: #333;
+    font-family: 'Alice', serif;
+    padding: 1rem 3rem -1rem 3rem;
+    margin: 1rem 0 0 0;
+    text-align: center;
+}
+
+#no-reviews-found-button {
+  position: relative;
+  padding: 15px;
+  margin: 0 1rem 2rem 1rem;
+  /* border: 3px solid red; */
+  background-color: #ECF6F1;
+  border: 2px solid #1B442E;
+  border-radius: 4px;
+  /* margin: 20px 0 40px 0; */
+  color: #1B442E;
+  width: 70%;
+}
+
+#single-drink-wrapper {
+    border: 5px solid green;
+    margin: 4rem 10rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 3px 8px rgba(27,68,46, 0.2);
+    border: 3px solid #DDD;
+}
+
+#single-drink-title {
+    color: #333;
+    font-family: 'Alice', serif;
+    padding: 1rem 3rem -1rem 3rem;
+    margin: 1rem 0 0 0;
+    text-align: center;
+}
+
+#single-drink-creator {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 20pt;
+    margin: 0 0 1rem 0;
+}
+
+#drink-content-container {
+    border: 3px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border: 2px solid #DDD;
+    box-shadow: 2px 4px 4px rgba(216,216,216, 1);
+    margin: 1rem 2rem;
+}
+
+.single-drink-img-wrapper {
+    border: 3px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-drink-img {
+    /* position: relative; */
+    border: 3px solid red;
+    max-width: 30rem;
+}
+
+
+#single-drink-content {
+    border: 3px solid red;
+    font-size: 16pt;
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#single-drink-button {
+    border: 3px solid red;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

@@ -15,19 +15,19 @@ function Navigation({ isLoaded }) {
         sessionLinks = (
             <div>
                 <ProfileButton user={sessionUser} />
-                <NavLink to="/drinks/new">
-                    <button type="button">
-                        Create A Drink
+                <NavLink to="/drinks/">
+                    <button id="nav-all-drinks-button" type="button">
+                        View All Drinks
                     </button>
                 </NavLink>
-                <NavLink to="/drinks/">
-                    <button type="button">
-                        View Drinks
+                <NavLink to="/drinks/new">
+                    <button id="nav-create-drink-button" type="button">
+                        Create A Drink
                     </button>
                 </NavLink>
                 {id && (
                     <NavLink to={`/drinks/${id}/reviews`}>
-                        <button type="button">
+                        <button id="nav-see-reviews-button" type="button">
                             See Reviews
                         </button>
                     </NavLink>
@@ -58,8 +58,8 @@ function Navigation({ isLoaded }) {
             <ul className="navigation-links">
                 <li>
                     <NavLink exact to="/">
-                        <button type="button">
-                            HOME
+                        <button id="nav-home-button" type="button">
+                            Home
                         </button>
                     </NavLink>
                     {isLoaded && sessionLinks}

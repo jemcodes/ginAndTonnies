@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createDrink } from '../../store/drink';
-import { useHistory, Redirect } from 'react-router-dom';
+import { useHistory, Redirect, NavLink } from 'react-router-dom';
 import './CreateDrink.css';
 
 
@@ -88,16 +88,16 @@ function CreateDrinkPage() {
                             onChange={updateContent} />
                         </label>
                         <label>
-                        <p className="create-drink-guide">vertical images work best 🍸</p>
+                        {/* <p className="create-drink-guide"></p> */}
                         <input className="create-drink-img"
                             type="text"
-                            placeholder="ADD AN IMAGE URL TO SHOW IT OFF"
+                                    placeholder="ADD AN IMAGE URL - VERTICAL IMAGES WORK BEST 🍸"
                             value={drinkImg}
                             onChange={updateDrinkImg} />
                         </label>
                         <div className="create-submit-block">
                             <h2>Let's check out your new bevvie!</h2>
-                            <button type="submit">Create new drink</button>
+                            <button className="drink-create-button" type="submit">Create new drink</button>
                         </div>
                     </div>
                 </div>
