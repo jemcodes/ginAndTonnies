@@ -77,7 +77,7 @@ function SignupFormPage() {
                 <button className="signup-form-button" type="submit">Sign Up</button>
                 <NavLink className="signup-instead"
                     to={`/`}>CANCEL
-            </NavLink>
+                </NavLink>
                 <Footer />
             </div>
         </form>

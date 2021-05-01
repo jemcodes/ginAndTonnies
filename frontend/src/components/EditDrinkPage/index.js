@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams, Redirect } from 'react-router-dom';
 import { editDrink, getDrinks, deleteDrink } from '../../store/drink';
+import './EditDrink.css';
 
 function EditDrinkPage() {
     const dispatch = useDispatch();
@@ -86,23 +87,34 @@ function EditDrinkPage() {
                         {error}
                     </li>)}
                 </ul>
-                <input
+                <div id="update-drink-wrapper">
+                    <div id="update-drink-container">
+                        <h1>See something wrong with the drink listing? Update it here!</h1>
+                <div className="update-drink-contents">
+                <label className="update-drink-labels">
+                <input className="update-drink-title"
                     type="text"
-                    placeholder="Drink Title"
+                    // placeholder="Drink Title"
                     value={title}
                     onChange={updateTitle} />
-                <input
+                </label>
+                <input className="update-drink-content"
                     type="text"
-                    placeholder="Drink Description"
+                    // placeholder="Drink Description"
                     value={content}
                     onChange={updateContent} />
-                <input
+                <input className="create-drink-img"
                     type="text"
-                    placeholder="Drink Picture"
+                    // placeholder="Drink Picture"
                     value={drinkImg}
                     onChange={updateDrinkImg} />
-                <button type="submit">Update Drink</button>
-                <button type="button" onClick={onDelete}>Delete This Drink 👋</button>
+                <div className="create-submit-block">
+                    <button type="submit">Update Drink</button>
+                    <button type="button" onClick={onDelete}>Delete This Drink 👋</button>
+                </div>
+                    </div>
+                    </div>
+                </div>
             </form>
         </section>
     );
