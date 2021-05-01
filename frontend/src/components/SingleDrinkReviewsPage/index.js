@@ -20,8 +20,42 @@ function SingleDrinkReviewsPage({ currentDrink }) {
     // helper function for drink rating - call helper function
     const renderRating = (review) => {
         if (review.rating === 5) {
-            review.ratingImages = '🍹🍹🍹🍹🍹'
+            review.ratingImages = 
+            <div>
+                <img src={`/images/lime3.png`} alt={`Little lime`}/>
+                <img src={`/images/lime3.png`} alt={`Little lime`}/>
+                <img src={`/images/lime3.png`} alt={`Little lime`}/>
+                <img src={`/images/lime3.png`} alt={`Little lime`}/>
+                <img src={`/images/lime3.png`} alt={`Little lime`}/>
+            </div>
+        } else if (review.rating === 4) {
+            review.ratingImages = 
+            <div>
+                <img src={`/images/lime3.png`} alt={`Little lime`} />
+                <img src={`/images/lime3.png`} alt={`Little lime`} />
+                <img src={`/images/lime3.png`} alt={`Little lime`} />
+                <img src={`/images/lime3.png`} alt={`Little lime`} />
+            </div>
+        } else if (review.rating === 3) {
+            review.ratingImages =
+            <div>
+                <img src={`/images/lime3.png`} alt={`Little lime`} />
+                <img src={`/images/lime3.png`} alt={`Little lime`} />
+                <img src={`/images/lime3.png`} alt={`Little lime`} />
+            </div>
+        } else if (review.rating === 2) {
+            review.ratingImages = 
+            <div>
+                <img src={`/images/lime3.png`} alt={`Little lime`} />
+                <img src={`/images/lime3.png`} alt={`Little lime`} />
+            </div>
+        } else if (review.rating === 1) {
+            review.ratingImages =
+            <div>
+                <img src={`/images/lime3.png`} alt={`Little lime`} />
+            </div>
         }
+
         return (
             <h2 className="review-list-contents">{review.ratingImages}</h2>
         )
