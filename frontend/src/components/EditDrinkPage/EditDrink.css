@@ -9,19 +9,17 @@ body {
 }
 
 #update-drink-wrapper {
-    border: 5px solid green;
+    /* border: 5px solid green; */
     margin: 4rem 16rem;
-    /* display: flex;
-    flex-direction: column;
+    display: flex;
     justify-content: center;
-    text-align: center; */
+    align-items: center;
 }
 
 #update-drink-container {
     border: 3px solid #DDD;
     margin: -1rem 10rem;
     padding: 2rem;
-    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center; 

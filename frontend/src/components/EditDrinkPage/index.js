@@ -90,29 +90,29 @@ function EditDrinkPage() {
                 <div id="update-drink-wrapper">
                     <div id="update-drink-container">
                         <h1>See something wrong with the drink listing? Update it here!</h1>
-                <div className="update-drink-contents">
-                <label className="update-drink-labels">
-                <input className="update-drink-title"
-                    type="text"
-                    placeholder="YOUR BEVERAGE TITLE"
-                    value={title}
-                    onChange={updateTitle} />
-                </label>
-                <input className="update-drink-content"
-                    type="text"
-                    placeholder="DESCRIBE YOUR DRINK HERE"
-                    value={content}
-                    onChange={updateContent} />
-                <input className="create-drink-img"
-                    type="text"
-                    placeholder="ADD AN IMAGE URL - VERTICAL IMAGES WORK BEST 🍸"
-                    value={drinkImg}
-                    onChange={updateDrinkImg} />
-                <div className="update-submit-block">
-                    <button className="drink-update-button" type="submit">Update Drink</button>
-                    <button className="drink-delete-button" type="button" onClick={onDelete}>Delete This Drink 👋</button>
-                </div>
-                    </div>
+                        <div className="update-drink-contents">
+                            <label className="update-drink-labels">
+                                <input className="update-drink-title"
+                                type="text"
+                                placeholder="YOUR BEVERAGE TITLE"
+                                value={title}
+                                onChange={updateTitle} />
+                            </label>
+                            <input className="update-drink-content"
+                                type="text"
+                                placeholder="DESCRIBE YOUR DRINK HERE"
+                                value={content}
+                                onChange={updateContent} />
+                            <input className="create-drink-img"
+                                type="text"
+                                placeholder="ADD AN IMAGE URL - VERTICAL IMAGES WORK BEST 🍸"
+                                value={drinkImg}
+                                onChange={updateDrinkImg} />
+                        </div>
+                        <div className="update-submit-block">
+                            <button className="drink-update-button" type="submit">Update Drink</button>
+                            <button className="drink-delete-button" type="button" onClick={onDelete}>Delete This Drink 👋</button>
+                        </div>
                     </div>
                 </div>
             </form>
