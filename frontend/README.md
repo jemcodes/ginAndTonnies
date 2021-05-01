@@ -86,6 +86,9 @@ https://gin-and-tonnies.herokuapp.com/
 
 ![Redux Store TreeDetail](/frontend/src/images/reduxstoretreedetail.png)
 
+### Adobe XD Mock-ups
+![AdobeXDMockups](/frontend/src/images/XDMockups.png)
+
 ### Sample Screenshots
 
 ### Installation Instructions
