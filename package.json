@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/jemcodes/authenticateMe#readme",
   "dependencies": {
-    "faker": "^5.5.3"
+    "faker": "^5.5.3",
+    "sequelize": "^6.6.2"
   }
 }
