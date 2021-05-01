@@ -25,65 +25,109 @@
     color: #F7F7F7;
 } */
 
-#nav-bar {
-    border: 3px solid blue;
+/* #nav-bar {
+    border: 3px solid red;
     background: #F1F6F2;
     text-align: center;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-}
+    align-items: center; */
+/* } */
 
 .navigation-links {
     padding-left: 0;
 }
 
-.navigation-links li {
+.navigation-links {
     border: 3px solid blue;
+    position: relative;
     list-style: none;
-    /* display: inline; */
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#nav-link-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: relative;
 }
 
 #nav-home-button {
+    border: 2px solid red;
+    margin: 2rem 1 rem;
     background-color: #E3EEE6;
-    border: 1px solid #A3B4AB;
+    border: 2px solid #A3B4AB;
     color: #1B442E;
-    margin: 1rem;
+    text-transform: uppercase;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
 }
 
-#nav-profile-button {
+/* #nav-profile-button {
     background-color: #E3EEE6;
     border: 1px solid #A3B4AB;
     color: #1B442E;
     margin: 1rem;
-}
+} */
 
 #nav-all-drinks-button {
+    border: 2px solid red;
+    margin: 2rem 1 rem;
     background-color: #E3EEE6;
-    border: 1px solid #A3B4AB;
+    border: 2px solid #A3B4AB;
     color: #1B442E;
-    margin: 1rem;
+    text-transform: uppercase;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
 }
 
 #nav-create-drink-button {
+    border: 2px solid red;
+    margin: 2rem 1 rem;
     background-color: #E3EEE6;
-    border: 1px solid #A3B4AB;
+    border: 2px solid #A3B4AB;
     color: #1B442E;
-    margin: 1rem;
+    text-transform: uppercase;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
 }
 
-#nav-see-reviews-button {
+/* #nav-see-reviews-button {
     background-color: #E3EEE6;
     border: 1px solid #A3B4AB;
     color: #1B442E;
     margin: 1rem;
+} */
+
+#user-welcome-message {
+    border: 2px solid red;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
 }
 
 #nav-logout-button {
+     border: 2px solid red;
+    margin: 2rem 1 rem;
     background-color: #E3EEE6;
-    border: 1px solid #A3B4AB;
+    border: 2px solid #A3B4AB;
     color: #1B442E;
-    margin: 1rem;
+    text-transform: uppercase;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
 }

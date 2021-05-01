@@ -13,7 +13,7 @@ function Navigation({ isLoaded }) {
     let sessionLinks;
     if (sessionUser) {
         sessionLinks = (
-            <div>
+            <div id="nav-link-group">
                 <NavLink to="/drinks/">
                     <button id="nav-all-drinks-button" type="button">
                         View All Drinks
@@ -24,7 +24,7 @@ function Navigation({ isLoaded }) {
                         Create A Drink
                     </button>
                 </NavLink>
-                <h1>Cheers {sessionUser.username}!</h1>
+                <h1 id="user-welcome-message">Cheers {sessionUser.username}!</h1>
                 <ProfileButton user={sessionUser} />
                 {/* {id && (
                     <NavLink to={`/drinks/${id}/reviews`}>
