@@ -39,30 +39,35 @@ function App() {
             <>
               <Navigation isLoaded={isLoaded} />
               <EditDrinkPage />
+              <Footer />
             </>
           </Route>
           <Route path="/drinks/:drinkId/reviews/new">
             <>
               <Navigation isLoaded={isLoaded} />
               <CreateReviewPage />
+              <Footer />
             </>
           </Route>
           <Route path="/drinks/:drinkId/reviews/:reviewId/edit">
             <>
               <Navigation isLoaded={isLoaded} />
               <EditReviewPage />
+              <Footer />
             </>
           </Route>
           <Route path="/drinks/:id">
             <>
               <Navigation isLoaded={isLoaded} />
               <SingleDrinkPage />
+              <Footer />
             </>
           </Route>
           <Route path="/drinks">
             <>
               <Navigation isLoaded={isLoaded} />
               <DrinkListPage />
+              <Footer />
             </>
           </Route>
           <Route path="/" exact>
