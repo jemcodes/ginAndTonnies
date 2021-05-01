@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, NavLink, Redirect } from 'react-router-dom';
 import { getDrinks } from '../../store/drink';
+import SingleDrinkReviewsPage from '../SingleDrinkReviewsPage';
 import './singleDrink.css';
 
 function SingleDrinkPage() {
@@ -48,25 +49,28 @@ function SingleDrinkPage() {
                 <h1 id="single-drink-title">{title}</h1>
                 <h2 id="single-drink-creator">Created by: {currentDrink.User.username}</h2>
             <div id="single-drink-img-wrapper">
-                <img className="single-drink-img" alt={`A fresh cocktail`} src={drinkImg} />
-                <p id="single-drink-content">{content}</p>
-                <div id="single-drink-buttons">
+                <div id="drink-content-container">
+                    <img className="single-drink-img" alt={`A fresh cocktail`} src={drinkImg} />
+                    <p id="single-drink-content">{content}</p>
+                <div id="single-drink-button">
                     <NavLink to={`/drinks/${id}/edit`}>
                         <button className="drink-detail-button" type="button">
                             Update This Drink
                     </button>
                     </NavLink>
-                    <NavLink to={`/drinks/${id}/reviews`}>
+                    <NavLink to={`/drinks/${id}/reviews/new`}>
                         <button className="drink-detail-button" type="button">
-                            See Reviews
-                                        </button>
+                            Review This Drink
+                        </button>
                     </NavLink>
-                </div>
-            </div>
                 {/* <NavLink to={`/drinks/${id}/edit`}>Update This Drink</NavLink>
                 <NavLink to={`/drinks/${id}/reviews`}>See Reviews</NavLink> */}
+                </div>
+            </div>
         </div>
-    ) 
-}
+        <SingleDrinkReviewsPage />
+    </div>
+    )
+};
 
 export default SingleDrinkPage;
