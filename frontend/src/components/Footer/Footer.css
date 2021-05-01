@@ -4,12 +4,12 @@ font-family: 'Raleway', sans-serif; */
 
 body {
     height: 100%;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
     position: relative;
 }
 
 footer {
-    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; */
     background: #F1F6F2;
     text-align: center;
     font-family: 'Raleway', sans-serif;

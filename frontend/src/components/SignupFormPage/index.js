@@ -30,6 +30,7 @@ function SignupFormPage() {
     };
 
     return (
+        <div>
         <form className="signup-form-background" onSubmit={handleSubmit}>
             <ul>
                 {errors.map((error, idx) => <li key={idx}>{error}</li>)}
@@ -78,9 +79,10 @@ function SignupFormPage() {
                 <NavLink className="signup-instead"
                     to={`/`}>CANCEL
                 </NavLink>
-                <Footer />
             </div>
         </form>
+            <Footer />
+        </div>
     );
 }
 

@@ -12,6 +12,7 @@ import SingleDrinkReviewsPage from './components/SingleDrinkReviewsPage';
 import CreateReviewPage from './components/CreateReviewPage';
 import EditReviewPage from './components/EditReviewPage';
 import SplashPage from './components/SplashPage';
+import Footer from './components/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -31,42 +32,42 @@ function App() {
             <>
               <Navigation isLoaded={isLoaded} />
               <CreateDrinkPage />
+              <Footer />
             </>
           </Route>
           <Route path="/drinks/:id/edit">
             <>
               <Navigation isLoaded={isLoaded} />
               <EditDrinkPage />
+              <Footer />
             </>
           </Route>
           <Route path="/drinks/:drinkId/reviews/new">
             <>
               <Navigation isLoaded={isLoaded} />
               <CreateReviewPage />
+              <Footer />
             </>
           </Route>
           <Route path="/drinks/:drinkId/reviews/:reviewId/edit">
             <>
               <Navigation isLoaded={isLoaded} />
               <EditReviewPage />
-            </>
-          </Route>
-          <Route path="/drinks/:id/reviews">
-            <>
-              <Navigation isLoaded={isLoaded} />
-              <SingleDrinkReviewsPage />
+              <Footer />
             </>
           </Route>
           <Route path="/drinks/:id">
             <>
               <Navigation isLoaded={isLoaded} />
               <SingleDrinkPage />
+              <Footer />
             </>
           </Route>
           <Route path="/drinks">
             <>
               <Navigation isLoaded={isLoaded} />
               <DrinkListPage />
+              <Footer />
             </>
           </Route>
           <Route path="/" exact>

@@ -31,7 +31,7 @@ function SingleDrinkPage() {
             setContent(foundDrink.content)
             setDrinkImg(foundDrink.drinkImg)
         }
-    }, [drinkList, id])
+    }, [drinkList, id]);
 
     if (!sessionUser) {
         return (
@@ -46,31 +46,35 @@ function SingleDrinkPage() {
     return (
         <div id="single-drink-wrapper">
             {/* <NavLink to={`/drinks/`}>Return To Drinks</NavLink> */}
-                <h1 id="single-drink-title">{title}</h1>
-                <h2 id="single-drink-creator">Created by: {currentDrink.User.username}</h2>
+            <h1 id="single-drink-title">{title}</h1>
+            <h2 id="single-drink-creator">Created by: {currentDrink.User.username}</h2>
             <div id="single-drink-img-wrapper">
                 <div id="drink-content-container">
                     <img className="single-drink-img" alt={`A fresh cocktail`} src={drinkImg} />
-                    <p id="single-drink-content">{content}</p>
-                <div id="single-drink-button">
-                    <NavLink to={`/drinks/${id}/edit`}>
-                        <button className="drink-detail-button" type="button">
-                            Update This Drink
-                    </button>
-                    </NavLink>
-                    <NavLink to={`/drinks/${id}/reviews/new`}>
-                        <button className="drink-detail-button" type="button">
-                            Review This Drink
-                        </button>
-                    </NavLink>
-                {/* <NavLink to={`/drinks/${id}/edit`}>Update This Drink</NavLink>
-                <NavLink to={`/drinks/${id}/reviews`}>See Reviews</NavLink> */}
+                    <div id="drink-info-and-buttons">
+                        <p id="single-drink-content">{content}</p>
+                        <div id="single-drink-button">
+                            {currentDrink.User.username === sessionUser.username && (
+                                <NavLink to={`/drinks/${id}/edit`}>
+                                    <button className="drink-detail-button" type="button">
+                                        Update This Drink
+                                    </button>
+                                </NavLink>
+                            )}
+                            <NavLink to={`/drinks/${id}/reviews/new`}>
+                                <button className="drink-detail-button" type="button">
+                                    Review This Drink
+                                </button>
+                            </NavLink>
+                            {/* <NavLink to={`/drinks/${id}/edit`}>Update This Drink</NavLink>
+                            <NavLink to={`/drinks/${id}/reviews`}>See Reviews</NavLink> */}
+                        </div>
+                    </div>
                 </div>
             </div>
+            <SingleDrinkReviewsPage currentDrink={currentDrink} />
         </div>
-        <SingleDrinkReviewsPage />
-    </div>
-    )
+    );
 };
 
 export default SingleDrinkPage;

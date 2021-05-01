@@ -12,8 +12,8 @@ body {
     /* border: 5px solid green; */
     margin: 4rem 16rem;
     display: flex;
-    flex-direction: column;
-    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
 }
 
 #create-drink-guide {

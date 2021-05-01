@@ -6,13 +6,13 @@ body {
     background-color: #F7F7F7;
 }
 
-#review-wrapper {}
-
 #rating-rows {
     border-bottom: 3px solid #eaeaea;
     /* box-shadow: 2px 4px 4px rgba(216,216,216, 1); */
     margin: 1rem 2rem;
 }
+
+
 
 #review-list-header {
     border-bottom: 3px solid #eaeaea;

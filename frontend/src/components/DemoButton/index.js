@@ -7,16 +7,16 @@ function DemoButton() {
     const dispatch = useDispatch();
     const history = useHistory();
     
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-            dispatch(login({credential: 'Demo-lition', password: 'password'}))
+            await dispatch(login({credential: 'Demo-lition', password: 'password'}))
             history.push(`/drinks/`)
     }
     
     return (
         <section className="demo-row">
             <form onSubmit={handleSubmit} >
-                    <button type="submit">DEMO LOGIN</button>
+                    <button id="demo-button" type="submit">DEMO LOGIN</button>
             </form>
         </section>
         
