@@ -6,6 +6,27 @@ body {
     background-color: #F7F7F7;
 }
 
+#no-reviews-found {
+    color: #333;
+    font-family: 'Alice', serif;
+    padding: 1rem 3rem -1rem 3rem;
+    margin: 1rem 0 0 0;
+    text-align: center;
+}
+
+#no-reviews-found-button {
+  position: relative;
+  padding: 15px;
+  margin: 0 1rem 2rem 1rem;
+  /* border: 3px solid red; */
+  background-color: #ECF6F1;
+  border: 2px solid #1B442E;
+  border-radius: 4px;
+  /* margin: 20px 0 40px 0; */
+  color: #1B442E;
+  width: 70%;
+}
+
 #single-drink-wrapper {
     border: 5px solid green;
     margin: 4rem 10rem;

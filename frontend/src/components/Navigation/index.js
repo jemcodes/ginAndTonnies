@@ -17,7 +17,7 @@ function Navigation({ isLoaded }) {
                 <ProfileButton user={sessionUser} />
                 <NavLink to="/drinks/">
                     <button type="button">
-                        View Drinks
+                        View All Drinks
                     </button>
                 </NavLink>
                 <NavLink to="/drinks/new">
