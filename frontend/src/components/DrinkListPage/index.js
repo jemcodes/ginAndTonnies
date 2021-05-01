@@ -49,7 +49,7 @@ function DrinkList() {
                                 <p>{drink.content}</p>
                                 <div className="drink-profile-details">
                                     <NavLink to={`/drinks/${drink.id}`}>
-                                        <button className="drink-detail-button" type="button">
+                                        <button className="learn-more-button" type="button">
                                             Learn More
                                         </button>
                                     </NavLink>

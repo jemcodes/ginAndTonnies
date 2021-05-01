@@ -94,18 +94,18 @@ function EditDrinkPage() {
                 <label className="update-drink-labels">
                 <input className="update-drink-title"
                     type="text"
-                    // placeholder="Drink Title"
+                    placeholder="YOUR BEVERAGE TITLE"
                     value={title}
                     onChange={updateTitle} />
                 </label>
                 <input className="update-drink-content"
                     type="text"
-                    // placeholder="Drink Description"
+                    placeholder="DESCRIBE YOUR DRINK HERE"
                     value={content}
                     onChange={updateContent} />
                 <input className="create-drink-img"
                     type="text"
-                    // placeholder="Drink Picture"
+                    placeholder="ADD AN IMAGE URL - VERTICAL IMAGES WORK BEST 🍸"
                     value={drinkImg}
                     onChange={updateDrinkImg} />
                 <div className="update-submit-block">
