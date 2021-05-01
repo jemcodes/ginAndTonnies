@@ -52,11 +52,11 @@ function DrinkList() {
                                             Learn More
                                         </button>
                                     </NavLink>
-                                    <NavLink to={`/drinks/${drink.id}/reviews`}>
+                                    {/* <NavLink to={`/drinks/${drink.id}/reviews`}>
                                         <button className="drink-detail-button" type="button">
                                             See Reviews
                                         </button>
-                                    </NavLink>
+                                    </NavLink> */}
                                 </div>
                             </div>
                     </li>)

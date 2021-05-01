@@ -15,8 +15,7 @@ function SingleDrinkReviewsPage() {
 
     const reviewList = useSelector(state => state.review.allReviews);
     const sessionUser = useSelector(state => state.session.user);
-    // const drinkList = useSelector(state => state.drink.allDrinks);
-    // console.log(drinkList)
+    const drinkList = useSelector(state => state.drink.allDrinks);
 
     if (reviewList.length === 0) {
         return (
@@ -42,7 +41,7 @@ function SingleDrinkReviewsPage() {
         <div id="review-wrapper">
             {reviewList.map(review => (
                 <div id="rating-rows" key={review.id}>
-                    <h1 id="review-list-header">Reviews for Insert Drink Title Here</h1>
+                    <h1 id="review-list-header">{`Reviews for INSERT DRINK NAME HERE`}</h1>
                     <h2 className="review-list-contents">Rating: {review.rating}</h2>
                     <h2 className="review-list-contents">{review.content}</h2>
                     <h2 className="review-list-contents">User: {review.User.username}</h2>
