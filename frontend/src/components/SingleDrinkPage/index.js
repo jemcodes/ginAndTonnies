@@ -54,11 +54,13 @@ function SingleDrinkPage() {
                     <div id="drink-info-and-buttons">
                         <p id="single-drink-content">{content}</p>
                         <div id="single-drink-button">
-                            <NavLink to={`/drinks/${id}/edit`}>
-                                <button className="drink-detail-button" type="button">
-                                    Update This Drink
-                                </button>
-                            </NavLink>
+                            {currentDrink.User.username === sessionUser.username && (
+                                <NavLink to={`/drinks/${id}/edit`}>
+                                    <button className="drink-detail-button" type="button">
+                                        Update This Drink
+                                    </button>
+                                </NavLink>
+                            )}
                             <NavLink to={`/drinks/${id}/reviews/new`}>
                                 <button className="drink-detail-button" type="button">
                                     Review This Drink

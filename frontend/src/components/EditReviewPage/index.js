@@ -107,8 +107,7 @@ function EditReviewPage() {
                     placeholder="Rating"
                     value={rating}
                     onChange={updateRating} />
-                <input className="edit-review-content"
-                    type="text"
+                <textarea className="edit-review-content"
                     placeholder="Review Content"
                     value={content}
                     onChange={updateContent} />

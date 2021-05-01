@@ -93,11 +93,14 @@ function SingleDrinkReviewsPage({ currentDrink }) {
                     {renderRating(review)}
                     <h2 className="review-list-contents">{review.content}</h2>
                     <h2 className="review-list-contents">User: {review.User.username}</h2>
+                    {review.User.username === sessionUser.username && 
+                    (
                     <NavLink to={`/drinks/${id}/reviews/${review.id}/edit`}>
                         <button className="review-update-button" type="button">
                             UPDATE THIS REVIEW
                         </button>
                     </NavLink>
+                    )}
                 </div>
             ))}
             {/* <div>

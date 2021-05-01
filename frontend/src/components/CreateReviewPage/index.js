@@ -73,8 +73,7 @@ function CreateReviewPage() {
                     placeholder="Review Rating"
                     value={rating}
                     onChange={updateRating} />
-                <input className="create-review-content"
-                    type="text"
+                <textarea className="create-review-content"
                     placeholder="Review Content"
                     value={content}
                     onChange={updateContent} />
