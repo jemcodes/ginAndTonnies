@@ -14,25 +14,30 @@ function Navigation({ isLoaded }) {
     if (sessionUser) {
         sessionLinks = (
             <div id="nav-link-group">
-                <NavLink to="/drinks/">
-                    <button id="nav-all-drinks-button" type="button">
-                        View All Drinks
-                    </button>
-                </NavLink>
-                <NavLink to="/drinks/new">
-                    <button id="nav-create-drink-button" type="button">
-                        Create A Drink
-                    </button>
-                </NavLink>
-                <h1 id="user-welcome-message">Cheers {sessionUser.username}!</h1>
-                <ProfileButton user={sessionUser} />
-                {/* {id && (
-                    <NavLink to={`/drinks/${id}/reviews`}>
-                        <button id="nav-see-reviews-button" type="button">
-                            See Reviews
+                <h2 id="user-welcome-message">Cheers {sessionUser.username}!</h2>
+                    <NavLink exact to="/">
+                        <button id="nav-home-button" type="button">
+                            Home
+                            </button>
+                    </NavLink>
+                    <NavLink to="/drinks/">
+                        <button id="nav-all-drinks-button" type="button">
+                            View All Drinks
                         </button>
                     </NavLink>
-                )} */}
+                    <NavLink to="/drinks/new">
+                        <button id="nav-create-drink-button" type="button">
+                            Create A Drink
+                        </button>
+                    </NavLink>
+                    <ProfileButton user={sessionUser} />
+                    {/* {id && (
+                        <NavLink to={`/drinks/${id}/reviews`}>
+                            <button id="nav-see-reviews-button" type="button">
+                                See Reviews
+                            </button>
+                        </NavLink>
+                    )} */}
             </div>
         );
     } else {
@@ -56,16 +61,7 @@ function Navigation({ isLoaded }) {
 
     return (
         <div className='nav-bar'>
-            <ul className="navigation-links">
-                <li>
-                    <NavLink exact to="/">
-                        <button id="nav-home-button" type="button">
-                            Home
-                        </button>
-                    </NavLink>
-                    {isLoaded && sessionLinks}
-                </li>
-            </ul>
+            {isLoaded && sessionLinks}
         </div>
     );
 }

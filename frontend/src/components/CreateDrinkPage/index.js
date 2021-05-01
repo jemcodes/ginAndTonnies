@@ -81,8 +81,7 @@ function CreateDrinkPage() {
                                 onChange={updateTitle} />
                             </label>
                         <label>
-                        <input className="create-drink-content"
-                            type="text"
+                        <textarea className="create-drink-content"
                             placeholder="DESCRIBE YOUR DRINK HERE"
                             value={content}
                             onChange={updateContent} />

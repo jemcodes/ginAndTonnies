@@ -29,7 +29,7 @@ body {
 
 #single-drink-wrapper {
     border: 5px solid green;
-    margin: 4rem 10rem;
+    margin: 4rem 10rem 10rem 10rem;
     /* position: fixed; */
     display: flex;
     flex-direction: column;
