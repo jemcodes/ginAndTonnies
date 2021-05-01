@@ -94,3 +94,32 @@ input {
   border: none;
 }
 
+.update-submit-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.drink-update-button {
+    background-color: #E3EEE6;
+    border: 1px solid #A3B4AB;
+    color: #1B442E;
+    width: 14vw;
+    margin: 1rem 0 1rem 0;
+    /* padding: 1.5rem; */
+}
+
+.drink-delete-button {
+    background-color: #E3EEE6;
+    border: 1px solid #A3B4AB;
+    color: #1B442E;
+    /* width: 35vw; */
+    margin: 1rem 0 2rem 0;
+}
+
+.drink-delete-button:hover {
+    background-color: #cc0000;
+    color: white;
+    text-transform: uppercase;
+}

@@ -108,9 +108,9 @@ function EditDrinkPage() {
                     // placeholder="Drink Picture"
                     value={drinkImg}
                     onChange={updateDrinkImg} />
-                <div className="create-submit-block">
-                    <button type="submit">Update Drink</button>
-                    <button type="button" onClick={onDelete}>Delete This Drink 👋</button>
+                <div className="update-submit-block">
+                    <button className="drink-update-button" type="submit">Update Drink</button>
+                    <button className="drink-delete-button" type="button" onClick={onDelete}>Delete This Drink 👋</button>
                 </div>
                     </div>
                     </div>
