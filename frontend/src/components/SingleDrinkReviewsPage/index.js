@@ -45,7 +45,11 @@ function SingleDrinkReviewsPage() {
                     <h2 className="review-list-contents">Rating: {review.rating}</h2>
                     <h2 className="review-list-contents">{review.content}</h2>
                     <h2 className="review-list-contents">User: {review.User.username}</h2>
-                    {/* <NavLink to={`/drinks/${id}/reviews/${review.id}/edit`}>Update This Review</NavLink> */}
+                    <NavLink to={`/drinks/${id}/reviews/${review.id}/edit`}>
+                        <button className="review-update-button" type="button">
+                            UPDATE THIS REVIEW
+                        </button>
+                    </NavLink>
                 </div>
             ))}
             {/* <div>

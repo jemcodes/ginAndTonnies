@@ -130,7 +130,7 @@ input {
     border: 2px solid #0D2217;
     border-radius: 4px;
     margin: 1rem 0 2rem 0;
-    color: #0D2217;
+    color: #1B442E;
 }
 
 .signup-form-button:hover {
@@ -139,7 +139,7 @@ input {
 }
 
 .cancel-signup {
-    color: #0D2217;
+    color: #1B442E;
     padding: -2rem 0 2rem 0;
     margin: -2rem 0 3rem 0;
 }

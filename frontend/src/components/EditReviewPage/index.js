@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams, Redirect } from 'react-router-dom';
 import { editReview, getReviews, deleteReview } from '../../store/review';
 import { getDrinks } from '../../store/drink';
+import './EditReview.css';
 
 function EditReviewPage() {
     const dispatch = useDispatch();
@@ -97,18 +98,27 @@ function EditReviewPage() {
                         {error}
                     </li>)}
                 </ul>
-                <input
-                    type="text"
+                <div id="edit-review-wrapper">
+                    <div id="edit-review-container">
+                        <h1>Something wrong with your review? Change it here!</h1>
+                <div className="edit-review-contents">
+                <input className="edit-review-rating"
+                    type="number" min="1" max="5" step="1"
                     placeholder="Rating"
                     value={rating}
                     onChange={updateRating} />
-                <input
+                <input className="edit-review-content"
                     type="text"
                     placeholder="Review Content"
                     value={content}
                     onChange={updateContent} />
-                <button type="submit">Update Review</button>
-                <button type="button" onClick={onDelete}>Delete This Review 👋</button>
+                   <div className="update-submit-block">
+                    <button className="edit-review-button" type="submit">Update Review</button>
+                    <button className="review-delete-button" type="button" onClick={onDelete}>Delete This Review 👋</button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
             </form>
         </section>
     );

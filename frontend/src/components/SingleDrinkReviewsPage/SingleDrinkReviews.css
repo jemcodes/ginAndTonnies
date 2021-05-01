@@ -29,3 +29,12 @@ body {
     font-size: 20pt;
     margin: -1rem 0 0.5rem 0;
 }
+
+.review-update-button {
+    background-color: #E3EEE6;
+    border: 1px solid #A3B4AB;
+    color: #1B442E;
+    max-width: 20vw;
+    margin: 0.5rem 0 1rem 3rem;
+    /* padding: 1.5rem; */
+}

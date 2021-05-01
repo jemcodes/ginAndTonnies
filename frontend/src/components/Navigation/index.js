@@ -25,13 +25,13 @@ function Navigation({ isLoaded }) {
                         Create A Drink
                     </button>
                 </NavLink>
-                {/* {id && (
+                {id && (
                     <NavLink to={`/drinks/${id}/reviews`}>
                         <button type="button">
                             See Reviews
                         </button>
                     </NavLink>
-                )} */}
+                )}
             </div>
         );
     } else {

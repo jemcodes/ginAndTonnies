@@ -97,6 +97,11 @@ body {
   color: #0D2217;
 }
 
+#modal-user-field:focus{
+  outline: 3px solid #C3D6CC;
+  border: none;
+}
+
 #modal-password-field {
   background-color: #E3EEE6;
   /* border: 3px solid red; */
@@ -106,6 +111,11 @@ body {
   font-size: 14pt;
   font-family: 'Raleway', sans-serif;
   color: #0D2217;
+}
+
+#modal-password-field:focus{
+  outline: 3px solid #C3D6CC;
+  border: none;
 }
 
 .signin-or-signup {
@@ -122,15 +132,22 @@ body {
   padding: 15px;
   margin: 0 1rem 2rem 1rem;
   /* border: 3px solid red; */
-  background-color: #0D2217;
+  background-color: transparent;
+  border: 2px solid #0D2217;
+  border-radius: 4px;
   /* margin: 20px 0 40px 0; */
-  color: #FFF;
+  color: #1B442E;
   width: 70%;
+}
+
+.welcome-button:hover {
+    background-color: #ECF6F1;
+    font-size: 16.5pt;
 }
 
 .signup-instead {
   margin: 0 0 1rem 0;
-  color: #0D2217
+  color: #1B442E;
 }
 
 #modal-close {
@@ -140,4 +157,5 @@ body {
   cursor: pointer;
   transform: rotate(45deg);
   font-size: 45pt;
+  color: #1B442E;
 }
