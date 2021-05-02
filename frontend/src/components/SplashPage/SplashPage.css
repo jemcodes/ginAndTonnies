@@ -15,14 +15,12 @@ body {
     
 }
 
-/*Top Container*/
 .top-container {
     margin: 0;
     width: 100%;
     position: relative;
     display: flex;
 }
-
 
 .showcase {
     margin: 0;
@@ -73,7 +71,7 @@ body {
     padding: 18px 22px;
     cursor: pointer;
     border-radius: 4px;
-} */
+}
 
 .showcase h1 {
     position: absolute;
