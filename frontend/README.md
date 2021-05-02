@@ -73,6 +73,7 @@ https://gin-and-tonnies.herokuapp.com/
 
 ### Feature Spotlight
 * I implemented functionality for users to create, read, update, and delete drink listings. Users can also create, read, update, and delete reviews on drink listings.
+* There is currently basic front end authorization so current user is guided to only update and delete drinks and reviews they created.
 * This was my first solo build of a full React app. I found the integration with Redux to be particularly challenging. With less than a week of knowledge under my belt, I took on the task and I'm quite pleased with the outcome.
 
 **Challenges I faced**
@@ -88,10 +89,27 @@ https://gin-and-tonnies.herokuapp.com/
 
 ![Redux Store TreeDetail](/frontend/src/images/reduxstoretreedetail.png)
 
+
 ### Adobe XD Mock-ups
 ![AdobeXDMockups](/frontend/src/images/XDMockups.png)
 
 ### Sample Screenshots
+*Signin Modal*
+
+Welcomes a returning user and offers an option for a new user to signup instead
+
+![SigninModal](/frontend/src/images/signinModal.png)
+
+*Drink List and Navigation*
+
+Navigation bar greets a returning user
+
+![DrinksList](/frontend/src/images/drinksList.png)
+
+*Single Drink Details*
+
+Demonstrates that a user (in this case, nari) does not have authority to update or delete drinks or reviews they did not create
+![SingleDrinkDetails](/frontend/src/images/singleDrinkDetail.png)
 
 ### Installation Instructions
 
@@ -108,6 +126,9 @@ https://gin-and-tonnies.herokuapp.com/
 * See profile page for each user
 * As a user, create, update, and delete details on your profile page
 * Drinks and badges dynamically added to your profile
+
+**Additional Protections**
+* Amplify security measures, particularly backend considerations, to prevent current user from updating or deleting another user's created drinks and reviews.
 
 ### Meet The Dev
 
