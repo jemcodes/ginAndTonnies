@@ -87,7 +87,7 @@ router.delete('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
 }));
 
 
-// ADDED TO TRY FOR NESTING ROUTES FOR
+// NESTING ROUTES TO ACCESS REVIEWS THROUGH DRINKS PATH
 router.use('/:id(\\d+)/reviews', reviewsRouter);
 
 module.exports = router;

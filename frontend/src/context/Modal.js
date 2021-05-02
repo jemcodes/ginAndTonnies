@@ -30,7 +30,7 @@ export function Modal({ onClose, children }) {
         <div id="modal">
             <div id="modal-background" onClick={onClose} />
             <div id="modal-content">
-                <img src={process.env.PUBLIC_URL + './images/drinksheader1.png'} alt={"Colorful drinks"}/>
+                <img src={process.env.PUBLIC_URL + './src/images/drinksheader1.png'} alt={"Colorful drinks"}/>
                 {children}
                 <div id="modal-close" onClick={onClose}>+</div>
             </div>
