@@ -112,6 +112,12 @@ Demonstrates that a user (in this case, nari) does not have authority to update 
 ![SingleDrinkDetails](/frontend/src/images/singleDrinkDetail.png)
 
 ### Installation Instructions
+* Git clone the project file
+* On your local machine, run 'npm install' to install required dependenices
+* Initiate database setup as stated in .env.example
+* Run npx dotenv sequelize commands (migrate, seed, etc.)
+* Run 'npm start' command on localhost for both backend and front end servers
+* Server should automatically navigate you to localhost:port in browser.
 
 ### Future Features
 
