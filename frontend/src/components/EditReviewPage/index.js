@@ -19,7 +19,7 @@ function EditReviewPage() {
 
     const reviewList = useSelector(state => state.review.allReviews)
     
-    const [currentReview, setCurrentReview] = useState();
+    // const [currentReview, setCurrentReview] = useState();
     const [rating, setRating] = useState('');
     const [content, setContent] = useState('');
     const [errors, setErrors] = useState([]);
@@ -32,11 +32,11 @@ function EditReviewPage() {
             return review.id === parseInt(reviewId)
         })
         if (foundReview) {
-            setCurrentReview(foundReview)
+            // setCurrentReview(foundReview)
             setRating(foundReview.rating)
             setContent(foundReview.content)
         }
-    }, [reviewList, reviewId, setCurrentReview])
+    }, [reviewList, reviewId])
 
     if (!sessionUser) {
         return (

@@ -1,5 +1,5 @@
 # Welcome to gin & tonnies
-![gin & tonnies Logo](/frontend/src/images/gandtbkgnd.png)
+![gin & tonnies Logo](/frontend/public/images/gandtbkgnd.png)
 
 ## Greetings, fellow cocktail enthusiast!
 
@@ -90,36 +90,41 @@ https://gin-and-tonnies.herokuapp.com/
 *Nested routes access*
 
 One task I found challenging was accessing my reviews through my drink id route. I researched and employed mergeParams with useParams to accomplish this. By merging the route on the backend, I was able to write my review update and delete methods as if they were the direct route. Then, on the front end, I assigned the drinkId and reviewId to standin for the correct paths in the URL. From there, I was able to access everything I needed to call upon a single drink, get its reviews, and allow the user to update and delete reviews they'd written.
-![Merge Params Route Access](frontend/src/images/mergeParamsReviews.png)
+![Merge Params Route Access](frontend/public/images/mergeParamsReviews.png)
 
 ### Redux Store Tree Samples
 
 *Sample of Redux Store Tree*
-![Redux Store Tree](/frontend/src/images/reduxstoretree.png)
+![Redux Store Tree](/frontend/public/images/reduxstoretree.png)
 
 *Sample of Redux Store Detail*
-![Redux Store TreeDetail](/frontend/src/images/reduxstoretreedetail.png)
+![Redux Store TreeDetail](/frontend/public/images/reduxstoretreedetail.png)
 
 ### Adobe XD Mock-ups
-![AdobeXDMockups](/frontend/src/images/XDMockups.png)
+![AdobeXDMockups](/frontend/public/images/XDMockups.png)
 
 ### Application Screenshots
 *Signin Modal*
 
 Welcomes a returning user and offers an option for a new user to signup instead
 
-![SigninModal](/frontend/src/images/signinModal.png)
+![SigninModal](/frontend/public/images/signinModal.png)
 
 *Drink List and Navigation*
 
 Navigation bar greets a returning user
 
-![DrinksList](/frontend/src/images/drinksList.png)
+![DrinksList](/frontend/public/images/drinksList.png)
 
 *Single Drink Details*
 
 Demonstrates that a user (in this case, nari) does not have authority to update or delete drinks or reviews they did not create
-![SingleDrinkDetails](/frontend/src/images/singleDrinkDetail.png)
+
+![SingleDrinkDetails](/frontend/public/images/singleDrinkDetail.png)
+
+
+
+
 
 ### Installation Instructions
 * Git clone the project file
