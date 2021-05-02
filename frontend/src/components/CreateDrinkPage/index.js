@@ -26,21 +26,8 @@ function CreateDrinkPage() {
         )
     }
 
-    // useEffect(() => {
-    //     dispatch(createDrink(payload));
-    // }, [dispatch]);
-
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // if (password === confirmPassword) {
-        //     setErrors([]);
-        //     return dispatch(sessionActions.signup({ email, username, password }))
-        //         .catch(async (res) => {
-        //             const data = await res.json();
-        //             if (data && data.errors) setErrors(data.errors);
-        //         });
-        // }
-        // return setErrors(['Confirm Password field must be the same as the Password field']);
 
         const payload = {
             title,
@@ -87,7 +74,6 @@ function CreateDrinkPage() {
                             onChange={updateContent} />
                         </label>
                         <label>
-                        {/* <p className="create-drink-guide"></p> */}
                         <input className="create-drink-img"
                             type="text"
                                     placeholder="ADD AN IMAGE URL - VERTICAL IMAGES WORK BEST 🍸"
