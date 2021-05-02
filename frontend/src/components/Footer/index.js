@@ -8,8 +8,8 @@ function Footer() {
             </ul>
             <ul className={"footer-links"}>
                 
-                <li><a target="_blank" rel="noreferrer" href="https://github.com/jemcodes">GitHub</a><i class="fab fa-github"></i></li>
-                <li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jemcodes/">LinkedIn</a><i class="fab fa-linkedin"></i></li>
+                <li><a target="_blank" rel="noreferrer" href="https://github.com/jemcodes">GitHub</a><i className="fab fa-github"></i></li>
+                <li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jemcodes/">LinkedIn</a><i className="fab fa-linkedin"></i></li>
             </ul>
         </footer>
     )

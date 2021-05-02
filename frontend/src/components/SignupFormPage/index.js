@@ -48,7 +48,7 @@ function SignupFormPage() {
                     required
                     />
                 </label>
-                <label class="signup-label-text">
+                <label className="signup-label-text">
                 <input id="signup-username-field"
                     placeholder="USERNAME"
                     type="text"
@@ -57,7 +57,7 @@ function SignupFormPage() {
                     required
                 />
                 </label>
-                <label class="signup-label-text">
+                <label className="signup-label-text">
                 <input id="signup-password-field"
                     placeholder="PASSWORD"
                     type="password"
@@ -66,7 +66,7 @@ function SignupFormPage() {
                     required
                 />
                 </label>
-                <label class="signup-label-text">
+                <label className="signup-label-text">
                 <input id="signup-confirm-field"
                     placeholder="CONFIRM PASSWORD"
                     type="password"

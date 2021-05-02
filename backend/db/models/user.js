@@ -21,9 +21,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         len: [3, 255],
-        /* my research on 4/21/21/turned up found a few issues where
+        /* my research on 4/21/21/ turned up a few issues where
         faker/isEmail can cause bugs, so commenting this section out for now */
-        
         // isEmail(value)
       },
     },

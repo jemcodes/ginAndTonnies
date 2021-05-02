@@ -16,14 +16,10 @@ function EditReviewPage() {
     }, [dispatch, drinkId])
 
     const sessionUser = useSelector(state => state.session.user);
-    // const drinkList = useSelector(state => state.drink.allDrinks);
-    // const currentDrink = drinkList.find((drink) => {
-    //     return drink.id === parseInt(drinkId)
-    // });
 
     const reviewList = useSelector(state => state.review.allReviews)
     
-    const [setCurrentReview] = useState();
+    const [currentReview, setCurrentReview] = useState();
     const [rating, setRating] = useState('');
     const [content, setContent] = useState('');
     const [errors, setErrors] = useState([]);
@@ -40,7 +36,7 @@ function EditReviewPage() {
             setRating(foundReview.rating)
             setContent(foundReview.content)
         }
-    }, [reviewList, reviewId])
+    }, [reviewList, reviewId, setCurrentReview])
 
     if (!sessionUser) {
         return (

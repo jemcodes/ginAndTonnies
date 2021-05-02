@@ -28,7 +28,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -86,7 +86,7 @@ body {
     padding: 1rem 2rem;
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: flex-end;
     justify-content: flex-end;
 }
 

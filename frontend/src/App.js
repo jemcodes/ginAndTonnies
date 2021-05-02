@@ -8,7 +8,6 @@ import DrinkListPage from './components/DrinkListPage';
 import SingleDrinkPage from './components/SingleDrinkPage';
 import CreateDrinkPage from './components/CreateDrinkPage';
 import EditDrinkPage from './components/EditDrinkPage';
-import SingleDrinkReviewsPage from './components/SingleDrinkReviewsPage';
 import CreateReviewPage from './components/CreateReviewPage';
 import EditReviewPage from './components/EditReviewPage';
 import SplashPage from './components/SplashPage';
