@@ -16,7 +16,7 @@ function EditReviewPage() {
     }, [dispatch, drinkId])
 
     const sessionUser = useSelector(state => state.session.user);
-    const drinkList = useSelector(state => state.drink.allDrinks);
+    // const drinkList = useSelector(state => state.drink.allDrinks);
     // const currentDrink = drinkList.find((drink) => {
     //     return drink.id === parseInt(drinkId)
     // });

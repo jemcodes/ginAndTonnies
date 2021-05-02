@@ -14,7 +14,6 @@ function SingleDrinkReviewsPage({ currentDrink }) {
 
     const reviewList = useSelector(state => state.review.allReviews);
     const sessionUser = useSelector(state => state.session.user);
-    const drinkList = useSelector(state => state.drink.allDrinks);
 
     const renderRating = (review) => {
         if (review.rating === 5) {

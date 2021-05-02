@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import './SplashPage.css'
 import { Modal } from '../../context/Modal';
 import LoginForm from '../LoginFormModal/LoginForm';
 import DemoButton from '../DemoButton';
 import Footer from '../Footer';
+import './SplashPage.css'
 
 
 function SplashPage() {
