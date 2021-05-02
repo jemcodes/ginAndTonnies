@@ -4,7 +4,6 @@ import { useParams, NavLink, Redirect } from 'react-router-dom';
 import { getReviews} from '../../store/review';
 import './SingleDrinkReviews.css';
 
-
 function SingleDrinkReviewsPage({ currentDrink }) {
     const dispatch = useDispatch();
     const { id } = useParams();
@@ -17,7 +16,6 @@ function SingleDrinkReviewsPage({ currentDrink }) {
     const sessionUser = useSelector(state => state.session.user);
     const drinkList = useSelector(state => state.drink.allDrinks);
 
-    // helper function for drink rating - call helper function
     const renderRating = (review) => {
         if (review.rating === 5) {
             review.ratingImages = 
@@ -66,9 +64,6 @@ function SingleDrinkReviewsPage({ currentDrink }) {
             <div>
                 <div id="no-reviews-block">
                     <h1 id="no-reviews-found">No reviews found!</h1>
-                    {/* <div>
-                    <NavLink to={`/drinks/${id}/reviews/new`}>Review This Drink</NavLink>
-                    </div> */}
                     <NavLink to={`/drinks/${id}/reviews/new`}>
                         <button id="no-reviews-found-button" type="button">
                             Review This Drink
@@ -103,12 +98,6 @@ function SingleDrinkReviewsPage({ currentDrink }) {
                     )}
                 </div>
             ))}
-            {/* <div>
-                <NavLink to={`/drinks/${id}/reviews/new`}>Review This Drink</NavLink>
-            </div>
-            <div>
-                <NavLink to={`/drinks/`}>Return To Drink List</NavLink>
-            </div> */}
         </div>
     )
 }

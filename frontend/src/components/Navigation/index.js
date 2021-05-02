@@ -31,13 +31,6 @@ function Navigation({ isLoaded }) {
                         </button>
                     </NavLink>
                     <ProfileButton user={sessionUser} />
-                    {/* {id && (
-                        <NavLink to={`/drinks/${id}/reviews`}>
-                            <button id="nav-see-reviews-button" type="button">
-                                See Reviews
-                            </button>
-                        </NavLink>
-                    )} */}
             </div>
         );
     } else {

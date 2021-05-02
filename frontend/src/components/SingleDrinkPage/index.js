@@ -45,13 +45,12 @@ function SingleDrinkPage() {
 
     return (
         <div id="single-drink-wrapper">
-            {/* <NavLink to={`/drinks/`}>Return To Drinks</NavLink> */}
             <h1 id="single-drink-title">{title}</h1>
             <h2 id="single-drink-creator">Created by: {currentDrink.User.username}</h2>
             <div id="single-drink-img-wrapper">
                 <div id="drink-content-container">
                     <img className="single-drink-img" alt={`A fresh cocktail`} src={drinkImg} />
-                    <div id="drink-info-and-buttons">
+                        <div id="drink-info-and-buttons">
                         <p id="single-drink-content">{content}</p>
                         <div id="single-drink-button">
                             {currentDrink.User.username === sessionUser.username && (
@@ -66,8 +65,6 @@ function SingleDrinkPage() {
                                     Review This Drink
                                 </button>
                             </NavLink>
-                            {/* <NavLink to={`/drinks/${id}/edit`}>Update This Drink</NavLink>
-                            <NavLink to={`/drinks/${id}/reviews`}>See Reviews</NavLink> */}
                         </div>
                     </div>
                 </div>
