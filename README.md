@@ -25,6 +25,10 @@
 
 [Code Snippets](#Code-Snippets)
 
+[Redux Store Tree Samples](https://github.com/jemcodes/ginAndTonnies/wiki/Redux-Store-Tree-Samples)
+
+[Adobe XD Mock-ups](https://github.com/jemcodes/ginAndTonnies/wiki/Adobe-XD-Mock-Ups)
+
 [Sample Screenshots](#Sample-Screenshots)
 
 [Installation Instructions](#Installation-Instructions)
@@ -91,17 +95,6 @@ https://gin-and-tonnies.herokuapp.com/
 
 One task I found challenging was accessing my reviews through my drink id route. I researched and employed mergeParams with useParams to accomplish this. By merging the route on the backend, I was able to write my review update and delete methods as if they were the direct route. Then, on the front end, I assigned the drinkId and reviewId to standin for the correct paths in the URL. From there, I was able to access everything I needed to call upon a single drink, get its reviews, and allow the user to update and delete reviews they'd written.
 ![Merge Params Route Access](frontend/public/images/mergeParamsReviews.png)
-
-### Redux Store Tree Samples
-
-*Sample of Redux Store Tree*
-![Redux Store Tree](/frontend/public/images/reduxstoretree.png)
-
-*Sample of Redux Store Detail*
-![Redux Store TreeDetail](/frontend/public/images/reduxstoretreedetail.png)
-
-### Adobe XD Mock-ups
-![AdobeXDMockups](/frontend/public/images/XDMockups.png)
 
 ### Application Screenshots
 *Signin Modal*
