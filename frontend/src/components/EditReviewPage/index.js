@@ -17,13 +17,13 @@ function EditReviewPage() {
 
     const sessionUser = useSelector(state => state.session.user);
     const drinkList = useSelector(state => state.drink.allDrinks);
-    const currentDrink = drinkList.find((drink) => {
-        return drink.id === parseInt(drinkId)
-    });
+    // const currentDrink = drinkList.find((drink) => {
+    //     return drink.id === parseInt(drinkId)
+    // });
 
     const reviewList = useSelector(state => state.review.allReviews)
     
-    const [currentReview, setCurrentReview] = useState();
+    const [setCurrentReview] = useState();
     const [rating, setRating] = useState('');
     const [content, setContent] = useState('');
     const [errors, setErrors] = useState([]);

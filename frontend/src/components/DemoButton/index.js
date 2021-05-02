@@ -1,4 +1,4 @@
-import { Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from '../../store/session';
 import './DemoButton.css';

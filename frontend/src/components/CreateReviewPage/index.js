@@ -16,10 +16,10 @@ function CreateReviewPage() {
     }, [dispatch]);
 
     const sessionUser = useSelector(state => state.session.user);
-    const reviewedDrink = useSelector(state => state.drink.allDrinks);
-    const currentDrink = reviewedDrink.find((drink) => {
-        return drink.id === parseInt(drinkId)
-    })
+    // const reviewedDrink = useSelector(state => state.drink.allDrinks);
+    // const currentDrink = reviewedDrink.find((drink) => {
+    //     return drink.id === parseInt(drinkId)
+    // })
 
     const [rating, setRating] = useState('');
     const [content, setContent] = useState('');

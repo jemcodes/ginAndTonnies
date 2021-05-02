@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, Redirect, useParams } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { getDrinks } from '../../store/drink';
 import CreateDrinkPage from '../CreateDrinkPage';
 import './DrinkList.css';
