@@ -19,17 +19,19 @@
 
 [Backend API Routes](https://github.com/jemcodes/ginAndTonnies/wiki/Backend-API-Routes)
 
-[Details](#Details)
+[Project Details](#Project-Details)
 
 [Feature Spotlight](#Feature-Spotlight)
+
+[Challenges](#Challenges)
 
 [Code Snippets](#Code-Snippets)
 
 [Redux Store Tree Samples](https://github.com/jemcodes/ginAndTonnies/wiki/Redux-Store-Tree-Samples)
 
-[Adobe XD Mock-ups](https://github.com/jemcodes/ginAndTonnies/wiki/Adobe-XD-Mock-Ups)
+[Adobe XD Design Mockups](https://github.com/jemcodes/ginAndTonnies/wiki/Adobe-XD-Mockups)
 
-[Sample Screenshots](#Sample-Screenshots)
+[Application Screenshots](#Application-Screenshots)
 
 [Installation Instructions](#Installation-Instructions)
 
@@ -71,7 +73,7 @@
 * Read reviews for each drink
 * Dynamically create, update, and delete reviews
 
-### Details
+### Project Details
 >"Strike hands with me. The glass is brim. The dew is on the heather. And love is good, and life is long, and friends are best together." - a traditional Scottish toast for the Quaich ceremony
 
 My gin & tonnies Full-Stack Project aims to bring delight to fellow cocktail connoisseurs, highball hobbyists, and every other liquor liker in between. Inspired by Untappd, I've created a community where drink enthusiasts can discover new beverages and share their thoughts on everything they try.
@@ -80,11 +82,13 @@ My gin & tonnies Full-Stack Project aims to bring delight to fellow cocktail con
 https://gin-and-tonnies.herokuapp.com/
 
 ### Feature Spotlight
-* I implemented functionality for users to create, read, update, and delete drink listings. Users can also create, read, update, and delete reviews on drink listings.
-* There is currently basic front end authorization so current user is guided to only update and delete drinks and reviews they created.
-* This was my first solo build of a full React app. I found the integration with Redux to be particularly challenging. With less than a week of knowledge under my belt, I took on the task and I'm quite pleased with the outcome.
+* Users can create, read, update, and delete drink listings. 
+* Users can also create, read, update, and delete reviews on drink listings.
+* I implemented basic front end authorization so the current user is guided to only update and delete drinks and reviews they created.
 
-**Challenges I faced**
+### Challenges
+
+This was my first solo build of a full React app. I found the integration with Redux to be particularly challenging. With less than a week of knowledge under my belt, I took on the task and I'm quite pleased with the outcome.
 
 * The learning curve for interacting with the Redux store to grab state was steep for me. It was eye-opening when I finally understood how to connect those dots and select only the information I wanted to show.
 
@@ -93,30 +97,19 @@ https://gin-and-tonnies.herokuapp.com/
 ### Code Snippets
 *Nested routes access*
 
-One task I found challenging was accessing my reviews through my drink id route. I researched and employed mergeParams with useParams to accomplish this. By merging the route on the backend, I was able to write my review update and delete methods as if they were the direct route. Then, on the front end, I assigned the drinkId and reviewId to standin for the correct paths in the URL. From there, I was able to access everything I needed to call upon a single drink, get its reviews, and allow the user to update and delete reviews they'd written.
+One difficulty I face was accessing my reviews through my drink id route. I researched and employed mergeParams along with useParams to accomplish this.
+
+By merging the route on the backend, I was able to write my review update and delete methods as if they were the direct route. Then, on the front end, I assigned the drinkId and reviewId to standin for the correct paths in the URL. From there, I was able to access everything I needed to call upon a single drink, get its reviews, and allow the user to update and delete reviews they'd written.
 ![Merge Params Route Access](frontend/public/images/mergeParamsReviews.png)
 
 ### Application Screenshots
-*Signin Modal*
-
-Welcomes a returning user and offers an option for a new user to signup instead
-
-![SigninModal](/frontend/public/images/signinModal.png)
-
-*Drink List and Navigation*
-
-Navigation bar greets a returning user
-
-![DrinksList](/frontend/public/images/drinksList.png)
-
 *Single Drink Details*
 
 Demonstrates that a user (in this case, nari) does not have authority to update or delete drinks or reviews they did not create
 
 ![SingleDrinkDetails](/frontend/public/images/singleDrinkDetail.png)
 
-
-
+### [View Additional Screenshots](https://github.com/jemcodes/ginAndTonnies/wiki/Application-Screenshots)
 
 
 ### Installation Instructions
