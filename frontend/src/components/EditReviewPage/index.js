@@ -21,16 +21,8 @@ function EditReviewPage() {
         return drink.id === parseInt(drinkId)
     });
 
-    // useEffect(() => {
-    //     dispatch(getReviews(drinkId));
-    // }, [dispatch, drinkId]);
-
     const reviewList = useSelector(state => state.review.allReviews)
-    // const foundReview = reviewList.find((review) => {
-    //     return review.id === parseInt(reviewId)
-    // })
     
-
     const [currentReview, setCurrentReview] = useState();
     const [rating, setRating] = useState('');
     const [content, setContent] = useState('');

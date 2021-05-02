@@ -8,7 +8,6 @@ import Footer from '../Footer';
 
 function DrinkList() {
     const dispatch = useDispatch();
-    // const { id } = useParams();
     const drinkList = useSelector(state => {
         return state.drink.allDrinks
     });
@@ -53,11 +52,6 @@ function DrinkList() {
                                             Learn More
                                         </button>
                                     </NavLink>
-                                    {/* <NavLink to={`/drinks/${drink.id}/reviews`}>
-                                        <button className="drink-detail-button" type="button">
-                                            See Reviews
-                                        </button>
-                                    </NavLink> */}
                                 </div>
                             </div>
                     </li>)
