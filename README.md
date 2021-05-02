@@ -3,6 +3,8 @@
 
 ## Greetings, fellow cocktail enthusiast!
 
+### [Visit gin & tonnies!](https://gin-and-tonnies.herokuapp.com/)
+
 ---
 
 ### Menu
@@ -10,8 +12,6 @@
 [Technologies](#Technologies)
 
 [Key Features](#Key-Features)
-
-[Visit gin & tonnies!](https://gin-and-tonnies.herokuapp.com/)
 
 [Database Schema](https://github.com/jemcodes/ginAndTonnies/wiki/Database-Schema)
 
@@ -30,6 +30,10 @@
 [Installation Instructions](#Installation-Instructions)
 
 [Future Features](#Future-Features)
+
+[Future Fixes](#Future-Fixes)
+
+[Visit gin & tonnies!](https://gin-and-tonnies.herokuapp.com/)
 
 [Meet The Dev](#Meet-The-Dev)
 
@@ -143,6 +147,13 @@ Demonstrates that a user (in this case, nari) does not have authority to update 
 
 **Additional Protections**
 * Amplify security measures, particularly backend considerations, to prevent current user from updating or deleting another user's created drinks and reviews.
+
+## Future Fixes
+
+**Heroku Hosting Improvements**
+* Loadtimes for backend calls are quite slow at the moment. As we haven't yet learned about database optimization, I would like to improve this when I have time to revist the project.
+
+### [Visit gin & tonnies!](https://gin-and-tonnies.herokuapp.com/)
 
 ### Meet The Dev
 
