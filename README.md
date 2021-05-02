@@ -83,7 +83,10 @@ https://gin-and-tonnies.herokuapp.com/
 * I felt more comfortable with PostgreSQL and Sequelize during this project after having used them in a previous group project. Still, it's a daunting task to make sure all the relationships are implemented correctly, knowing that the functionality of your app depends on it!
 
 ### Code Snippets
+*Nested routes access*
 
+One task I found challenging was accessing my reviews through my drink id route. I researched and employed mergeParams with useParams to accomplish this. By merging the route on the backend, I was able to write my review update and delete methods as if they were the direct route. Then, on the front end, I assigned the drinkId and reviewId to standin for the correct paths in the URL. From there, I was able to access everything I needed to call upon a single drink, get its reviews, and allow the user to update and delete reviews they'd written.
+![Merge Params Route Access](frontend/src/images/mergeParamsReviews.png)
 
 ### Redux Store Tree Samples
 
