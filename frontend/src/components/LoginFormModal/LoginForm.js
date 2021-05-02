@@ -29,38 +29,40 @@ function LoginForm() {
     };
 
     return (
-        <form className="sign-up-form" onSubmit={handleSubmit}>
-            <ul>
-                {errors.map((error, idx) => (
-                    <li key={idx}>{error}</li>
-                ))}
-            </ul>
-        <label id="modal-user">
-            <input id="modal-user-field"
-                    placeholder="USERNAME OR EMAIL"
-                    type="text"
-                    value={credential}
-                    onChange={(e) => setCredential(e.target.value)}
-                    required
-                />
-        </label>
-        <label id="modal-password">
-            <input id="modal-password-field"
-                        placeholder="PASSWORD"
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+        <div>
+            <form className="sign-up-form" onSubmit={handleSubmit}>
+                <ul>
+                    {errors.map((error, idx) => (
+                        <li key={idx}>{error}</li>
+                    ))}
+                </ul>
+            <label id="modal-user">
+                <input id="modal-user-field"
+                        placeholder="USERNAME OR EMAIL"
+                        type="text"
+                        value={credential}
+                        onChange={(e) => setCredential(e.target.value)}
                         required
-            />
-        </label>
-        <div className="signin-or-signup">
-            <button className="welcome-button" type="submit">WELCOME BACK</button>
+                    />
+            </label>
+            <label id="modal-password">
+                <input id="modal-password-field"
+                            placeholder="PASSWORD"
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                />
+            </label>
+            <div className="signin-or-signup">
+                <button className="welcome-button" type="submit">WELCOME BACK</button>
+                <NavLink className="signup-instead"
+                    to={`/signup`}>New around here? Sign up!
+                </NavLink>
+            </div>
+            </form>
             <DemoButton />
-            <NavLink className="signup-instead"
-                to={`/signup`}>New around here? Sign up!
-            </NavLink>
         </div>
-        </form>
     );
 }
 

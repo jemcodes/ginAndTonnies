@@ -14,7 +14,7 @@ body {
     min-width: 100%;
     background-color: #F7F7F7;  
     display: flex;
-    padding: 1rem 0 45rem 0;
+    padding: 1rem 0 55rem 0;
 }
 
 #signup-container {
@@ -133,4 +133,11 @@ input {
     color: #1B442E;
     padding: -2rem 0 2rem 0;
     margin: 1rem;
+}
+
+#demo-footer-signup {
+    background-color: #F7F7F7;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }

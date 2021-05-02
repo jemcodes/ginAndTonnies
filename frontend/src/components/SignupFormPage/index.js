@@ -77,13 +77,16 @@ function SignupFormPage() {
                 />
                 </label>
                 <button className="signup-form-button" type="submit">Sign Up</button>
-                <DemoButton />
+                
                 <NavLink className="cancel-signup "
                     to={`/`}>CANCEL
                 </NavLink>
             </div>
         </form>
-            <Footer />
+            <div id="demo-footer-signup">
+                <DemoButton />
+            </div>
+                <Footer />
         </div>
     );
 }
