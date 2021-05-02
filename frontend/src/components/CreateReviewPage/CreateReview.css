@@ -21,7 +21,6 @@ body {
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    text-align: center;
     box-shadow: 2px 3px 8px rgba(27,68,46, 0.2);
 }
 
@@ -32,6 +31,13 @@ body {
 
 input {
   margin: 0;
+}
+
+.create-review-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .create-review-rating {
@@ -71,9 +77,9 @@ input {
 }
 
 .create-review-button {
+    position: relative;
     background-color: #E3EEE6;
     border: 1px solid #A3B4AB;
     color: #1B442E;
-    width: 14vw;
     margin: 1rem 0 1rem 0;
 }

@@ -4,6 +4,13 @@ body {
     background-color: #F7F7F7;
 }
 
+#no-reviews-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #no-reviews-found {
     color: #333;
     font-family: 'Alice', serif;
@@ -17,10 +24,10 @@ body {
   padding: 15px;
   margin: 0 1rem 2rem 1rem;
   background-color: #ECF6F1;
-  border: 2px solid #1B442E;
+  border: 2px solid #A3B4AB;
   border-radius: 4px;
   color: #1B442E;
-  width: 70%;
+  text-transform: uppercase;
 }
 
 #single-drink-wrapper {

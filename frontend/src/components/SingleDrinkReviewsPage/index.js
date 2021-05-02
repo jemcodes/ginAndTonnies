@@ -64,11 +64,11 @@ function SingleDrinkReviewsPage({ currentDrink }) {
     if (reviewList.length === 0) {
         return (
             <div>
-                <h1 id="no-reviews-found">No reviews found!</h1>
-                {/* <div>
+                <div id="no-reviews-block">
+                    <h1 id="no-reviews-found">No reviews found!</h1>
+                    {/* <div>
                     <NavLink to={`/drinks/${id}/reviews/new`}>Review This Drink</NavLink>
-                </div> */}
-                <div>
+                    </div> */}
                     <NavLink to={`/drinks/${id}/reviews/new`}>
                         <button id="no-reviews-found-button" type="button">
                             Review This Drink

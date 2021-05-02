@@ -67,7 +67,7 @@ function CreateReviewPage() {
                 <div id="create-review-wrapper">
                     <div id="create-review-container">
                         <h1>Have you tried this drink? Let us know your thoughts!</h1>
-                <div className="create-review-contents">
+                <div className="create-review-body">
                 <input className="create-review-rating"
                     type="number" min="1" max="5" step="1"
                     placeholder="Review Rating"
