@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useHistory, NavLink } from 'react-router-dom';
-import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
+import * as sessionActions from "../../store/session";
+import DemoButton from '../DemoButton';
 
 function LoginForm() {
     const dispatch = useDispatch();
@@ -54,6 +55,7 @@ function LoginForm() {
         </label>
         <div className="signin-or-signup">
             <button className="welcome-button" type="submit">WELCOME BACK</button>
+            <DemoButton />
             <NavLink className="signup-instead"
                 to={`/signup`}>New around here? Sign up!
             </NavLink>
