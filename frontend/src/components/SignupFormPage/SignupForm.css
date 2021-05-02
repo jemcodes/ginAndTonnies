@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Raleway&display=swap');
-/* font-family: 'Alice', serif;
-font-family: 'Raleway', sans-serif; */
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -17,7 +15,6 @@ body {
     background-color: #F7F7F7;  
     display: flex;
     padding: 1rem 0 45rem 0;
-    /* border: 1px solid red; */
 }
 
 #signup-container {
@@ -34,7 +31,6 @@ body {
 }
 
 #signup-banner {
-    /* background-color: blue; */
     width: 25%;
 }
 
@@ -52,7 +48,6 @@ body {
 }
 
 input {
-  /* border: 3px solid red; */
   position: relative;
   border: none;
   width: 70%;
@@ -63,7 +58,6 @@ input {
 
 #signup-email-field {
     background-color: #E3EEE6;
-    /* border: 3px solid red; */
     width: 20vw;
     padding: 15px;
     border-radius: 4px;
@@ -79,7 +73,6 @@ input {
 
 #signup-username-field {
     background-color: #E3EEE6;
-    /* border: 3px solid red; */
     width: 20vw;
     padding: 15px;
     border-radius: 4px;
@@ -96,7 +89,6 @@ input {
 #signup-password-field {
     background-color: #E3EEE6;
     width: 20vw;
-    /* border: 3px solid red; */
     padding: 15px;
     border-radius: 4px;
     margin: 1rem 0 1rem 0;
@@ -112,7 +104,6 @@ input {
 #signup-confirm-field {
     background-color: #E3EEE6;
     width: 20vw;
-    /* border: 3px solid red; */
     padding: 15px;
     border-radius: 4px;
     margin: 1rem 0 2rem 0;

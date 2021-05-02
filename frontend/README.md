@@ -82,6 +82,8 @@ https://gin-and-tonnies.herokuapp.com/
 * I felt more comfortable with PostgreSQL and Sequelize during this project after having used them in a previous group project. Still, it's a daunting task to make sure all the relationships are implemented correctly, knowing that the functionality of your app depends on it!
 
 ### Code Snippets
+
+*Sample of Redux Store Tree*
 ![Redux Store Tree](/frontend/src/images/reduxstoretree.png)
 
 ![Redux Store TreeDetail](/frontend/src/images/reduxstoretreedetail.png)

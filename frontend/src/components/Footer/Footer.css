@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Raleway&display=swap');
-/* font-family: 'Alice', serif;
-font-family: 'Raleway', sans-serif; */
 
 body {
     height: 100%;
-    /* padding-bottom: 40px; */
     position: relative;
 }
 
 footer {
-    /* margin-top: 0.5rem; */
     background: #F1F6F2;
     text-align: center;
     font-family: 'Raleway', sans-serif;
@@ -22,10 +18,6 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-}
-
-.oh-hai-it-me {
-
 }
 
 .oh-hai-it-me li {

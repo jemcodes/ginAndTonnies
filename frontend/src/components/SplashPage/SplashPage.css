@@ -1,31 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Raleway&display=swap');
-/* font-family: 'Alice', serif;
-font-family: 'Raleway', sans-serif; */
-
-/* html {
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-    color: #000;
-} */
 
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 16pt;
     color: #333;
     background-color: #f7f7f7;
-    /* border: 2px solid red; */
     line-height: 1.4;
     margin: 0;
-    /* width: 100%; */
 }
 
-/* img {
-    max-width: 100%;
-} */
-
 .splash-wrapper {
-    /* border: 3px solid green; */
-    /* display: grid; */
     position: absolute;
     width: 100%;
     
@@ -33,34 +17,14 @@ body {
 
 /*Top Container*/
 .top-container {
-    /* border: 3px solid blue; */
     margin: 0;
     width: 100%;
     position: relative;
     display: flex;
 }
 
-/* .showcase {
-    border: 3px solid orange;
-    grid-area: splash-hero-image;
-    background-image: url(../../images/gandtbkgnd.png);
-    background-size: cover;
-    background-position: center-top;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: cover;
-    min-width: 100%;
-    min-width: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 1px 5px rgba(104,104,104, 0.8);
-} */
 
 .showcase {
-    /* border: 3px solid red; */
     margin: 0;
     position: relative;
     width: 100%;
@@ -68,7 +32,6 @@ body {
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
-    /* gap: 4vw; */
 }
 
 .showcase img {
@@ -76,13 +39,6 @@ body {
   margin: 0;
   height: auto;
 }
-
-/* .showcase button {
-    background-color: red;
-    position: absolute;
-}
-
-.showcase */
 
 .button-container {
     position: absolute;
@@ -96,7 +52,6 @@ body {
 }
 
 #log-in-button {
-    /* position: absolute; */
     margin: 20px 10px;
     background-color: transparent;
     border: 2px solid white;
@@ -109,7 +64,6 @@ body {
 }
 
 #sign-up-button {
-    /* position: absolute; */
     margin: 20px 20px;
     background-color: transparent;
     border: 2px solid white;
@@ -127,12 +81,9 @@ body {
 
 .showcase img {
     min-width: 100%;
-    /* max-height: 730px; */
-    /* border: 3px solid red; */
 }
 
 .box  {
-    /* border: 3px solid purple; */
     background-color: #fff;
     padding: 1rem 2rem;
     display: flex;
@@ -142,21 +93,14 @@ body {
 }
 
 .feature-row-container {
-    /* border: 3px solid pink; */
-    /* grid-template-areas:
-    'feature-row-left feature-row-right'
-    'feature-row-left feature-row-right'; */
     margin: 3vh 15vw 3vh 15vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
-    /* margin: 40px; */
-    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-    /* position: relative; */
-    
+    flex-wrap: wrap;    
 }
+
 .feature-card {
     background-color: #fff;
     text-align: center;
@@ -169,7 +113,6 @@ body {
     justify-content: center;
 }
 .feature-card img {
-    /* background-color: red; */
     max-width: 20rem;
 }
 
@@ -206,7 +149,6 @@ body {
 }
 
 .more-info-text {
-    /* border: 3px solid red; */
     text-align: center;
     margin: 0 16vw 0 16vw;
 }
@@ -215,16 +157,3 @@ body {
     font-family: 'Alice', serif;
     font-size: 70px;
 }
-
-/* .secondary-image img {
-    width: 100%;
-}
-
-.secondary-feature-row {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-.feature-box {
-    width: 100%;
-} */

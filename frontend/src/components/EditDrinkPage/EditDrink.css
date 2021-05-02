@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Raleway&display=swap');
-/* font-family: 'Alice', serif;
-font-family: 'Raleway', sans-serif; */
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -9,7 +7,6 @@ body {
 }
 
 #update-drink-wrapper {
-    /* border: 5px solid green; */
     margin: 4rem 16rem;
     display: flex;
     justify-content: center;
@@ -24,7 +21,6 @@ body {
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    /* flex-wrap: wrap; */
     text-align: center;
     box-shadow: 2px 3px 8px rgba(27,68,46, 0.2);
 }
@@ -40,7 +36,6 @@ input {
 
 .update-drink-title {
     background-color: #E3EEE6;
-    /* border: 3px solid red; */
     width: 35vw;
     padding: 15px;
     border-radius: 4px;
@@ -58,7 +53,6 @@ input {
 
 .update-drink-content {
     background-color: #E3EEE6;
-    /* border: 3px solid red; */
     width: 35vw;
     height: 5vh;
     padding: 15px;
@@ -78,7 +72,6 @@ input {
 
 .create-drink-img {
     background-color: #E3EEE6;
-    /* border: 3px solid red; */
     width: 35vw;
     padding: 1rem;
     border-radius: 4px;
@@ -107,14 +100,12 @@ input {
     color: #1B442E;
     width: 14vw;
     margin: 1rem 0 1rem 0;
-    /* padding: 1.5rem; */
 }
 
 .drink-delete-button {
     background-color: #E3EEE6;
     border: 1px solid #A3B4AB;
     color: #1B442E;
-    /* width: 35vw; */
     margin: 1rem 0 2rem 0;
 }
 
