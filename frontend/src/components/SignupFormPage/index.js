@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, NavLink } from "react-router-dom";
 import * as sessionActions from "../../store/session";
+import DemoButton from '../DemoButton';
 import Footer from '../Footer';
 import './SignupForm.css';
 
@@ -76,7 +77,8 @@ function SignupFormPage() {
                 />
                 </label>
                 <button className="signup-form-button" type="submit">Sign Up</button>
-                <NavLink className="signup-instead"
+                <DemoButton />
+                <NavLink className="cancel-signup "
                     to={`/`}>CANCEL
                 </NavLink>
             </div>
