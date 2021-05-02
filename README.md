@@ -1,5 +1,5 @@
 # Welcome to gin & tonnies
-![gin & tonnies Logo](/frontend/public/images/gandtbkgnd.png)
+![gin & tonnies Logo](frontend/public/images/gandtthin2.png)
 
 ## Greetings, fellow cocktail enthusiast!
 
