@@ -35,13 +35,13 @@
 
 [Installation Instructions](#Installation-Instructions)
 
-[Future Features](#Future-Features)
-
-[Future Fixes](#Future-Fixes)
-
 [Visit gin & tonnies!](https://gin-and-tonnies.herokuapp.com/)
 
 [Meet The Dev](#Meet-The-Dev)
+
+[Future Features](#Future-Features)
+
+[Future Fixes](#Future-Fixes)
 
 ---
 
@@ -100,6 +100,7 @@ This was my first solo build of a full React app. I found the integration with R
 One difficulty I face was accessing my reviews through my drink id route. I researched and employed mergeParams along with useParams to accomplish this.
 
 By merging the route on the backend, I was able to write my review update and delete methods as if they were the direct route. Then, on the front end, I assigned the drinkId and reviewId to standin for the correct paths in the URL. From there, I was able to access everything I needed to call upon a single drink, get its reviews, and allow the user to update and delete reviews they'd written.
+
 ![Merge Params Route Access](frontend/public/images/mergeParamsReviews.png)
 
 ### Application Screenshots
@@ -119,6 +120,13 @@ Demonstrates that a user (in this case, nari) does not have authority to update 
 * Run npx dotenv sequelize commands (migrate, seed, etc.)
 * Run 'npm start' command on localhost for both backend and front end servers
 * Server should automatically navigate you to localhost:port in browser.
+
+### [Visit gin & tonnies!](https://gin-and-tonnies.herokuapp.com/)
+
+### Meet The Dev
+
+* jane martin [Github](https://github.com/jemcodes) [Linkedin](https://www.linkedin.com/in/jemcodes/) 
+
 
 ---
 
@@ -143,9 +151,3 @@ Demonstrates that a user (in this case, nari) does not have authority to update 
 
 **Heroku Hosting Improvements**
 * Loadtimes for backend calls are quite slow at the moment. As we haven't yet learned about database optimization, I would like to improve this when I have time to revist the project.
-
-### [Visit gin & tonnies!](https://gin-and-tonnies.herokuapp.com/)
-
-### Meet The Dev
-
-* jane martin [Github](https://github.com/jemcodes) [Linkedin](https://www.linkedin.com/in/jemcodes/) 
