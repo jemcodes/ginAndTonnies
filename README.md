@@ -29,7 +29,7 @@
 
 [Redux Store Tree Samples](https://github.com/jemcodes/ginAndTonnies/wiki/Redux-Store-Tree-Samples)
 
-[Adobe XD Design Mockups](https://github.com/jemcodes/ginAndTonnies/wiki/Adobe-XD-Mockups)
+[Adobe XD Design Mockups](https://github.com/jemcodes/ginAndTonnies/wiki/Adobe-XD-Design-Mockups)
 
 [Application Screenshots](#Application-Screenshots)
 
