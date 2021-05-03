@@ -10,6 +10,9 @@ const { validationResult, check } = require('express-validator');
 // GET a list of all the drinks
 router.get('/', requireAuth, asyncHandler(async (req, res) => {
     const drinkList = await db.Drink.findAll({
+        order: [
+            ['id', 'ASC']
+        ],
         include: [db.User]
     });
     return res.json({ drinkList });
