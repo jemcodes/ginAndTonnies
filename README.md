@@ -3,8 +3,6 @@
 
 ## Greetings, fellow cocktail enthusiast!
 
-### [Visit gin & tonnies!](https://gin-and-tonnies.herokuapp.com/)
-
 ---
 
 ### Menu
@@ -34,8 +32,6 @@
 [Application Screenshots](#Application-Screenshots)
 
 [Installation Instructions](#Installation-Instructions)
-
-[Visit gin & tonnies!](https://gin-and-tonnies.herokuapp.com/)
 
 [Meet The Dev](#Meet-The-Dev)
 
@@ -78,9 +74,6 @@
 
 My gin & tonnies Full-Stack Project aims to bring delight to fellow cocktail connoisseurs, highball hobbyists, and every other liquor liker in between. Inspired by Untappd, I've created a community where drink enthusiasts can discover new beverages and share their thoughts on everything they try.
 
-### Visit gin & tonnies
-https://gin-and-tonnies.herokuapp.com/
-
 ### Feature Spotlight
 * Users can create, read, update, and delete drink listings. 
 * Users can also create, read, update, and delete reviews on drink listings.
@@ -120,8 +113,6 @@ Demonstrates that a user (in this case, nari) does not have authority to update 
 * Run npx dotenv sequelize commands (migrate, seed, etc.)
 * Run 'npm start' command on localhost for both backend and front end servers
 * Server should automatically navigate you to localhost:port in browser.
-
-### [Visit gin & tonnies!](https://gin-and-tonnies.herokuapp.com/)
 
 ### Meet The Dev
 
